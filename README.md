@@ -20,13 +20,13 @@ The *first* thing you need to learn is that devolping in TDD is a (*slightly*) d
 ![failing test first](http://i.imgur.com/RQe2NQT.jpg)
 
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
-we need to ***write*** our ***tests first*** (*and watch them fail*) and then writing the code require to make the test pass.
+we need to ***write*** our ***tests first*** (*and watch it fail*) and *then* write the code require to make the test pass.
 
 ### Scenario
 
 ![vending machine](http://i.imgur.com/HbwMqDa.jpg)
 
-You are building a **Vending Machine** that allows people to buy any item.
+We are building a **Vending Machine** that allows people to buy any item.
 It takes notes and coins (*we'll build the BitCoin module next time!*)
 and must calculate the change to be returned to the customer given the **Price**
 of the Item and the **Amount** of cash given.
