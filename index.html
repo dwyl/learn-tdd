@@ -1,13 +1,14 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Vending Machine Change Calculator</title>
+    <title>Vending Machine Change Calculator TDD</title>
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   </head>
   <body>
     <div id='main' style='padding: 2em;'>
-      <h1>Calculate the Change for a Given Price and Cash Received</h1>
+      <h1>Vending Machine Change Calculator</h1>
+      <h2>Calculate the Change for a Given Price and Cash Received</h2>
       <!-- <input type='text' id='price'> </input> -->
     </div>
 
@@ -15,15 +16,21 @@
     <div id="qunit-fixture"></div>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+
     <script>
+    var getChange = function (totalPayable, cashPaid) {
+        'use strict';
 
-test('This dummy test should always pass!', function(assert){
-  assert.ok(true===true); // just so we know everything loaded ok
-});
+        var change = [];
 
-test('This is what a failing test looks like!', function(assert){
-  assert.equal(-1, [1,2,3].indexOf(1)); // we *expect* this to fail
-});
+        return change
+    };
+    </script>
+
+    <script>
+    test('getChange(1,1) should equal []', function(){
+        deepEqual(getChange(1,1), []);
+    }); // use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/
 
     </script>
   </body>
