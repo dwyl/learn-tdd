@@ -288,7 +288,7 @@ Add the following test to `index.html` and refresh your browser:
 
 ```javascript
 test('getChange(486,1000) should equal [500, 10, 2, 2]', function(){
-    deepEqual(C.getChange(486,1000), [500, 10, 2, 2]);
+    deepEqual(getChange(486,1000), [500, 10, 2, 2]);
 })
 ```
 
@@ -318,11 +318,11 @@ var coins = [5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
 var getChange = function (totalPayable, cashPaid) {
     'use strict';
     var change = [];
-    var length = C.coins.length;
+    var length = coins.length;
     var remaining = cashPaid - totalPayable;          // we reduce this below
 
     for (var i = 0; i < length; i++) { // loop through array of notes & coins:
-        var coin = C.coins[i];
+        var coin = coins[i];
 
         if(remaining/coin >= 1) { // check coin fits into the remaining amount
             var times = Math.floor(remaining/coin);        // no partial coins
