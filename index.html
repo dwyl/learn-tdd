@@ -17,8 +17,12 @@
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <script>
 
-test('this dummy test should always pass!', function(assert){
+test('This dummy test should always pass!', function(assert){
   assert.ok(true===true); // just so we know everything loaded ok
+});
+
+test('This is what a failing test looks like!', function(assert){
+  assert.equal(-1, [1,2,3].indexOf(1)); // we *expect* this to fail
 });
 
     </script>

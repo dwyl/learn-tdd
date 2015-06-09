@@ -17,12 +17,14 @@ You can get started with **T**est **D**riven **D**evelopment today!
 
 The *first* thing you need to learn is that devolping in TDD is a (*slightly*) different approach to development from simply diving into solving the solution (wihout a test)
 
+![failing test first](http://i.imgur.com/RQe2NQT.jpg)
+
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
 we need to ***write*** our ***tests first*** (*and watch them fail*) and then writing the code require to make the test pass.
 
 ### Scenario
 
-![vending machine]()
+![vending machine](http://i.imgur.com/HbwMqDa.jpg)
 
 You are building a **Vending Machine** that allows people to buy any item.
 It takes notes and coins (*we'll build the BitCoin module next time!*)
@@ -35,12 +37,57 @@ of the Item and the **Amount** of cash given.
 + Return an array of the largest notes/coins required as change
 
 
+## Practical
+
+
+### Single *File* App
+
+We will build the entire tutorial/project in a single file: **index.html**
+
+On your Computer, create a file called index.html
+
+Copy-paste the following *sample code* to get started:
+
+```html
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Vending Machine Change Calculator</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  </head>
+  <body>
+    <div id='main' style='margin-bottom: 2em; padding: 2em;'>
+      <h1>Calculate the Change for a Given Price and Cash Received</h1>
+      <!-- <input type='text' id='price'> </input> -->
+    </div>
+
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+    <script>
+
+test('This dummy test should always pass!', function(assert){
+  assert.ok(true===true); // just so we know everything loaded ok
+});
+
+test('This is what a failing test looks like!', function(assert){
+  assert.equal(-1, [1,2,3].indexOf(1)); // we *expect* this to fail
+});
+
+    </script>
+  </body>
+</html>
+```
+
+
 ### First Tests
 
 Create a project on your machine called **vending-machine**:
 
 ```sh
-mkdirp vending-machine && cd vending-machine
+mkdir vending-machine && cd vending-machine
 ```
 
 #### Create Test Directory
