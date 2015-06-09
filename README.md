@@ -11,13 +11,37 @@ You can get started with **T**est **D**riven **D**evelopment today!
 + A computer with a web browser
 + Internet access to download the starter files
 + 30 minutes
-+ *Basic* Programming Skills 
++ *Basic* Programming Skills
 
 ## How?
 
-We need to get into the habit of writing tests *first* and then writing the code
+The *first* thing you need to learn is that devolping in TDD is a (*slightly*) different approach to development from simply diving into solving the solution (wihout a test)
+
+To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
+we need to ***write*** our ***tests first*** (*and watch them fail*) and then writing the code require to make the test pass.
+
+### Scenario
+
+![vending machine]()
+
+You are building a **Vending Machine** that allows people to buy any item.
+It takes notes and coins (*we'll build the BitCoin module next time!*)
+and must calculate the change to be returned to the customer given the **Price**
+of the Item and the **Amount** of cash given.
+
+### Requirements
+
++ Calculate the change in notes and coins for a given **item price** and
++ Return an array of the largest notes/coins required as change
+
 
 ### First Tests
+
+Create a project on your machine called **vending-machine**:
+
+```sh
+mkdirp vending-machine && cd vending-machine
+```
 
 #### Create Test Directory
 
