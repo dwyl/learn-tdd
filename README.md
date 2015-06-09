@@ -44,7 +44,14 @@ of the Item and the **Amount** of cash given.
 
 We will build the entire tutorial/project in a single file: **index.html**
 
-On your Computer, create a file called index.html
+
+Create a project on your machine called **vending-machine**:
+
+```sh
+mkdir vending-machine && cd vending-machine
+```
+
+Then create a file called **index.html**
 
 Copy-paste the following *sample code* to get started:
 
@@ -57,7 +64,7 @@ Copy-paste the following *sample code* to get started:
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   </head>
   <body>
-    <div id='main' style='margin-bottom: 2em; padding: 2em;'>
+    <div id='main' style='padding: 2em;'>
       <h1>Calculate the Change for a Given Price and Cash Received</h1>
       <!-- <input type='text' id='price'> </input> -->
     </div>
@@ -81,58 +88,13 @@ test('This is what a failing test looks like!', function(assert){
 </html>
 ```
 
+#### Open index.html in your Browser
 
-### First Tests
+When you open **index.html** in your favorite web browser
+(*the one with the* ***foxy icon***)
+you should expect to see:
 
-Create a project on your machine called **vending-machine**:
-
-```sh
-mkdir vending-machine && cd vending-machine
-```
-
-#### Create Test Directory
-
-In your project create a new **/test** directory to hold your tests:
-
-```sh
-mkdir test
-```
-
-#### Create test.js File
-
-Now create a new file ./test/**test.js** in your text editor
-
-and write/paste the following code:
-
-```js
-var assert = require("assert"); // node.js core module
-
-describe('Array', function(){
-  describe('#indexOf()', function(){
-    it('should return -1 when the value is not present', function(){
-      assert.equal(-1, [1,2,3].indexOf(4)); // 4 is not present in this array so indexOf returns -1
-    })
-  })
-});
-```
-
-#### Run Test
-
-By typing the command **mocha** in your terminal the mocha comand line program
-will look for a **/test** directory and run any **.js** files it contains:
-
-```sh
-mocha
-```
-
-![Mocha 1 Test Passes](https://raw.github.com/nelsonic/learn-mocha/master/images/mocha-1-test-passing.png "Mocha 1 Test Passes")
-
-### A More Useful TDD Example (Cash Register Mini Project)
-
-While I'm the first to agree that *cash-less* payments are the future,
-paying with cash is something *everyone* can relate to and is therefore
-a good example to use. (*think of better TDD example*? *tell me*!)
-
+![initial index.html view](http://i.imgur.com/f48Hzvu.png)
 
 #### Basic Requirements
 
