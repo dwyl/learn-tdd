@@ -1,26 +1,42 @@
-# learn-tdd
+# Learn TDD
 
 A brief introduction to Test Driven Development (TDD) in JavaScript
 
 ## What?
 
-You can get started with **T**est **D**riven **D**evelopment today!
+Get started with **T**est **D**riven **D**evelopment *today*!  
+In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to know to write tests for your web project!
 
 ### Pre-Requisites
 
-+ A computer with a web browser
-+ Internet access to download the starter files
-+ 30 minutes
-+ *Basic* Programming Skills
++ **A computer** with a web browser
++ **Internet access** to download the starter files
++ **30 minutes** of time
++ **_Basic_ Programming Skills** (HTML & JavaScript)
 
 ## How?
 
-The *first* thing you need to learn is that devolping in TDD is a (*slightly*) different approach to development from simply diving into solving the solution (wihout a test)
+The *first* thing you need to learn is that developing following TDD (*discipline*) is a (*slightly*) different approach from simply diving into solving the solution (wihout a test).
 
-![failing test first](http://i.imgur.com/RQe2NQT.jpg)
+You will hear the expression: "***Red, Green, Refactor***":
+
+![TDD Cycle: Red, Green, Refactor](http://i.imgur.com/RQe2NQT.jpg)
+
+What this means is that there's a **3-step process**:
+
+1. ***Write*** a **Failing Test** - Understand the (user) requirements/story well enough to write a test for what you expect. (_the test should **fail** initially - hence it being "Red"_)  
+
+2. ***Make*** the (*faling*) **Test Pass** -
 
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
-we need to ***write*** our ***tests first*** (*and watch it fail*) and *then* write the code require to make the test pass.
+we need to ***write*** our ***test(s) first*** (*and watch them fail*) and *then* write the code require to make the test pass.
+
+Writing a failing test, before writing the code may seem *counter-intuitive* at first.  
+But we urge you to think of it this way:
+
+> The ***test*** is the ***question*** you are asking  
+> your code is the ***answer*** to the question.  
+>
 
 ### Scenario
 
@@ -377,4 +393,6 @@ https://github.com/nelsonic/learn-travis
 
 Done.
 
-- - -˜
+- - -
+
+<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need!
