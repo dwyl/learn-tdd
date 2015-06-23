@@ -211,6 +211,8 @@ they are really simple, there are **3 parts**:
 2. **Calculation** - perform the calculation (*usually testing the method you will write to solve your test*)
 3. **Assertion** - check that the result of your calculation is what you ***expect*** it to be.
 
+
+
 ##### Further Reading:
 
 + Test assertion: https://en.wikipedia.org/wiki/Test_assertion
@@ -418,8 +420,7 @@ test('getChange(486,1000) should equal [500, 10, 2, 2]', function(){
 We could keep cheating by writing a series of if statements:
 
 ```javascript
-var getChange = function (totalPayable, cashPaid) {
-    'use strict';
+function getChange (totalPayable, cashPaid) {
     if(totalPayable == 486 && cashPaid == 1000)
         return [500, 10, 2, 2];
     else if(totalPayable == 210 && cashPaid == 300)
@@ -435,8 +436,7 @@ Lets do that instead.
 
 ```javascript
 var coins = [5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
-var getChange = function (totalPayable, cashPaid) {
-    'use strict';
+function getChange(totalPayable, cashPaid) {
     var change = [];
     var length = coins.length;
     var remaining = cashPaid - totalPayable;          // we reduce this below

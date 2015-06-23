@@ -7,9 +7,15 @@
  * @param {number} cashPaid the integer amount (in pennies) the person paid
  * @returns {array} list of coins we need to dispense to the person as change
  */
-var getChange = function (totalPayable, cashPaid) {
+function getChange (totalPayable, cashPaid) {
     var change = [];
     // your code goes here
 
     return change;
 };
+
+/* The Code block below ONLY Applies to Node.js - This Demonstrates
+   re-useability of JS code in both Back-end and Front-end! #isomorphic */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = getChange;  // allows CommonJS/Node.js require()
+}
