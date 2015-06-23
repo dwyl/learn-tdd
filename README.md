@@ -1,26 +1,67 @@
-# learn-tdd
+# Learn TDD
 
-A brief introduction to Test Driven Development (TDD) in JavaScript
+A brief introduction to Test Driven Development (TDD) in JavaScript for people who want writer better code.
+
+## Why?
+
+Have you ever felt like your code/project is stuck together with *duck tape*?
+
+![duck tape car fail](http://i.imgur.com/e3BaZHt.png)
+
+Change one part and the other stops working? "Fix" one bug, created another?
+
+Would you rather everything was consistent and beautifully integrated?
+
+![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
+
+Test Driven Development (TDD) makes your team a well-oiled machine which allows you to go faster.
+
+Once your team has a ***suite*** of tests that run on every change, you will
+begin to develop a whole other level of ***confidence*** in codebase
+and will discover a new freedom to be ***creative*** without fear of
+"*breaking*" anything else; truly *game-changing*.
+
 
 ## What?
 
-You can get started with **T**est **D**riven **D**evelopment today!
+Get started with **T**est **D**riven **D**evelopment *today*!  
+In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to know to write tests for your web project!
 
 ### Pre-Requisites
 
-+ A computer with a web browser
-+ Internet access to download the starter files
-+ 30 minutes
-+ *Basic* Programming Skills
++ **A computer** with a web browser
++ **Internet access** to download the starter files
++ **30 minutes** of time
++ **_Basic_ Programming Skills** (HTML & JavaScript)
 
 ## How?
 
-The *first* thing you need to learn is that devolping in TDD is a (*slightly*) different approach to development from simply diving into solving the solution (wihout a test)
+The *first* thing you need to learn is that developing following TDD (*discipline*) is a (*slightly*) different approach from simply diving into solving the solution (*wihout a test*).
 
-![failing test first](http://i.imgur.com/RQe2NQT.jpg)
+When reading abut TDD you will see the expression: "***Red, Green, Refactor***":
+
+![TDD Cycle: Red, Green, Refactor](http://i.imgur.com/RQe2NQT.jpg)
+
+What this means is that there's a **3-step process**:
+
+1. ***Write*** a **Failing Test** - Understand the (user) requirements/story well enough to write a test for what you expect. (_the test should **fail** initially - hence it being "Red"_)  
+
+2. ***Make*** the (*faling*) **Test Pass** - Write (*only*) the code you need
+to make the (*failing*) test pass, while ensuring your existing/previous tests
+all still pass (*no regressions*).
+
+3. ***Refactor*** the code *you* wrote - if you have time to tidy up the code
+*you* wrote to make it simpler (*for your future self or colleagues to undersand*) before you need to ship the current feature, do it.
 
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
-we need to ***write*** our ***tests first*** (*and watch it fail*) and *then* write the code require to make the test pass.
+we need to ***write*** our ***test(s) first*** (*and watch them fail*) and *then* write the code require to make the test pass.
+
+Writing a failing test, before writing the code may seem *counter-intuitive* at first.  
+But we urge you to think of it this way:
+
+> The ***test*** is the ***question*** you are asking  
+> your code is the ***answer*** to the question.  
+
 
 ### Scenario
 
@@ -60,34 +101,37 @@ Copy-paste the following *sample code* to get started:
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Vending Machine Change Calculator TDD</title>
+    <!-- Load the QUnit CSS file from CDN - Require to display our tests attractively -->
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+    <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   </head>
   <body>
     <div id='main' style='padding: 2em;'>
       <h1>Vending Machine Change Calculator</h1>
       <h2>Calculate the Change for a Given Price and Cash Received</h2>
-      <!-- <input type='text' id='price'> </input> -->
     </div>
 
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
+    <!-- QUnit does not depend on JQUery, but we are using it so load from CDN -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Load the QUnit Library from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <script>
-
-test('This dummy test should always pass!', function(assert){
-  assert.ok(true===true); // just so we know everything loaded ok
-});
-
-test('This is what a failing test looks like!', function(assert){
-  assert.equal(-1, [1,2,3].indexOf(1)); // we *expect* this to fail
-});
-
+      // This is what a simple unit test looks like:
+      test('This dummy test should always pass!', function(assert) {
+        var result = 1 + 1;
+        assert.equal(result, 2); // just so we know everything loaded ok
+      });
+      // A failing test will be RED:
+      test('This is what a failing test looks like!', function(assert) {
+        var result = [1,2,3].indexOf(1);  // this should be 1
+        assert.equal(result, -1); // we *expect* this to fail
+      });
     </script>
   </body>
 </html>
-
 ```
 
 #### Open index.html in your Browser
@@ -97,6 +141,77 @@ When you ***open*** `index.html` in your ***favorite web browser***
 you should expect to see:
 
 ![initial index.html view](http://i.imgur.com/dBXH59w.png)
+
+
+##### Explanation
+
+There is quite a lot of code in that **index.html** you just created,
+lets step through it to understand the parts:
+
+The first part of **index.html** is a standard HTML head and body:
+
+```html
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Vending Machine Change Calculator TDD</title>
+    <!-- Load the QUnit CSS file from CDN - Require to display our tests attractively -->
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+    <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  </head>
+  <body>
+    <div id='main' style='padding: 2em;'>
+      <h1>Vending Machine Change Calculator</h1>
+      <h2>Calculate the Change for a Given Price and Cash Received</h2>
+    </div>
+```
+Nothing special here, we are simply setting up the page and loading the CSS files.
+
+Next we see the **qunit divs** and load JQuery and the QUnit Library from CDN:
+
+```html
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <!-- QUnit does not depend on JQUery, but we are using it so load from CDN -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Load the QUnit Library from CDN - this is the important bit ... -->
+    <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+```
+
+Finally we see our test(s) - the interesting part of the file:
+
+```html
+    <script>
+      // This is what a simple unit test looks like:
+      test('This dummy test should always pass!', function(assert) {
+        var result = 1 + 1;
+        assert.equal(result, 2); // just so we know everything loaded ok
+      });
+      // A failing test will be RED:
+      test('This is what a failing test looks like!', function(assert) {
+        var result = [1,2,3].indexOf(1);  // this should be 1
+        assert.equal(result, -1); // we *expect* this to fail
+      });
+
+    </script>
+  </body>
+</html>
+```
+
+If you are completely new to writing ***test assertions***, don't worry,
+they are really simple, there are **3 parts**:
+
+1. **Description** - usually the *first* parameter to QUnit's test() method.
+2. **Calculation** - perform the calculation (*usually testing the method you will write to solve your test*)
+3. **Assertion** - check that the result of your calculation is what you ***expect*** it to be.
+
+##### Further Reading:
+
++ Test assertion: https://en.wikipedia.org/wiki/Test_assertion
++ What are Test Assertions and how do they work:
+http://www.thoughtworks.com/insights/blog/test-assertions-how-do-they-work
+
 
 #### Basic Requirements
 
@@ -377,4 +492,6 @@ https://github.com/nelsonic/learn-travis
 
 Done.
 
-- - -˜
+- - -
+
+<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need!
