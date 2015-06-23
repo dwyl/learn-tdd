@@ -6,11 +6,11 @@ A brief introduction to Test Driven Development (TDD) in JavaScript for people w
 
 Have you ever felt like your code/project is stuck together with *duck tape*?
 
-![duck tape car fail](http://i.imgur.com/e3BaZHt.png)
+![duck tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
 
 Change one part and the other stops working? "Fix" one bug, created another?
 
-Would you rather everything was consistent and beautifully integrated?
+Would you *prefer* if everything was ***consistent*** and beautifully integrated?
 
 ![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
 
@@ -184,10 +184,13 @@ Finally we see our test(s) - the interesting part of the file:
 ```html
     <script>
       // This is what a simple unit test looks like:
-      test('This dummy test should always pass!', function(assert) {
-        var result = 1 + 1;
-        assert.equal(result, 2); // just so we know everything loaded ok
-      });
+
+
+  test('This dummy test should always pass!', function(assert) {
+    var result = 1 + 1;
+    assert.equal(result, 2);
+  });
+
       // A failing test will be RED:
       test('This is what a failing test looks like!', function(assert) {
         var result = [1,2,3].indexOf(1);  // this should be 1
@@ -353,7 +356,7 @@ your `index.html` should now look like this:
 
 It Passed!!
 
-#### Now Lets Write A Real Test
+#### Now Lets Write A *Real* Test
 
 Going back to the requirements, we need our getChange method to accept
 two arguments/parameters (**totalPayable** and **cashPaid**) and return an
@@ -473,6 +476,8 @@ test('getChange(1487,10000) should equal [5000, 2000, 1000, 500, 10, 2, 1 ]', fu
 ### Bonus Level
 
 #### Code Coverage
+
+
 
 > http://blanketjs.org/
 
