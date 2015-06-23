@@ -17,14 +17,8 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
 
-    <script data-cover>
-    var getChange = function (totalPayable, cashPaid) {
-        'use strict';
+    <script data-cover src="/change.js">
 
-        var change = [];
-
-        return change
-    };
     </script>
 
     <script>
@@ -33,6 +27,6 @@
     }); // use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/
 
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/blanket.js/1.1.4/blanket.min.js"></script>
+    <script src="https://rawgit.com/alex-seville/blanket/master/dist/qunit/blanket.min.js" data-cover-flags="debug"></script>
   </body>
 </html>
