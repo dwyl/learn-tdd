@@ -2,6 +2,26 @@
 
 A brief introduction to Test Driven Development (TDD) in JavaScript
 
+## Why?
+
+Have you ever felt like your code/project is stuck together with *duck tape*?
+
+![duck tape car fail](http://i.imgur.com/e3BaZHt.png)
+
+Change one part and the other stops working?
+
+Would you rather everything was consistent and beutifully integrated?
+
+![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
+
+Test Driven Development (TDD) makes your team a well-oiled machine which allows you to go faster.
+
+Once your team has a ***suite*** of tests that run on every change, you will
+begin to develop a whole other level of ***confidence*** in codebase
+and will discover a new freedom to be ***creative*** without fear of
+"*breaking*" anything else; truly *game-changing*.
+
+
 ## What?
 
 Get started with **T**est **D**riven **D**evelopment *today*!  
@@ -26,7 +46,12 @@ What this means is that there's a **3-step process**:
 
 1. ***Write*** a **Failing Test** - Understand the (user) requirements/story well enough to write a test for what you expect. (_the test should **fail** initially - hence it being "Red"_)  
 
-2. ***Make*** the (*faling*) **Test Pass** -
+2. ***Make*** the (*faling*) **Test Pass** - Write (*only*) the code you need
+to make the (*failing*) test pass, while ensuring your existing/previous tests
+all still pass (*no regressions*).
+
+3. ***Refactor*** the code *you* wrote - if you have time to tidy up the code
+*you* wrote to make it simpler (*for your future self or colleagues to undersand*) before you need to ship the current feature, do it.
 
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
 we need to ***write*** our ***test(s) first*** (*and watch them fail*) and *then* write the code require to make the test pass.
@@ -36,7 +61,6 @@ But we urge you to think of it this way:
 
 > The ***test*** is the ***question*** you are asking  
 > your code is the ***answer*** to the question.  
->
 
 ### Scenario
 
