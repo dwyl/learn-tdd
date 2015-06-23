@@ -4,11 +4,13 @@ A brief introduction to Test Driven Development (TDD) in JavaScript for people w
 
 ## Why?
 
-Have you ever felt like your code/project is stuck together with *duck tape*?
+Have you ever felt like a project did not turn out as it was originally imagined?  
+Does the code feel like its stuck together with _**duck tape**_?
 
 ![duck tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
 
-Change one part and the other stops working? "Fix" one bug, created another?
+Change one part and the other stops working?  
+"_Fix_" one bug, created another?
 
 Would you *prefer* if everything was ***consistent*** and beautifully integrated?
 
