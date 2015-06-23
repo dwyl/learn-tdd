@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "qunit",
-    "start": "./node_modules/.bin/nodemon static-server.js"
+    "start": "./node_modules/.bin/nodemon static-server.js",
+    "docs":"./node_modules/jsdoc/jsdoc.js change.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/nelsonic/learn-tdd",
   "devDependencies": {
     "hapi": "^8.6.1",
+    "jsdoc": "^3.3.2",
     "nodemon": "^1.3.7"
   }
 }
