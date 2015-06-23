@@ -120,14 +120,15 @@ Copy-paste the following *sample code* to get started:
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <script>
       // This is what a simple unit test looks like:
-      test('This dummy test should always pass!', function(assert){
-        assert.ok(true===true); // just so we know everything loaded ok
+      test('This dummy test should always pass!', function(assert) {
+        var result = 1 + 1;
+        assert.equal(result, 2); // just so we know everything loaded ok
       });
       // A failing test will be RED:
-      test('This is what a failing test looks like!', function(assert){
-        assert.equal(-1, [1,2,3].indexOf(1)); // we *expect* this to fail
+      test('This is what a failing test looks like!', function(assert) {
+        var result = [1,2,3].indexOf(1);  // this should be 1
+        assert.equal(result, -1); // we *expect* this to fail
       });
-
     </script>
   </body>
 </html>
@@ -183,12 +184,14 @@ Finally we see our test(s) - the interesting part of the file:
 ```html
     <script>
       // This is what a simple unit test looks like:
-      test('This dummy test should always pass!', function(assert){
-        assert.ok(true===true); // just so we know everything loaded ok
+      test('This dummy test should always pass!', function(assert) {
+        var result = 1 + 1;
+        assert.equal(result, 2); // just so we know everything loaded ok
       });
       // A failing test will be RED:
-      test('This is what a failing test looks like!', function(assert){
-        assert.equal(-1, [1,2,3].indexOf(1)); // we *expect* this to fail
+      test('This is what a failing test looks like!', function(assert) {
+        var result = [1,2,3].indexOf(1);  // this should be 1
+        assert.equal(result, -1); // we *expect* this to fail
       });
 
     </script>
@@ -197,7 +200,11 @@ Finally we see our test(s) - the interesting part of the file:
 ```
 
 If you are completely new to writing ***test assertions***, don't worry,
-they are really simple,
+they are really simple, there are **3 parts**:
+
+1. **Description** - usually the *first* parameter to QUnit's test() method.
+2. **Calculation** - perform the calculation (*usually testing the method you will write to solve your test*)
+3. **Assertion** - check that the result of your calculation is what you ***expect*** it to be.
 
 ##### Further Reading:
 
