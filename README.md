@@ -83,8 +83,15 @@ of the Item and the **cash** received.
 ### Requirements
 
 + Create a `function` called `getChange` that accepts _**two parameters**_: `totalPayable` and `cashPaid`
-+ For a given `totalPayable` (the total amount a item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _**return**_ to the customer
++ For a given `totalPayable` (the total amount a item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _return_ to the customer
 + _**return**_ change as an `array` of coins (largest to smallest) that the vending machine will need to _dispense_ to the customer.
+
+#### Example
+
+If a person buys an item costing £2.15 (_we represent this as **215 pennies**_ `totalPayable`)
+and pays £3 (`cashPaid`) into the vending machine, the change will be 85p.
+We would return **four coins** to the person: 50p, 20p, 10p and 5p
+an **array** of these coins would look like: `[50, 20, 10, 5]`
 
 ### Single *File* App
 
