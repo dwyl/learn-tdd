@@ -280,8 +280,9 @@ so, back in our **index.html** file ***remove the dummy tests*** and add the fol
 
 ```js
 test('getChange(1,1) should equal [] - an empty array', function(assert) {
-  var result = getChange(1,1); //no change/coins just an empty array
-  assert.deepEqual(result, []);
+  var result = getChange(1, 1); //no change/coins just an empty array
+  var expected = [];
+  assert.deepEqual(result, expected);
 }); // use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/
 ```
 We use Quint's `deepEqual` (_assert_) method to check that all the _elements_
@@ -304,12 +305,11 @@ In your index.html file add the following code (*above the tests*)
 
 ```js
 <script>
-var getChange = function (totalPayable, cashPaid) {
-    'use strict';
-
+function getChange (totalPayable, cashPaid) {
     var change = [];
+    // your code goes here
 
-    return change
+    return change;
 };
 </script>
 ```
@@ -347,8 +347,10 @@ your `index.html` should now look like this:
     </script>
 
     <script>
-    test('getChange(1,1) should equal []', function(){
-        deepEqual(getChange(1,1), []);
+    test('getChange(1,1) should equal [] - an empty array', function() {
+      var result = getChange(1, 1); //no change/coins just an empty array
+      var expected = [];
+      assert.deepEqual(result, expected);
     }); // use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/
 
     </script>
@@ -372,74 +374,129 @@ array containing the coins equal to the difference:
 
 e.g:
 ```
-totalPayable = 210         // £2.10
-cashPaid     = 300         // £3.00
-dfference    =  90         // 90p
-change       = [50,20,20]  // 50p, 20p, 20p
+totalPayable = 215          // £2.15
+cashPaid     = 300          // £3.00
+dfference    =  85          // 85p
+change       = [50,20,10,5] // 50p, 20p, 10p, 5p
 ```
 
 Add the following test to tests section of `index.html`:
 
 ```javascript
-test('getChange(210,300) should return [50,20,20]', function(){
-    deepEqual(getChange(210,300), [50,20,20]);
+test('getChange(215, 300) should return [50, 20, 10, 5]', function() {
+  var result = getChange(215, 300); // expect an array containing [50,20,10,5]
+  var expected = [50, 20, 10, 5];
+  assert.deepEqual(result, expected);
 })
 ```
 
 #### Write the Method to Pass the Test
 
-What if I cheat?
+What if I _**cheat**_?
 
 ```javascript
-var getChange = function (totalPayable, cashPaid) {
-    'use strict';
-    return [50, 20, 20];    // just enough to pass :-)
+function getChange (totalPayable, cashPaid) {
+    return [50, 20, 10, 5];    // just "enough to pass the failint test"
 };
 ```
 
-This will pass, but do you have *hard coded* the result (*not exactly a calculator...*)
+This will _pass_, but do you have *hard coded* the result (*not exactly a calculator...*)
 
 This only works *once*. When the Spec (Test) Writer writes the next test, the method will need
 to be re-written to satisfy it.
 
-Lets try it.  Work out what you expect:
+Lets try it.  Work out what you expect so you can write your test:
 ```
 totalPayable = 486           // £4.86
-cashPaid     = 1000          // £10.00
-dfference    = 514           // £5.14
-change       = [500,10,2,2]  // £5, 10p, 2p, 2p
+cashPaid     = 600           // £6.00
+dfference    = 114           // £1.14
+change       = [100,10,2,2]  // £1, 10p, 2p, 2p
 ```
 
 Add the following test to `index.html` and refresh your browser:
 
 ```javascript
-test('getChange(486,1000) should equal [500, 10, 2, 2]', function(){
-    deepEqual(getChange(486,1000), [500, 10, 2, 2]);
+test('getChange(486, 600) should equal [100, 10, 2, 2]', function(assert) {
+  var result = getChange(486, 600);
+  var expected = [500, 10, 2, 2];
+  assert.deepEqual(result, expected);
 })
 ```
 
 
-#### Keep Cheating or Solve the Problem?
+#### Should We _Keep Cheating or Solve the Problem_?
 
-We could keep cheating by writing a series of if statements:
+We could _keep cheating_ by writing a series of if statements:
 
 ```javascript
 function getChange (totalPayable, cashPaid) {
-    if(totalPayable == 486 && cashPaid == 1000)
-        return [500, 10, 2, 2];
-    else if(totalPayable == 210 && cashPaid == 300)
-        return [50, 20, 20];
+    if(totalPayable == 486 && cashPaid == 600)
+        return [100, 10, 2, 2];
+    else if(totalPayable == 215 && cashPaid == 300)
+        return [50, 20, 10, 5];
 };
 ```
-The *Arthur Andersen Approach* gets results in the *short run*...
+The _**Arthur Andersen Approach**_ gets results in the *short run* ...
 
 But its arguably *more work* than simply *solving* the problem.
 Lets do that instead.
 
-(**Note**: this is the *readable* version of the solution! feel free to suggest a more compact algorithm)
+# Try It Yourself (_before looking at the solution_!)
+
+> Try to create your own `getChange` method that passes the two tests
+> _before_ you look at the solution...
+
+to re-cap these are our two tests:
+```js
+test('getChange(215, 300) should return [50, 20, 10, 5]', function() {
+  var result = getChange(215, 300); // expect an array containing [50,20,10,5]
+  var expected = [50, 20, 10, 5];
+  assert.deepEqual(result, expected);
+});
+
+test('getChange(486, 500) should equal [100, 10, 2, 2]', function(assert) {
+  var result = getChange(486, 600);
+  var expected = [100, 10, 2, 2];
+  assert.deepEqual(result, expected);
+});
+```
+
+#### One More Test to be _Sure_ it Works?
+
+Lets invent a test that will return one of each of the coins ...
+
+Recall that we have 8 coins:
 
 ```javascript
-var coins = [5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+var coins = [200, 100, 50, 20, 10, 5, 2, 1];
+```
+
+The sum of the (_array containing one of each_) coins is: **388**p
+
+So, we need to create a test in which pay £4 for an item costing 12p
+(a bit un-realistic but if it works we know our `getChange` method is _ready_!)
+
+```js
+test('getChange(12, 400) should return [200, 100, 50, 20, 10, 5, 2, 1]', function(assert) {
+  var result = getChange(12, 400);
+  var expected = [200, 100, 50, 20, 10, 5, 2, 1];
+  assert.deepEqual(result, expected);
+});
+```
+
+When these tests pass, your work is done.
+
+
+<br />
+<br />
+
+## Solution
+
+**Note**: this is the *readable* version of the solution!
+feel free to suggest a more compact algorithm
+
+```javascript
+var coins = [200, 100, 50, 20, 10, 5, 2, 1]
 function getChange(totalPayable, cashPaid) {
     var change = [];
     var length = coins.length;
@@ -461,28 +518,9 @@ function getChange(totalPayable, cashPaid) {
 };
 ```
 
-Add one more test to ensure we are *fully* exercising our method:
-
-```
-totalPayable = 1487                                 // £14.87  (fourteen pounds and eighty-seven pence)
-cashPaid     = 10000                                // £100.00 (one hundred pounds)
-dfference    = 8513                                 // £85.13
-change       = [5000, 2000, 1000, 500, 10, 2, 1 ]   // £50, £20, £10, £5, 10p, 2p, 1p
-```
-
-```javascript
-test('getChange(1487,10000) should equal [5000, 2000, 1000, 500, 10, 2, 1 ]', function(){
-    deepEqual(getChange(1487,10000), [5000, 2000, 1000, 500, 10, 2, 1 ]);
-});
-```
-
-
 - - -
 
-### Bonus Level
-
-#### Code Coverage
-
+### Bonus Level: Code Coverage
 
 
 > http://blanketjs.org/
