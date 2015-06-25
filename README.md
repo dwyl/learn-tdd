@@ -111,16 +111,16 @@ Now copy-paste the following *sample code* to get started:
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Vending Machine Change Calculator TDD</title>
+    <title>Vending Machine Change Calculator TDD Tutorial</title>
     <!-- Load the QUnit CSS file from CDN - Require to display our tests attractively -->
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
     <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   </head>
-  <body>
-    <div id='main' style='padding: 2em;'>
-      <h1>Vending Machine Change Calculator</h1>
-      <h2>Calculate the Change for a Given Price and Cash Received</h2>
+  <body style='margin: 0 1em;'>
+    <div id='main'>
+      <h1>Vending Machine <em>Change Calculator</em></h1>
+      <h3>Calculate the change (<em>coins</em>) to return to a customer when they buy something.</h2>
     </div>
 
     <div id="qunit"></div>
@@ -172,7 +172,7 @@ The first part of **index.html** is a standard HTML head and body:
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   </head>
   <body>
-    <div id='main' style='padding: 2em;'>
+    <div id='main'>
       <h1>Vending Machine Change Calculator</h1>
       <h2>Calculate the Change for a Given Price and Cash Received</h2>
     </div>
