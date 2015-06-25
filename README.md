@@ -4,16 +4,15 @@ A brief introduction to Test Driven Development (TDD) in JavaScript for people w
 
 ## Why?
 
-Have you ever felt like a project did not turn out as it was originally imagined?  
-Did the code feel like its stuck together with _**duck tape**_?
+A _project without tests_ often ends up looking its stuck together with _**duck tape**_ ...
 
 ![duck tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
 
-Change one part and the other stops working?  
+Change _one_ part and the _other_ stops working?  
 "_Fix_" one bug, created another?
 
 Would you *prefer* if everything was ***consistent*** and beautifully integrated?  
-What if everyone on your team worked in a disciplined order...
+What if everyone on your team worked in a disciplined order... like a _**Formula 1 Team**_ ...
 
 ![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
 
@@ -59,14 +58,13 @@ all still pass (*no regressions*).
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
 we need to ***write*** a ***test first*** (*and watch it fail*) and *then* write the code require to make the test pass.
 
-Writing a failing test, before writing the code may seem *counter-intuitive* at first.  
-But we urge you to think of it this way:
+Writing a _**failing test**_, before writing the code may seem *counter-intuitive*, *time consuming* or even "*tedious*" at _**first**_. But we _urge_ you to think of it this way:
 
 > The ***test*** is the ***question*** you are asking  
 > your code is the ***answer*** to the question.  
-> by having a clear question, you can always check
+> by having a _clear_ question, you can always check
 > that your code is working,  
-because it _**consistently**_
+> because it _**consistently**_
 > gives you the same answer(s) ... _no surprises_!
 
 ## Practical
@@ -86,26 +84,28 @@ of the Item and the **cash** received.
 + For a given `totalPayable` (the total amount a item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _return_ to the customer
 + _**return**_ change as an `array` of coins (largest to smallest) that the vending machine will need to _dispense_ to the customer.
 
-#### Example
+#### _Example_
 
 If a person buys an item costing £2.15 (_we represent this as **215 pennies**_ `totalPayable`)
-and pays £3 (`cashPaid`) into the vending machine, the change will be 85p.
-We would return **four coins** to the person: 50p, 20p, 10p and 5p
-an **array** of these coins would look like: `[50, 20, 10, 5]`
+and pays £3 (3 x £1 or _**300 pennies**_ `cashPaid`) into the vending machine, the _**change**_ will be **85p**.  
+To make up this 85p of change we would _return_ **four coins** to the person: 50p, 20p, 10p and 5p.  
+An **array** of these coins would look like: `[50, 20, 10, 5]`
 
 ### Single *File* App
 
 We can build the entire "project" in a single file: **index.html**
 
-Create a project on your machine called **vending-machine**:
+Create a directory on your computer called **vending-machine**:
 
+In your **terminal** type this command:
 ```sh
 mkdir vending-machine && cd vending-machine
 ```
+(_this will create the directory and move you into it_)
 
-Then create a file called **index.html** `atom index.html`
+Next create a file called **index.html** e.g: `atom index.html`
 
-Copy-paste the following *sample code* to get started:
+Now copy-paste the following *sample code* to get started:
 
 ```html
 <html>
@@ -148,9 +148,10 @@ Copy-paste the following *sample code* to get started:
 #### Open index.html in your Browser
 
 When you ***open*** `index.html` in your ***web browser***
-you should expect to see:
+you should expect to see something like this: (_without the annotations_)
 
-![initial index.html view](http://i.imgur.com/dBXH59w.png)
+![learn-tdd-initial-index-html-showing-failing-test](https://cloud.githubusercontent.com/assets/194400/8395737/80716e08-1d7a-11e5-9858-c8f96b8c8ad5.png)
+
 
 
 ##### Explanation

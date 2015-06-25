@@ -1,32 +1,35 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Vending Machine Change Calculator TDD</title>
+    <title>Vending Machine Change Calculator TDD Tutorial</title>
+    <!-- Load the QUnit CSS file from CDN - Require to display our tests attractively -->
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+    <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   </head>
-  <body>
-    <div id='main' style='padding: 2em;'>
-      <h1>Vending Machine Change Calculator</h1>
-      <h2>Calculate the Change for a Given Price and Cash Received</h2>
-      <!-- <input type='text' id='price'> </input> -->
+  <body style='margin: 0 1em;'>
+    <div id='main'>
+      <h1>Vending Machine <em>Change Calculator</em></h1>
+      <h3>Calculate the change (<em>coins</em>) to return to a customer when they buy something.</h2>
     </div>
 
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
+    <!-- QUnit does not depend on JQUery, but we are using it later so load from CDN -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
-
-    <script data-cover src="/change.js">
-
-    </script>
-
     <script>
-    test('getChange(1,1) should equal []', function(){
-        deepEqual(getChange(1,1), []);
-    }); // use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/
-
+      // This is what a simple unit test looks like:
+      test('This sample test should always pass!', function(assert) {
+        var result = 1 + 1;
+        assert.equal(result, 2); // just so we know everything loaded ok
+      });
+      // A failing test will be RED:
+      test('This is what a failing test looks like!', function(assert) {
+        var result = [1,2,3].indexOf(1);  // this should be 1
+        assert.equal(result, -1); // we *expect* this to fail
+      });
     </script>
-    <script src="https://rawgit.com/alex-seville/blanket/master/dist/qunit/blanket.min.js" data-cover-flags="debug"></script>
   </body>
 </html>
