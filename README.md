@@ -65,34 +65,30 @@ But we urge you to think of it this way:
 > The ***test*** is the ***question*** you are asking  
 > your code is the ***answer*** to the question.  
 > by having a clear question, you can always check
-> that your code is working, because it consistently
-> gives you the same answer(s) - i.e. no surprises!
+> that your code is working,  
+because it _**consistently**_
+> gives you the same answer(s) ... _no surprises_!
 
+## Practical
 
 ### Scenario: Vending Machine _Change Calculator_ Micro-Project
 
 ![vending machine](http://i.imgur.com/HbwMqDa.jpg)
 
 Imagine you are building a **Vending Machine** that allows people to buy any item.
-The machine accepts notes and coins and must calculate the change
-to be returned to the customer given the **Price**
-of the Item and the **Amount** of cash given.
+The machine accepts coins and calculates the change
+to be returned to the customer given the **price**
+of the Item and the **cash** received.
 
 ### Requirements
 
-+ Create a function called `getChange` that accepts two parameters: (`totalPayable` and `cashPaid`) 
-+ For a given `totalPayable` (the total amount a item - or set of items - in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), calculate the change we need to give back
-+ return change as an array of the coins (largest to smallest) that the vending machine will need to dispense to the customer.
-
-
-
-## Practical
-
++ Create a `function` called `getChange` that accepts _**two parameters**_: `totalPayable` and `cashPaid`
++ For a given `totalPayable` (the total amount a item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _**return**_ to the customer
++ _**return**_ change as an `array` of coins (largest to smallest) that the vending machine will need to _dispense_ to the customer.
 
 ### Single *File* App
 
-We will build the entire tutorial/project in a single file: **index.html**
-
+We can build the entire "project" in a single file: **index.html**
 
 Create a project on your machine called **vending-machine**:
 
@@ -100,7 +96,7 @@ Create a project on your machine called **vending-machine**:
 mkdir vending-machine && cd vending-machine
 ```
 
-Then create a file called **index.html**
+Then create a file called **index.html** `atom index.html`
 
 Copy-paste the following *sample code* to get started:
 
@@ -122,13 +118,13 @@ Copy-paste the following *sample code* to get started:
 
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
-    <!-- QUnit does not depend on JQUery, but we are using it so load from CDN -->
+    <!-- QUnit does not depend on JQUery, but we are using it later so load from CDN -->
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!-- Load the QUnit Library from CDN - this is the important bit ... -->
+    <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <script>
       // This is what a simple unit test looks like:
-      test('This dummy test should always pass!', function(assert) {
+      test('This sample test should always pass!', function(assert) {
         var result = 1 + 1;
         assert.equal(result, 2); // just so we know everything loaded ok
       });
@@ -144,8 +140,7 @@ Copy-paste the following *sample code* to get started:
 
 #### Open index.html in your Browser
 
-When you ***open*** `index.html` in your ***favorite web browser***
-(*the one with the* ***foxy icon***)
+When you ***open*** `index.html` in your ***web browser***
 you should expect to see:
 
 ![initial index.html view](http://i.imgur.com/dBXH59w.png)
@@ -153,7 +148,7 @@ you should expect to see:
 
 ##### Explanation
 
-There is quite a lot of code in that **index.html** you just created,
+There is quite a lot of code in the **index.html** you just created,
 lets step through it to understand the parts:
 
 The first part of **index.html** is a standard HTML head and body:
@@ -176,7 +171,8 @@ The first part of **index.html** is a standard HTML head and body:
 ```
 Nothing special here, we are simply setting up the page and loading the CSS files.
 
-Next we see the **qunit divs** and load JQuery and the QUnit Library from CDN:
+Next we see the **qunit divs** (_where the **test results** will be **displayed**_)
+and load JQuery and the QUnit Library from CDN:
 
 ```html
     <div id="qunit"></div>
@@ -192,12 +188,10 @@ Finally we see our test(s) - the interesting part of the file:
 ```html
     <script>
       // This is what a simple unit test looks like:
-
-
-  test('This dummy test should always pass!', function(assert) {
-    var result = 1 + 1;
-    assert.equal(result, 2);
-  });
+      test('This sample test should always pass!', function(assert) {
+        var result = 1 + 1;
+        assert.equal(result, 2);
+      });
 
       // A failing test will be RED:
       test('This is what a failing test looks like!', function(assert) {
@@ -214,7 +208,7 @@ If you are completely new to writing ***test assertions***, don't worry,
 they are really simple, there are **3 parts**:
 
 1. **Description** - usually the *first* parameter to QUnit's test() method.
-2. **Calculation** - perform the calculation (*usually testing the method you will write to solve your test*)
+2. **Computation** - execute a function/method (*exercising the method you will write to solve your test*)
 3. **Assertion** - check that the result of your calculation is what you ***expect*** it to be.
 
 
