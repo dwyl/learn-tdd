@@ -5,20 +5,21 @@ A brief introduction to Test Driven Development (TDD) in JavaScript for people w
 ## Why?
 
 Have you ever felt like a project did not turn out as it was originally imagined?  
-Does the code feel like its stuck together with _**duck tape**_?
+Did the code feel like its stuck together with _**duck tape**_?
 
 ![duck tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
 
 Change one part and the other stops working?  
 "_Fix_" one bug, created another?
 
-Would you *prefer* if everything was ***consistent*** and beautifully integrated?
+Would you *prefer* if everything was ***consistent*** and beautifully integrated?  
+What if everyone on your team worked in a disciplined order...
 
 ![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
 
 Test Driven Development (TDD) makes your team a well-oiled machine which allows you to go faster.
 
-Once your team has a ***suite*** of tests that run on every change, you will
+Once you have a ***suite*** of tests that run on every change, you will
 begin to develop a whole other level of ***confidence*** in codebase
 and will discover a new freedom to be ***creative*** without fear of
 "*breaking*" anything else; truly *game-changing*.
@@ -26,7 +27,7 @@ and will discover a new freedom to be ***creative*** without fear of
 
 ## What?
 
-Get started with **T**est **D**riven **D**evelopment *today*!  
+Get started with **T**est **D**riven **D**evelopment (**TDD**) *today*!  
 In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to know to write tests for your web project!
 
 ### Pre-Requisites
@@ -38,7 +39,7 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 
 ## How?
 
-The *first* thing you need to learn is that developing following TDD (*discipline*) is a (*slightly*) different approach from simply diving into solving the solution (*wihout a test*).
+The *first* thing you need to *understand* is that writing code following TDD (*discipline*) is a (*slightly*) different approach from simply diving into solving the solution (*wihout a test*).
 
 When reading abut TDD you will see the expression: "***Red, Green, Refactor***":
 
@@ -56,28 +57,33 @@ all still pass (*no regressions*).
 *you* wrote to make it simpler (*for your future self or colleagues to undersand*) before you need to ship the current feature, do it.
 
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
-we need to ***write*** our ***test(s) first*** (*and watch them fail*) and *then* write the code require to make the test pass.
+we need to ***write*** a ***test first*** (*and watch it fail*) and *then* write the code require to make the test pass.
 
 Writing a failing test, before writing the code may seem *counter-intuitive* at first.  
 But we urge you to think of it this way:
 
 > The ***test*** is the ***question*** you are asking  
 > your code is the ***answer*** to the question.  
+> by having a clear question, you can always check
+> that your code is working, because it consistently
+> gives you the same answer(s) - i.e. no surprises!
 
 
-### Scenario
+### Scenario: Vending Machine _Change Calculator_ Micro-Project
 
 ![vending machine](http://i.imgur.com/HbwMqDa.jpg)
 
-We are building a **Vending Machine** that allows people to buy any item.
-It takes notes and coins (*we'll build the BitCoin module next time!*)
-and must calculate the change to be returned to the customer given the **Price**
+Imagine you are building a **Vending Machine** that allows people to buy any item.
+The machine accepts notes and coins and must calculate the change
+to be returned to the customer given the **Price**
 of the Item and the **Amount** of cash given.
 
 ### Requirements
 
-+ Calculate the change in notes and coins for a given **item price** and
-+ Return an array of the largest notes/coins required as change
++ Create a function called `getChange` that accepts two parameters: (`totalPayable` and `cashPaid`) 
++ For a given `totalPayable` (the total amount a item - or set of items - in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), calculate the change we need to give back
++ return change as an array of the coins (largest to smallest) that the vending machine will need to dispense to the customer.
+
 
 
 ## Practical
