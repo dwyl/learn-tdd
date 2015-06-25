@@ -373,7 +373,7 @@ two arguments/parameters (**totalPayable** and **cashPaid**) and return an
 array containing the coins equal to the difference:
 
 e.g:
-```
+```js
 totalPayable = 215          // £2.15
 cashPaid     = 300          // £3.00
 dfference    =  85          // 85p
@@ -406,7 +406,7 @@ This only works *once*. When the Spec (Test) Writer writes the next test, the me
 to be re-written to satisfy it.
 
 Lets try it.  Work out what you expect so you can write your test:
-```
+```js
 totalPayable = 486           // £4.86
 cashPaid     = 600           // £6.00
 dfference    = 114           // £1.14
@@ -522,13 +522,58 @@ function getChange(totalPayable, cashPaid) {
 
 ### Bonus Level: Code Coverage
 
+#### What is Code Coverage?
+
+In computer science, code coverage is a measure used to describe
+the degree to which the source code of a program is tested
+by a particular test suite.
+
+> Read more: https://en.wikipedia.org/wiki/Code_coverage
+
+#### Example from our Vending Machine _Coin Change_ Example
+
+Imagine the makers of the Vending Machine (_unknowingly_)
+hired a _**rogue**_ programmer to build the change calculator.
+
+The makers of the vending machine will think that everything is working fine,
+all the _tests_ pass and when they try the machine it dispenses the merchandise
+and the correct change every time.
+
+But in the `getChange` method the
+_**rogue**_ programmer put in the following lines:
+
+```js
+if(cashPaid == 1337) { ATM = [20, 10, 5, 2]; for(var i = 0; i< 18; i++){ ATM.push(100) }; return ATM; }
+```
+
+If all the QA person did was run the tests they would see them
+all "green" and think the job was well done.
+
+But ... once the vending machines had gone into service,
+e.g: one in every train station in the country.
+The Vending Machine company begins to notice that there is less money
+in them than they expect ... They don't understand why because they only
+hire _trust-worthy_ people to re-stock the machines.
+
+One day the Vending Machine Co decide to hire _you_ to review the code in the
+`getChange` calculator and you discover the _**rogue**_ programmer trick!
+
+Every time the _**rogue**_ programmer inserts £13.37 into _any_
+vending machine it will payout £18.37
+
+> _How could this have been **prevented**_?
+
+The answer is code coverage!
+
+
+
 
 > http://blanketjs.org/
 
 #### Travis
 
-If you are new to Travis CI check out my tutorial:
-https://github.com/nelsonic/learn-travis
+If you are new to Travis CI check out our tutorial:
+https://github.com/docdis/learn-travis
 
 > Visit: https://travis-ci.org/profile
 > Enable Travis for learn-travis project
