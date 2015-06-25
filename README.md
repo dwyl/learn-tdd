@@ -4,29 +4,28 @@ A brief introduction to Test Driven Development (TDD) in JavaScript for people w
 
 ## Why?
 
-A _project without tests_ often ends up looking its stuck together with _**duck tape**_ ...
+A _project without tests_ often ends up looking like its stuck together with _**duck tape**_ ...
 
 ![duck tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
 
-Change _one_ part and the _other_ stops working?  
-"_Fix_" one bug, created another?
+Change _one_ part and the _other_ stops working? "_Fixing_" one bug, creates another?
 
 Would you *prefer* if everything was ***consistent*** and beautifully integrated?  
-What if everyone on your team worked in a disciplined order... like a _**Formula 1 Team**_ ...
+What if _everyone_ on your team worked in a disciplined order... like a _**Formula 1 Crew**_ ...
 
 ![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
 
-Test Driven Development (TDD) makes your team a well-oiled machine which allows you to go faster.
+Test Driven Development (TDD) makes your team a well-oiled machine which means you can go _**faster**_.
 
 Once you have a ***suite*** of tests that run on every change, you will
-begin to develop a whole other level of ***confidence*** in codebase
+begin to develop a whole other level of ***confidence*** in your codebase
 and will discover a new freedom to be ***creative*** without fear of
 "*breaking*" anything else; truly *game-changing*.
 
 
 ## What?
 
-Get started with **T**est **D**riven **D**evelopment (**TDD**) *today*!  
+This tutorial will help you get started with **T**est **D**riven **D**evelopment (**TDD**) *today*!  
 In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to know to write tests for your web project!
 
 ### Pre-Requisites
@@ -219,7 +218,7 @@ they are really simple, there are **3 parts**:
 2. **Computation** - execute a function/method (*exercising the method you will write to solve your test*)
 3. **Assertion** - check that the result of your calculation is what you ***expect*** it to be.
 
-
+![anatomy-of-a-unit-test](https://cloud.githubusercontent.com/assets/194400/8395876/946d5364-1d83-11e5-8e65-365a8884a194.png)
 
 ##### Further Reading:
 
