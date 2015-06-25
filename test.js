@@ -1,12 +1,17 @@
-/*** If you prefer to separate your code into different files you can create a test.js ***/
+test('getChange(215, 300) should return [50, 20, 10, 5]', function(assert) {
+  var result = getChange(215, 300); // expect an array containing [50,20,10,5]
+  var expected = [50, 20, 10, 5];
+  assert.deepEqual(result, expected);
+});
 
-  test('This sample test should always pass!', function(assert) {
-    var result = 1 + 1;
-    assert.equal(result, 2);
-  });
+test('getChange(486, 500) should equal [100, 10, 2, 2]', function(assert) {
+  var result = getChange(486, 600);
+  var expected = [100, 10, 2, 2];
+  assert.deepEqual(result, expected);
+});
 
-  // A failing test will be RED:
-  test('This is what a failing test looks like!', function(assert) {
-    var result = [1,2,3].indexOf(1);  // this should be 1
-    assert.equal(result, -1); // we *EXPECT* this to fail
-  });
+test('getChange(12, 400) should return [200, 100, 50, 20, 10, 5, 2, 1]', function(assert) {
+  var result = getChange(12, 400);
+  var expected = [200, 100, 50, 20, 10, 5, 2, 1];
+  assert.deepEqual(result, expected);
+});

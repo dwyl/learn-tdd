@@ -383,7 +383,7 @@ change       = [50,20,10,5] // 50p, 20p, 10p, 5p
 Add the following test to tests section of `index.html`:
 
 ```javascript
-test('getChange(215, 300) should return [50, 20, 10, 5]', function() {
+test('getChange(215, 300) should return [50, 20, 10, 5]', function(assert) {
   var result = getChange(215, 300); // expect an array containing [50,20,10,5]
   var expected = [50, 20, 10, 5];
   assert.deepEqual(result, expected);
@@ -396,7 +396,7 @@ What if I _**cheat**_?
 
 ```javascript
 function getChange (totalPayable, cashPaid) {
-    return [50, 20, 10, 5];    // just "enough to pass the failint test"
+    return [50, 20, 10, 5];    // just "enough to pass the failing test"
 };
 ```
 
@@ -448,7 +448,7 @@ Lets do that instead.
 
 to re-cap these are our two tests:
 ```js
-test('getChange(215, 300) should return [50, 20, 10, 5]', function() {
+test('getChange(215, 300) should return [50, 20, 10, 5]', function(assert) {
   var result = getChange(215, 300); // expect an array containing [50,20,10,5]
   var expected = [50, 20, 10, 5];
   assert.deepEqual(result, expected);
@@ -517,10 +517,14 @@ function getChange(totalPayable, cashPaid) {
     return change;
 };
 ```
+![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
 
+<br />
 - - -
+<br />
+<br />
 
-## Bonus Level: Code Coverage
+## Bonus Level 1: Code Coverage
 
 ### What is Code Coverage?
 
@@ -546,7 +550,10 @@ But in the `getChange` method the
 _**rogue**_ programmer put in the following lines:
 
 ```js
-if(cashPaid == 1337) { ATM = [20, 10, 5, 2]; for(var i = 0; i< 18; i++){ ATM.push(100) }; return ATM; }
+if(cashPaid == 1337) {
+  ATM = [20, 10, 5, 2];
+  for(var i = 0; i< 18; i++) { ATM.push(100) };
+  return ATM; }
 ```
 
 If all the QA person did was run the tests they would see them
@@ -569,10 +576,65 @@ vending machine it will payout £18.37 i.e: a **£5 payout**
 
 The answer is code coverage!
 
+TO check the coverage of code being executed in the browser we use **Blanket.js**
 
+> See: http://blanketjs.org/
 
+to *run* blanket.js we need to separate our tests and solution
+into distinct **.js** files:
 
-> http://blanketjs.org/
+**test.js** contains our unit tests
+```js
+test('getChange(215, 300) should return [50, 20, 10, 5]', function(assert) {
+  var result = getChange(215, 300); // expect an array containing [50,20,10,5]
+  var expected = [50, 20, 10, 5];
+  assert.deepEqual(result, expected);
+});
+
+test('getChange(486, 500) should equal [100, 10, 2, 2]', function(assert) {
+  var result = getChange(486, 600);
+  var expected = [100, 10, 2, 2];
+  assert.deepEqual(result, expected);
+});
+
+test('getChange(12, 400) should return [200, 100, 50, 20, 10, 5, 2, 1]', function(assert) {
+  var result = getChange(12, 400);
+  var expected = [200, 100, 50, 20, 10, 5, 2, 1];
+  assert.deepEqual(result, expected);
+});
+```
+
+**change.js** has the `getChange` method.
+```js
+var coins = [200, 100, 50, 20, 10, 5, 2, 1]
+function getChange(totalPayable, cashPaid) {
+    var change = [];
+    var length = coins.length;
+    var remaining = cashPaid - totalPayable;          // we reduce this below
+
+    for (var i = 0; i < length; i++) { // loop through array of notes & coins:
+        var coin = coins[i];
+
+        if(remaining/coin >= 1) { // check coin fits into the remaining amount
+            var times = Math.floor(remaining/coin);        // no partial coins
+
+            for(var j = 0; j < times; j++) {     // add coin to change x times
+                change.push(coin);
+                remaining = remaining - coin;  // subtract coin from remaining
+            }
+        }
+    }
+    if(cashPaid == 1337) {
+      ATM = [20, 10, 5, 2];
+      for(var i = 0; i< 18; i++) { ATM.push(100) };
+      return ATM;
+    }
+    else {
+      return change;  
+    }
+};
+```
+
 
 #### Travis
 
