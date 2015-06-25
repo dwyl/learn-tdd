@@ -77,19 +77,6 @@ The machine accepts coins and calculates the change
 to be returned to the customer given the **price**
 of the Item and the **cash** received.
 
-### Requirements
-
-+ Create a `function` called `getChange` that accepts _**two parameters**_: `totalPayable` and `cashPaid`
-+ For a given `totalPayable` (the total amount a item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _return_ to the customer
-+ _**return**_ change as an `array` of coins (largest to smallest) that the vending machine will need to _dispense_ to the customer.
-
-#### _Example_
-
-If a person buys an item costing £2.15 (_we represent this as **215 pennies**_ `totalPayable`)
-and pays £3 (3 x £1 or _**300 pennies**_ `cashPaid`) into the vending machine, the _**change**_ will be **85p**.  
-To make up this 85p of change we would _return_ **four coins** to the person: 50p, 20p, 10p and 5p.  
-An **array** of these coins would look like: `[50, 20, 10, 5]`
-
 ### Single *File* App
 
 We can build the entire "project" in a single file: **index.html**
@@ -227,30 +214,38 @@ they are really simple, there are **3 parts**:
 http://www.thoughtworks.com/insights/blog/test-assertions-how-do-they-work
 
 
-#### Basic Requirements
+## Requirements
 
 > Given a **Price** and amount of **Cash** from Customer
 > Return: **Change** to customer (*in notes and coins*).
 
 Essentially we are building a *simple* **calculator** that *only does* **subtraction**
-(Price - Cash = Change), but also splits the **result** into the various **notes & coins**.
+(Price - Cash = Change), but also splits the **result** into the various **coins**.
 
-In the UK we have the following Notes & Coins:
 
-![GBP Notes](https://raw.github.com/nelsonic/learn-mocha/master/images/gbp-notes.jpg "GBP Notes")
+### Understand what is needed
+
++ Create a `function` called `getChange` that accepts _**two parameters**_: `totalPayable` and `cashPaid`
++ For a given `totalPayable` (the total amount a item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _return_ to the customer
++ _**return**_ change as an `array` of coins (largest to smallest) that the vending machine will need to _dispense_ to the customer.
+
+#### _Example_
+
+If a person buys an item costing £2.15 (_we represent this as **215 pennies**_ `totalPayable`)
+and pays £3 (3 x £1 or _**300 pennies**_ `cashPaid`) into the vending machine, the _**change**_ will be **85p**.  
+To make up this 85p of change we would _return_ **four coins** to the person: 50p, 20p, 10p and 5p.  
+An **array** of these coins would look like: `[50, 20, 10, 5]`
+
+#### Coins
+
+In the UK we have the following Coins:
+
 ![GBP Coins](https://raw.github.com/nelsonic/learn-mocha/master/images/gbp-coins.jpg "GBP Coins")
 
-see: http://en.wikipedia.org/wiki/Banknotes_of_the_pound_sterling
-(technically there are also £100 and even £100,000,000 notes,
-but these aren't common so we can leave them out. ;-)
 
 If we use the penny as the unit (i.e. 100 pennies in a pound)
-the notes and coins can be represented as:
+the coins can be represented as:
 
-- 5000 (£50)
-- 2000 (£20)
-- 1000 (£10)
--  500 (£5)
 -  200 (£2)
 -  100 (£1)
 -   50 (50p)
@@ -260,10 +255,10 @@ the notes and coins can be represented as:
 -    2 (2p)
 -    1 (1p)
 
-this can be represented as an Array:
+this can be stored as an Array:
 
 ```javascript
-var coins = [5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1]
+var coins = [200, 100, 50, 20, 10, 5, 2, 1];
 ```
 
 **Note**: the same can be done for any other cash system ($ ¥ €)
@@ -284,10 +279,13 @@ write the code that makes the test pass.
 so, back in our **index.html** file ***remove the dummy tests*** and add the following lines:
 
 ```js
-test('getChange(1,1) should equal []', function(){
-    deepEqual(getChange(1,1), []);
+test('getChange(1,1) should equal [] - an empty array', function(assert) {
+  var result = getChange(1,1); //no change/coins just an empty array
+  assert.deepEqual(result, []);
 }); // use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/
 ```
+We use Quint's `deepEqual` (_assert_) method to check that all the _elements_
+in the two arrays are _**identical**_. see: https://api.qunitjs.com/deepEqual/
 
 #### Watch it Fail
 
@@ -357,7 +355,6 @@ your `index.html` should now look like this:
   </body>
 </html>
 ```
-
 
 
 #### Refresh `index.html` in the Browser
