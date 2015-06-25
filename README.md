@@ -520,17 +520,20 @@ function getChange(totalPayable, cashPaid) {
 
 - - -
 
-### Bonus Level: Code Coverage
+## Bonus Level: Code Coverage
 
-#### What is Code Coverage?
+### What is Code Coverage?
 
 In computer science, code coverage is a measure used to describe
 the degree to which the source code of a program is tested
 by a particular test suite.
 
+In other words: if there is code in the codebase which is not "_covered_"
+by a test, it could potentially be a source of bugs or undesireable behaviour.
+
 > Read more: https://en.wikipedia.org/wiki/Code_coverage
 
-#### Example from our Vending Machine _Coin Change_ Example
+### Example from our Vending Machine _Coin Change_ Example
 
 Imagine the makers of the Vending Machine (_unknowingly_)
 hired a _**rogue**_ programmer to build the change calculator.
@@ -559,7 +562,8 @@ One day the Vending Machine Co decide to hire _you_ to review the code in the
 `getChange` calculator and you discover the _**rogue**_ programmer trick!
 
 Every time the _**rogue**_ programmer inserts £13.37 into _any_
-vending machine it will payout £18.37
+vending machine it will payout £18.37 i.e: a **£5 payout**
+(and a "_free_" item from the vending machine!)
 
 > _How could this have been **prevented**_?
 
