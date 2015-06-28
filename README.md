@@ -34,6 +34,8 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 + **Internet access** to download the starter files
 + **30 minutes** of time
 + **_Basic_ Programming Skills** (HTML & JavaScript)
++ (_**Optional**_) _**Bonus Levels require**_ you to
+[_install_ **Node.js**](https://nodejs.org/download/)
 
 ## How?
 
@@ -654,14 +656,26 @@ Include these two files _and_ the **Blanket.js** library in your index.html:
 Because we are loading external **.js** files our web browser will not _allow_
 us to simply open the **index.html** from the directory.
 
-If you are working on a Linux (Ubuntu/Raspbery Pi/etc)
-or Unix (Mac) based computer, you should be able to
-run the following following _command_ in your **terminal**
+You don't _need_ to understand Hapi.js to run a simple (_static_) node.js server.
+
+Create a file called **static-server.js** and paste these 4 lines of code into it:
+```js
+var Hapi = require('hapi'), Path = require('path'), server = new Hapi.Server(), port = process.env.PORT || 8000;
+server.connection({ port: port });
+server.route( { method: '*', path: '/{param*}', handler: { directory: { path: Path.normalize(__dirname + '/') } } });
+server.start(function() { console.log('Static Server Listening on : http://127.0.0.1:' +port) });
+```
+
+Next, you need to run this command in your terminal
+to _**install** the two **node modules** and **start** the **server**_:
 
 ```sh
-python -m SimpleHTTPServer
+npm install hapi nodemon && ./node_modules/.bin/nodemon static-server.js
 ```
-That starts a simple HTTP server on port 8000.
+It will take a a minute to install **hapi.js** and **nodemon**,
+but once that's done your static server will boot.
+
+That starts a simple node.js (hapi.js) HTTP server on port 8000.
 
 > Visit: http://localhost:8000/?coverage/ in your web browser
 
