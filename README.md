@@ -517,7 +517,11 @@ function getChange(totalPayable, cashPaid) {
     return change;
 };
 ```
+If you see this:
+
 ![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
+
+Congratuations! You understand Test Driven Development (TDD). Give yourself a pat on the back!
 
 <br />
 - - -
@@ -565,7 +569,7 @@ The Vending Machine company begins to notice that there is less money
 in them than they expect ... They don't understand why because they only
 hire _trust-worthy_ people to re-stock the machines.
 
-One day the Vending Machine Co decide to hire _you_ to review the code in the
+One day the Vending Machine Company decide to hire _you_ to review the code in the
 `getChange` calculator and you discover the _**rogue**_ programmer trick!
 
 Every time the _**rogue**_ programmer inserts £13.37 into _any_
@@ -576,9 +580,12 @@ vending machine it will payout £18.37 i.e: a **£5 payout**
 
 The answer is code coverage!
 
-TO check the coverage of code being executed in the browser we use **Blanket.js**
+### Blanket.js
 
-> See: http://blanketjs.org/
+To check the _coverage_ of code being executed
+(_in the browser_) we use **Blanket.js**
+
+> See: http://blanketjs.org/ and https://github.com/alex-seville/blanket
 
 to *run* blanket.js we need to separate our tests and solution
 into distinct **.js** files:
@@ -634,9 +641,51 @@ function getChange(totalPayable, cashPaid) {
     }
 };
 ```
+Include these two files _and_ the **Blanket.js** library in your index.html:
+```html
+<!-- Load Blanket.js from CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blanket.js/1.1.4/blanket.js"></script>
+<script src="/change.js" data-cover></script> <!-- load our getChange method  -->
+<script src="/test.js"></script>              <!-- load tests after getChange -->
+```
+
+### Static Server
+
+Because we are loading external **.js** files our web browser will not _allow_
+us to simply open the **index.html** from the directory.
+
+If you are working on a Linux (Ubuntu/Raspbery Pi/etc)
+or Unix (Mac) based computer, you should be able to
+run the following following _command_ in your **terminal**
+
+```sh
+python -m SimpleHTTPServer
+```
+That starts a simple HTTP server on port 8000.
+
+> Visit: http://localhost:8000/?coverage/ in your web browser
+
+You should expect to see:
+
+![learn-tdd-showing-coverage](https://cloud.githubusercontent.com/assets/194400/8397289/b48b8284-1dbe-11e5-8c71-b9d1d8b42402.png)
 
 
-#### Travis
+
+#### Hold on ... What if the _rogue_ code is all on _one line_?
+
+
+
+## Bonus Level 2: Node.js (_server-side_) Tests
+
+```js
+/* The code block below ONLY Applies to Node.js - This Demonstrates
+   re-useability of JS code in both Back-end and Front-end! #isomorphic */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = getChange;  // allows CommonJS/Node.js require()
+}
+```
+
+## Bonus Level 3: Travis
 
 If you are new to Travis CI check out our tutorial:
 https://github.com/docdis/learn-travis
