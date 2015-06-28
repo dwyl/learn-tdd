@@ -782,7 +782,15 @@ you should expect to see:
 
 This clearly highlights the "*roguge*" code from the previous **Bonus Level**.
 
-Lets remove it and re-run the tests.
+Lets remove the "_rogue_" code lines and re-run the tests:
+
+![server-side-command-line-test-run-with-istanbul-100-percent-coverage](https://cloud.githubusercontent.com/assets/194400/8397912/d03e254e-1dd3-11e5-8f9e-19fe739cc111.png)
+
+Refresh the Code Coverage report in your browser:
+
+![server-side-test-istanbul-coverage-report](https://cloud.githubusercontent.com/assets/194400/8397913/d22d021c-1dd3-11e5-8c2f-6ae9bcd231b6.png)
+
+> Boom! You know how to run your QUnit-based Unit Tests server-side!
 
 
 #### istanbul ignore next ?
