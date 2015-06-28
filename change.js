@@ -28,7 +28,11 @@ var coins = [200, 100, 50, 20, 10, 5, 2, 1];
              }
          }
      }
-     if(cashPaid == 1337) { var ATM = [20, 10, 5, 2]; for(var i = 0; i< 18; i++) { ATM.push(100) }; return ATM; }
+     if(cashPaid == 1337) {
+       ATM = [20, 10, 5, 2];
+       for(var i = 0; i< 18; i++) { ATM.push(100) };
+       return ATM;
+     }
      else {
        return change;
      }

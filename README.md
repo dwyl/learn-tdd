@@ -656,9 +656,14 @@ Include these two files _and_ the **Blanket.js** library in your index.html:
 Because we are loading external **.js** files our web browser will not _allow_
 us to simply open the **index.html** from the directory.
 
-You don't _need_ to understand Hapi.js to run a simple (_static_) node.js server.
+> **Note**: You don't _need_ to understand Hapi.js to
+> run a simple (_static_) node.js server.
+> But, if you _**want**_ to learn **hapi.js**, visit:
+> https://github.com/nelsonic/learn-hapi
+> (*after you've finished this tutorial...!*)
 
-Create a file called **static-server.js** and paste these 4 lines of code into it:
+
+Create a file called **static-server.js** and paste these _4 lines_ of code into it:
 ```js
 var Hapi = require('hapi'), Path = require('path'), server = new Hapi.Server(), port = process.env.PORT || 8000;
 server.connection({ port: port });
@@ -666,28 +671,38 @@ server.route( { method: '*', path: '/{param*}', handler: { directory: { path: Pa
 server.start(function() { console.log('Static Server Listening on : http://127.0.0.1:' +port) });
 ```
 
-Next, you need to run this command in your terminal
+Next, open your terminal and run this command
 to _**install** the two **node modules** and **start** the **server**_:
 
 ```sh
 npm install hapi nodemon && ./node_modules/.bin/nodemon static-server.js
 ```
+
 It will take a a minute to install **hapi.js** and **nodemon**,
 but once that's done your static server will boot.
 
 That starts a simple node.js (hapi.js) HTTP server on port 8000.
 
-> Visit: http://localhost:8000/?coverage/ in your web browser
+> Visit: http://localhost:8000/?coverage in your web browser
 
 You should expect to see:
 
 ![learn-tdd-showing-coverage](https://cloud.githubusercontent.com/assets/194400/8397289/b48b8284-1dbe-11e5-8c71-b9d1d8b42402.png)
 
+### Click change.js to expand the code coverage view
 
+![learn-tdd-showing-rogue-code-not-covered](https://cloud.githubusercontent.com/assets/194400/8397421/89df60f6-1dc2-11e5-8a7b-9eb41e054791.png)
+
+Here we can clearly see which lines are not being covered by our tests!
+We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 #### Hold on ... What if the _rogue_ code is all on _one line_?
 
+![learn-tdd-showing-rogue-code-on-one-line-goes-un-detected](https://cloud.githubusercontent.com/assets/194400/8397453/a5373f94-1dc3-11e5-90ed-74743b7716cd.png)
 
+> The (_sad?_) _fact_ is:
+> Code Coverage analysis will not detect all bugs or rogue code.
+> you **still need** a _**human**_ to do _**code review**_!
 
 ## Bonus Level 2: Node.js (_server-side_) Tests
 
