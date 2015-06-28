@@ -209,6 +209,10 @@ they are really simple, there are **3 parts**:
 
 ![anatomy-of-a-unit-test](https://cloud.githubusercontent.com/assets/194400/8395876/946d5364-1d83-11e5-8e65-365a8884a194.png)
 
+In the above screenshot, the assertion is `assert.equal(result, 2)`  
+We are giving the `equal` method two arguments; the `result` of our computation
+and our expected value in this case **2**. _That's it_.
+
 ##### Further Reading:
 
 + Test assertion: https://en.wikipedia.org/wiki/Test_assertion
@@ -475,7 +479,7 @@ var coins = [200, 100, 50, 20, 10, 5, 2, 1];
 
 The sum of the (_array containing one of each_) coins is: **388**p
 
-So, we need to create a test in which pay £4 for an item costing 12p
+So, we need to create a test in which we **pay £4** for an item costing 12p
 (a bit un-realistic but if it works we know our `getChange` method is _ready_!)
 
 ```js
@@ -523,16 +527,20 @@ If you see this:
 
 ![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
 
-Congratuations! You understand Test Driven Development (TDD). Give yourself a pat on the back!
+Congratuations! You can do Test Driven Development (TDD).
+Give yourself a pat on the back!  
+Take a break, grab some water and come back for the #**BonusLevel**
 
 <br />
 - - -
 <br />
 <br />
 
-## Bonus Level 1: Code Coverage
+## Bonus Level 1: Code Coverage (10 mins)
 
 ### What is Code Coverage?
+
+![sign not in use](http://i.imgur.com/bmY2imf.jpg)
 
 In computer science, code coverage is a measure used to describe
 the degree to which the source code of a program is tested
@@ -675,13 +683,13 @@ Next, open your terminal and run this command
 to _**install** the two **node modules** and **start** the **server**_:
 
 ```sh
-npm install hapi nodemon && ./node_modules/.bin/nodemon static-server.js
+npm install hapi nodemon --s && ./node_modules/.bin/nodemon static-server.js
 ```
 
 It will take a a minute to install **hapi.js** and **nodemon**,
 but once that's done your static server will boot.
 
-That starts a simple node.js (hapi.js) HTTP server on port 8000.
+That starts a node.js (hapi.js) HTTP server on port 8000.
 
 > Visit: http://localhost:8000/?coverage in your web browser
 
@@ -698,21 +706,89 @@ We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 #### Hold on ... What if the _rogue_ code is all on _one line_?
 
+
+
 ![learn-tdd-showing-rogue-code-on-one-line-goes-un-detected](https://cloud.githubusercontent.com/assets/194400/8397453/a5373f94-1dc3-11e5-90ed-74743b7716cd.png)
 
 > The (_sad?_) _fact_ is:
-> Code Coverage analysis will not detect all bugs or rogue code.
+> Blanket.js Code Coverage analysis will not detect _all_ bugs or rogue code.
 > you **still need** a _**human**_ to do _**code review**_!
 
-## Bonus Level 2: Node.js (_server-side_) Tests
+_But_ ... if you use _**Istanbul**_ to check coverage on the server,
+Istanbul is _much_ better at spotting un-tested code!
+(_see: **Bonus Level 2**!_)
+
+## Bonus Level 2: Node.js (_server-side_) Tests  (10 mins)
+
+The beauty of writing JavaScript is that you can _**run**_ it _**anywhere**_!
+
+In this bonus level we are going to run our tests _**"server-side"**_ using **Node.js**
+
+Add these lines to the top of the **test.js** file you
+created in **Bonus Level 1**
 
 ```js
 /* The code block below ONLY Applies to Node.js - This Demonstrates
    re-useability of JS code in both Back-end and Front-end! #isomorphic */
+/* istanbul ignore if */
+if (typeof module !== 'undefined' && module.exports) {
+  var QUnit = require('qunitjs'); // require QUnit node.js module
+  // alias the QUnit.test method so we don't have to change all our tests
+  var test = QUnit.test; // stores a copy of QUnit.test
+  require('qunit-tap')(QUnit, console.log); // use console.log for test output
+  var getChange = require('./change.js'); // load our getChange method
+}
+```
+
+Also you need to add this to the **change.js** file  you
+created in **Bonus Level 1**
+
+```js
+/* The code block below ONLY Applies to Node.js - This Demonstrates
+   re-useability of JS code in both Back-end and Front-end! #isomorphic */
+/* istanbul ignore next */
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = getChange;  // allows CommonJS/Node.js require()
 }
 ```
+
+Next, install the node.js modules:
++ QUnit node.js module
++ qunit-tap (for command line output)
++ Istanbul for server-side code coverage
+
+```sh
+npm install qunitjs qunit-tap istanbul --save-dev
+```
+
+Run the tests:
+```sh
+node test.js
+```
+
+And to see code server-side coverage:
+```sh
+istanbul cover test.js
+```
+You should expect to see something like this in your terminal:
+
+![server-side-command-line-test-run-with-istanbul](https://cloud.githubusercontent.com/assets/194400/8397893/f94dbd7e-1dd2-11e5-954a-8ea0d4ac20b2.png)
+
+To view the detailed coverage report,
+`open ./coverage/lcov-report/index.html`
+you should expect to see:
+
+![server-side-test-istanbul-coverage-highlights-rogue-code](https://cloud.githubusercontent.com/assets/194400/8397833/347fafee-1dd1-11e5-8f83-c1f6dd237df9.png)
+
+This clearly highlights the "*roguge*" code from the previous **Bonus Level**.
+
+Lets remove it and re-run the tests.
+
+
+#### istanbul ignore next ?
+
+> curious what those `/* istanbul ignore next */` are for?
+> see: https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md
 
 ## Bonus Level 3: Travis
 
