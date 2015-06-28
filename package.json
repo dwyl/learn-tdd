@@ -4,6 +4,7 @@
   "description": "learn test driven development (TDD) using QUnit!",
   "main": "index.html",
   "scripts": {
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=3bb2791931dd5e9dc1f0227bffba72d01241bf25a72af5a72e49c960675010b1 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
     "test": "node test.js",
     "coverage": "istanbul cover test.js",
     "open-coverage":"open ./coverage/lcov-report/index.html",
@@ -29,6 +30,7 @@
   },
   "homepage": "https://github.com/nelsonic/learn-tdd",
   "devDependencies": {
+    "codeclimate-test-reporter": "0.0.4",
     "hapi": "^8.6.1",
     "istanbul": "^0.3.17",
     "jsdoc": "^3.3.2",

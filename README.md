@@ -1,6 +1,12 @@
-# Learn TDD
+# Learn **T**est **D**riven **D**evelopement (**TDD**)
 
-A brief introduction to Test Driven Development (TDD) in JavaScript for people who want writer better code.
+A brief introduction to **T**est **D**riven **D**evelopement (**TDD**)
+in JavaScript for people who want write _**more reliable code**_.
+
+[![Build Status](https://travis-ci.org/nelsonic/learn-tdd.svg)](https://travis-ci.org/nelsonic/learn-tdd)
+[![Code Climate](https://codeclimate.com/github/nelsonic/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/nelsonic/learn-tdd)
+[![Test Coverage](https://codeclimate.com/github/nelsonic/learn-tdd/badges/coverage.svg)](https://codeclimate.com/github/nelsonic/learn-tdd/coverage)
+[![devDependency Status](https://david-dm.org/nelsonic/learn-tdd/dev-status.svg)](https://david-dm.org/nelsonic/learn-tdd#info=devDependencies)
 
 ## Why?
 
@@ -878,7 +884,7 @@ In the last **90 minutes** you _**learned how**_ to:
 (so that you can keep track of the test/build status for your project)
 + use **JSDoc** to document your code using simple comment blocks above your functions.
 
-> _Please **Star**_ this repository and share it with your coder friends/colleagues.
+> _Please **Star**_ this repository and share it with your coder friends/colleagues.  
 > if you have _**any questions**_ please (_don't hesitate_) ask:
 > https://github.com/nelsonic/learn-tdd/issues
 
