@@ -4,7 +4,7 @@
   "description": "learn test driven development (TDD) using QUnit!",
   "main": "index.html",
   "scripts": {
-    "test": "qunit",
+    "test": "node test.js",
     "coverage": "istanbul cover test.js",
     "open-coverage":"open ./coverage/lcov-report/index.html",
     "start": "./node_modules/.bin/nodemon static-server.js",
