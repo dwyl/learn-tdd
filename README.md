@@ -782,7 +782,7 @@ you should expect to see:
 
 This clearly highlights the "*roguge*" code from the previous **Bonus Level**.
 
-Lets remove the "_rogue_" code lines and re-run the tests:
+Lets _remove_ the "_rogue_" code lines and re-run the tests:
 
 ![server-side-command-line-test-run-with-istanbul-100-percent-coverage](https://cloud.githubusercontent.com/assets/194400/8397912/d03e254e-1dd3-11e5-8f9e-19fe739cc111.png)
 
@@ -790,7 +790,7 @@ Refresh the Code Coverage report in your browser:
 
 ![server-side-test-istanbul-coverage-report](https://cloud.githubusercontent.com/assets/194400/8397913/d22d021c-1dd3-11e5-8c2f-6ae9bcd231b6.png)
 
-> Boom! You know how to run your QUnit-based Unit Tests server-side!
+> _**Boom**_! You know how to run your QUnit-based Unit Tests server-side!
 
 
 #### istanbul ignore next ?
@@ -798,15 +798,27 @@ Refresh the Code Coverage report in your browser:
 > curious what those `/* istanbul ignore next */` are for?
 > see: https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md
 
-## Bonus Level 3: Travis
+## Bonus Level 3: Travis (_Continuous Integration_) (5 mins)
 
-If you are new to Travis CI check out our tutorial:
+If you are new to Continuous Integration (_in general_)
+or Travis CI check out our tutorial:
 https://github.com/docdis/learn-travis
 
-> Visit: https://travis-ci.org/profile
-> Enable Travis for learn-travis project
+To quickly add CI support to your project.
 
-![Travis Enabled](https://raw.github.com/nelsonic/learn-mocha/master/images/travis-on.png "Travis Enabled")
+1. **Visit**: https://travis-ci.org/profile and **Login** with your **GitHub account**  
+2. Enable Travis for your project _**Note**_: the project will need to be hosted on GitHub
+
+![learn-tdd-enable-travis-ci](https://cloud.githubusercontent.com/assets/194400/8398323/8397fb3a-1de1-11e5-867f-a392e04fb22e.png)
+
+3. Add a .travis.yml file to your project's root directory:
+```sh
+language: node_js
+node_js:
+  - 0.12
+```
+4. Ensure that you have a **package.json** file with **test** script.
+(_if you are in any doubt, just copy-paste the **package.json** from this project!_)
 
 [![Build Status](https://travis-ci.org/nelsonic/learn-mocha.png?branch=master)](https://travis-ci.org/nelsonic/learn-mocha)
 
