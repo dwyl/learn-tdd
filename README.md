@@ -556,9 +556,12 @@ by a test, it could potentially be a source of bugs or undesireable behaviour.
 Imagine the makers of the Vending Machine (_unknowingly_)
 hired a _**rogue**_ programmer to build the change calculator.
 
-The makers of the vending machine will think that everything is working fine,
+The _**rogue**_ programmer charged below the "_market rate_",
+delivered the code quickly and even included tests!
+
+The makers of the vending machine think that everything is working fine,
 all the _tests_ pass and when they try the machine it dispenses the merchandise
-and the correct change every time.
+and the _correct change every time_.
 
 But in the `getChange` method the
 _**rogue**_ programmer put in the following lines:
@@ -798,34 +801,87 @@ Refresh the Code Coverage report in your browser:
 > curious what those `/* istanbul ignore next */` are for?
 > see: https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md
 
-## Bonus Level 3: Travis (_Continuous Integration_) (5 mins)
+## Bonus Level 3: _Continuous Integration_ (5 mins)
 
-If you are new to Continuous Integration (_in general_)
-or Travis CI check out our tutorial:
+If you are new to **Continuous Integration** (**CI** _in general_)
+or **Travis CI** check out our tutorial:
 https://github.com/docdis/learn-travis
 
 To quickly add CI support to your project.
 
-1. **Visit**: https://travis-ci.org/profile and **Login** with your **GitHub account**  
-2. Enable Travis for your project _**Note**_: the project will need to be hosted on GitHub
+**1**)  **Visit**: https://travis-ci.org/profile and **Login** with your **GitHub account**  
+**2**)  Enable Travis for your project _**Note**_: the project will need to be hosted on GitHub
 
 ![learn-tdd-enable-travis-ci](https://cloud.githubusercontent.com/assets/194400/8398323/8397fb3a-1de1-11e5-867f-a392e04fb22e.png)
 
-3. Add a .travis.yml file to your project's root directory:
+**3**)  Add a **.travis.yml** file to your project's root directory and include the following lines in it:
 ```sh
 language: node_js
 node_js:
   - 0.12
 ```
-4. Ensure that you have a **package.json** file with **test** script.
-(_if you are in any doubt, just copy-paste the **package.json** from this project!_)
+**4**)  Ensure that you have a **package.json** file with **test** script.  
+(_if in doubt, just copy-paste the **package.json** from this project!_)
 
-[![Build Status](https://travis-ci.org/nelsonic/learn-mocha.png?branch=master)](https://travis-ci.org/nelsonic/learn-mocha)
+**5**)  **Commit** your changes and **push** them to GitHub  
+**6**)  Visit the page on Travis-CI for your project. e.g: https://travis-ci.org/nelsonic/learn-tdd
+to see the build results.
 
-![Travis Build Pass](https://raw.github.com/nelsonic/learn-mocha/master/images/learn-travis-build-passing.png "Travis Build Passing")
+![learn-tdd-build-passing-summary](https://cloud.githubusercontent.com/assets/194400/8398366/52697d84-1de3-11e5-952c-5f1671e1a099.png)
 
-Done.
+![learn-tdd-build-passing](https://cloud.githubusercontent.com/assets/194400/8398361/0df9929c-1de3-11e5-8986-2fe4d5962637.png)
+
+Done. [![Build Status](https://travis-ci.org/nelsonic/learn-tdd.svg)](https://travis-ci.org/nelsonic/learn-tdd)
+
+<br />
+
+## Bonus Level 4: _Documentation_ with JSDoc (5 mins)
+
+If you took a peak at the solution in **change.js** you may have noticed
+that there is a **comment block** at the top of the file:
+
+```js
+/**
+ * getChange accepts two parameters (totalPayable and cashPaid) and calculates
+ * the change in "coins" that needs to be returned.
+ * @param {number} totalPayable the integer amount (in pennies) to be paid
+ * @param {number} cashPaid the integer amount (in pennies) the person paid
+ * @returns {array} list of coins we need to dispense to the person as change
+ * @example
+ * getChange(215, 300); // returns [50, 20, 10, 5]
+ */
+```
+This is a JSDoc comment block which documents the `getChange` function/method.
+
+The beauty of writing documenting comments this way is that you can easily
+produce documentation for your project in 3 easy steps:
+
+**1**) install jsdoc: `npm install jsdoc --save-dev`
+
+**2**) run the `jsdoc` command in your terminal: `./node_modules/jsdoc/jsdoc.js change.js`
+
+**3**) open the resulting **html** file `open ./out/global.html#getChange`
+you should expect to see something lik this in your web browser:
+
+![learn-tdd-jsdoc-html](https://cloud.githubusercontent.com/assets/194400/8398518/8203e79a-1de9-11e5-86a5-24c3c6d582b6.png)
+
+This _clearly_ documents the functionality of the `getChange` method.
 
 - - -
 
-<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need!
+## _Conclusion_
+
+In the last **90 minutes** you _**learned how**_ to:
++ write code following **T**est **D**riven **D**evelopement (**TDD**) descipline
++ view the **code coverage** for both front-end and back-end JavaScript Code.
++ set up **Travis-CI Continuous Integration** for your project
+(so that you can keep track of the test/build status for your project)
++ use **JSDoc** to document your code using simple comment blocks above your functions.
+
+> _Please **Star**_ this repository and share it with your coder friends/colleagues.
+> if you have _**any questions**_ please (_don't hesitate_) ask:
+> https://github.com/nelsonic/learn-tdd/issues
+
+- - -
+
+<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need! And, if you have *any questions*, _**please ask**_: https://github.com/nelsonic/learn-tdd/issues
