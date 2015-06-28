@@ -4,8 +4,13 @@
   "description": "learn test driven development (TDD) using QUnit!",
   "main": "index.html",
   "scripts": {
-    "test": "qunit",
-    "start": "./node_modules/.bin/nodemon static-server.js"
+    "codeclimate": "CODECLIMATE_REPO_TOKEN=3bb2791931dd5e9dc1f0227bffba72d01241bf25a72af5a72e49c960675010b1 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
+    "test": "node test.js",
+    "coverage": "istanbul cover test.js",
+    "open-coverage":"open ./coverage/lcov-report/index.html",
+    "start": "./node_modules/.bin/nodemon static-server.js",
+    "docs": "./node_modules/jsdoc/jsdoc.js change.js",
+    "open-docs": "open ./out/global.html#getChange"
   },
   "repository": {
     "type": "git",
@@ -14,7 +19,9 @@
   "keywords": [
     "learn",
     "tdd",
-    "testing"
+    "testing",
+    "tutorial",
+    "beginner"
   ],
   "author": "nelsonic <nodecoder@gmail.com> (https://github.com/nelsonic)",
   "license": "ISC",
@@ -23,7 +30,12 @@
   },
   "homepage": "https://github.com/nelsonic/learn-tdd",
   "devDependencies": {
+    "codeclimate-test-reporter": "0.0.4",
     "hapi": "^8.6.1",
-    "nodemon": "^1.3.7"
+    "istanbul": "^0.3.17",
+    "jsdoc": "^3.3.2",
+    "nodemon": "^1.3.7",
+    "qunit-tap": "^1.5.0",
+    "qunitjs": "^1.18.0"
   }
 }
