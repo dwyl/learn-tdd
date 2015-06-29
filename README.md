@@ -45,9 +45,9 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 
 ## How?
 
-The *first* thing you need to *understand* is that writing code following TDD (*discipline*) is a (*slightly*) different approach from simply diving into solving the solution (*wihout a test*).
+The *first* thing you need to *understand* is that writing code following TDD (*discipline*) is a (*slightly*) different approach from simply diving into solving the problem (*without a test*).
 
-When reading abut TDD you will see the expression: "***Red, Green, Refactor***":
+When reading about TDD you will see the expression: "***Red, Green, Refactor***":
 
 ![TDD Cycle: Red, Green, Refactor](http://i.imgur.com/RQe2NQT.jpg)
 
@@ -55,7 +55,7 @@ What this means is that there's a **3-step process**:
 
 1. ***Write*** a **Failing Test** - Understand the (user) requirements/story well enough to write a test for what you expect. (_the test should **fail** initially - hence it being "Red"_)  
 
-2. ***Make*** the (*faling*) **Test Pass** - Write (*only*) the code you need
+2. ***Make*** the (*failing*) **Test Pass** - Write (*only*) the code you need
 to make the (*failing*) test pass, while ensuring your existing/previous tests
 all still pass (*no regressions*).
 
@@ -63,16 +63,16 @@ all still pass (*no regressions*).
 *you* wrote to make it simpler (*for your future self or colleagues to undersand*) before you need to ship the current feature, do it.
 
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
-we need to ***write*** a ***test first*** (*and watch it fail*) and *then* write the code require to make the test pass.
+we need to ***write*** a ***test first*** (*and watch it fail*) and *then* write the code required to make the test pass.
 
 Writing a _**failing test**_, before writing the code may seem *counter-intuitive*, *time consuming* or even "*tedious*" at _**first**_. But we _urge_ you to think of it this way:
 
 > The ***test*** is the ***question*** you are asking  
 > your code is the ***answer*** to the question.  
-> by having a _clear_ question, you can always check
+> By having a _clear_ question, you can always check
 > that your code is working,  
 > because it _**consistently**_
-> gives you the same answer(s) ... _no surprises_!
+> gives you the same answer(s) ... _no surprises_, even when you're working with a large, inter-dependent code base!
 
 ## Practical
 
@@ -97,7 +97,7 @@ mkdir vending-machine && cd vending-machine
 ```
 (_this will create the directory and move you into it_)
 
-Next create a file called **index.html** e.g: `atom index.html`
+Next create a file called **index.html** e.g: `atom index.html` (which creates and opens the file in the [Atom text editor](https://atom.io/) if you have it installed)
 
 Now copy-paste the following *sample code* to get started:
 
@@ -288,7 +288,7 @@ write the code that makes the test pass.
 
 #### First Requirement
 
-so, back in our **index.html** file ***remove the dummy tests*** and add the following lines:
+So, back in our **index.html** file ***remove the dummy tests*** and add the following lines:
 
 ```js
 test('getChange(1,1) should equal [] - an empty array', function(assert) {
@@ -297,7 +297,7 @@ test('getChange(1,1) should equal [] - an empty array', function(assert) {
   assert.deepEqual(result, expected);
 }); // use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/
 ```
-We use Quint's `deepEqual` (_assert_) method to check that all the _elements_
+We use QUnit's `deepEqual` (_assert_) method to check that all the _elements_
 in the two arrays are _**identical**_. see: https://api.qunitjs.com/deepEqual/
 
 #### Watch it Fail
@@ -717,7 +717,7 @@ We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 
 
-![learn-tdd-showing-rogue-code-on-one-line-goes-un-detected](https://cloud.githubusercontent.com/assets/194400/8397453/a5373f94-1dc3-11e5-90ed-74743b7716cd.png)
+![learn-tdd-showing-rogue-code-on-one-line-goes-un-detected](https://cloud.githubusercontent.com/assets/4185328/8413913/f78be006-1e8b-11e5-940e-2f9bd22502bc.png)
 
 > The (_sad?_) _fact_ is:
 > Blanket.js Code Coverage analysis will not detect _all_ bugs or rogue code.
@@ -731,7 +731,7 @@ Istanbul is _much_ better at spotting un-tested code!
 
 The beauty of writing JavaScript is that you can _**run**_ it _**anywhere**_!
 
-In this bonus level we are going to run our tests _**"server-side"**_ using **Node.js**
+In this bonus level we are going to run our tests _**"server-side"**_ using **Node.js**.
 
 Add these lines to the top of the **test.js** file you
 created in **Bonus Level 1**
@@ -761,14 +761,10 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 ```
 
-Next, install the node.js modules:
+Next, install the node.js following modules by runnin `npm install qunitjs qunit-tap istanbul --save-dev`:
 + QUnit node.js module
 + qunit-tap (for command line output)
 + Istanbul for server-side code coverage
-
-```sh
-npm install qunitjs qunit-tap istanbul --save-dev
-```
 
 Run the tests:
 ```sh
@@ -789,7 +785,7 @@ you should expect to see:
 
 ![server-side-test-istanbul-coverage-highlights-rogue-code](https://cloud.githubusercontent.com/assets/194400/8397833/347fafee-1dd1-11e5-8f83-c1f6dd237df9.png)
 
-This clearly highlights the "*roguge*" code from the previous **Bonus Level**.
+This clearly highlights the "*rogue*" code from the previous **Bonus Level**.
 
 Lets _remove_ the "_rogue_" code lines and re-run the tests:
 
@@ -813,10 +809,11 @@ If you are new to **Continuous Integration** (**CI** _in general_)
 or **Travis CI** check out our tutorial:
 https://github.com/docdis/learn-travis
 
-To quickly add CI support to your project.
+To quickly add CI support to your project:
 
 **1**)  **Visit**: https://travis-ci.org/profile and **Login** with your **GitHub account**  
-**2**)  Enable Travis for your project _**Note**_: the project will need to be hosted on GitHub
+**2**)  Enable Travis for your project     
+(_**Note**_: the project will need to be hosted on GitHub)
 
 ![learn-tdd-enable-travis-ci](https://cloud.githubusercontent.com/assets/194400/8398323/8397fb3a-1de1-11e5-867f-a392e04fb22e.png)
 
@@ -862,12 +859,12 @@ This is a JSDoc comment block which documents the `getChange` function/method.
 The beauty of writing documenting comments this way is that you can easily
 produce documentation for your project in 3 easy steps:
 
-**1**) install jsdoc: `npm install jsdoc --save-dev`
+**1**) Install jsdoc: `npm install jsdoc --save-dev`
 
-**2**) run the `jsdoc` command in your terminal: `./node_modules/jsdoc/jsdoc.js change.js`
+**2**) Run the `jsdoc` command in your terminal: `./node_modules/jsdoc/jsdoc.js change.js`
 
-**3**) open the resulting **html** file `open ./out/global.html#getChange`
-you should expect to see something lik this in your web browser:
+**3**) Open the resulting **html** file `open ./out/global.html#getChange`
+you should expect to see something like this in your web browser:
 
 ![learn-tdd-jsdoc-html](https://cloud.githubusercontent.com/assets/194400/8398518/8203e79a-1de9-11e5-86a5-24c3c6d582b6.png)
 
@@ -878,14 +875,14 @@ This _clearly_ documents the functionality of the `getChange` method.
 ## _Conclusion_
 
 In the last **90 minutes** you _**learned how**_ to:
-+ write code following **T**est **D**riven **D**evelopement (**TDD**) descipline
-+ view the **code coverage** for both front-end and back-end JavaScript Code.
-+ set up **Travis-CI Continuous Integration** for your project
++ Write code following **T**est **D**riven **D**evelopement (**TDD**) discipline
++ View the **code coverage** for both front-end and back-end JavaScript Code
++ Set up **Travis-CI Continuous Integration** for your project
 (so that you can keep track of the test/build status for your project)
-+ use **JSDoc** to document your code using simple comment blocks above your functions.
++ Use **JSDoc** to document your code using simple comment blocks above your functions.
 
 > _Please **Star**_ this repository and share it with your coder friends/colleagues.  
-> if you have _**any questions**_ please (_don't hesitate_) ask:
+> If you have _**any questions**_ please (_don't hesitate_) ask:
 > https://github.com/nelsonic/learn-tdd/issues
 
 - - -
