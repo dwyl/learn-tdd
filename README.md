@@ -717,7 +717,7 @@ We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 
 
-![learn-tdd-showing-rogue-code-on-one-line-goes-un-detected](https://cloud.githubusercontent.com/assets/194400/8397453/a5373f94-1dc3-11e5-90ed-74743b7716cd.png)
+![learn-tdd-showing-rogue-code-on-one-line-goes-un-detected](https://cloud.githubusercontent.com/assets/4185328/8413913/f78be006-1e8b-11e5-940e-2f9bd22502bc.png)
 
 > The (_sad?_) _fact_ is:
 > Blanket.js Code Coverage analysis will not detect _all_ bugs or rogue code.
