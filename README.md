@@ -43,6 +43,15 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 + (_**Optional**_) _**Bonus Levels require**_ you to
 [_install_ **Node.js**](https://nodejs.org/download/)
 
+### What is Software Testing and TDD?
+
+If you're new to Testing Driven Development (**TDD**) read: http://en.wikipedia.org/wiki/Software_testing <br />
+
+And watch:
+- Video intro to Software Development Lifecycle: http://youtu.be/qMkV_TDdDeA
+- "What is Software Testing" video: http://youtu.be/UZy1Dj9JIg4
+- "**How to Write Clean, Testable Code**": http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principals )
+
 ## How?
 
 The *first* thing you need to *understand* is that writing code following TDD (*discipline*) is a (*slightly*) different approach from simply diving into solving the problem (*without a test*).
@@ -812,7 +821,7 @@ https://github.com/docdis/learn-travis
 To quickly add CI support to your project:
 
 **1**)  **Visit**: https://travis-ci.org/profile and **Login** with your **GitHub account**  
-**2**)  Enable Travis for your project     
+**2**)  Enable Travis for your project
 (_**Note**_: the project will need to be hosted on GitHub)
 
 ![learn-tdd-enable-travis-ci](https://cloud.githubusercontent.com/assets/194400/8398323/8397fb3a-1de1-11e5-867f-a392e04fb22e.png)
