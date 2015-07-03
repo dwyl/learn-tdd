@@ -98,7 +98,7 @@ of the Item and the **cash** received.
 
 ### Single *File* App
 
-We can build the entire "project" in a single file: **index.html**
+We can build the _entire_ "project" in a _**single file**_: `index.html`
 
 > _**note**: in practice you want to split your JavaScript, CSS and HTML (Tempaltes) into **separate** files,
 but for this example we are keeping everything in `index.html` for simplicity.
@@ -134,8 +134,6 @@ Now copy-paste the following *sample code* to get started:
 
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
-    <!-- QUnit does not depend on JQUery, but we are using it later so load from CDN -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <script>
