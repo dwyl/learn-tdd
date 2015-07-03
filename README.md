@@ -100,6 +100,10 @@ of the Item and the **cash** received.
 
 We can build the entire "project" in a single file: **index.html**
 
+> _**note**: in practice you want to split your JavaScript, CSS and HTML (Tempaltes) into **separate** files,
+but for this example we are keeping everything in `index.html` for simplicity.
+If you make it to the "Bonus Levels" you will split things out!_
+
 Create a directory on your computer called **vending-machine**:
 
 In your **terminal** type this command:
