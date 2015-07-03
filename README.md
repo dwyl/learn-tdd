@@ -6,6 +6,7 @@ in JavaScript for people who want write _**more reliable code**_.
 [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
 [![Test Coverage](https://codeclimate.com/github/dwyl/learn-tdd/badges/coverage.svg)](https://codeclimate.com/github/dwyl/learn-tdd/coverage)
 [![Code Climate](https://codeclimate.com/github/dwyl/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/dwyl/learn-tdd)
+[![Dependency Status](https://david-dm.org/nelsonic/learn-tdd.svg)](https://david-dm.org/nelsonic/learn-tdd)
 [![devDependency Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd#info=devDependencies)
 [![bitHound Score](https://www.bithound.io/github/dwyl/learn-tdd/badges/score.svg)](https://www.bithound.io/github/dwyl/learn-tdd)
 
