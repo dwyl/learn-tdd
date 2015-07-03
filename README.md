@@ -3,10 +3,10 @@
 A brief introduction to **T**est **D**riven **D**evelopement (**TDD**)
 in JavaScript for people who want write _**more reliable code**_.
 
-[![Build Status](https://travis-ci.org/nelsonic/learn-tdd.svg)](https://travis-ci.org/nelsonic/learn-tdd)
-[![Code Climate](https://codeclimate.com/github/nelsonic/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/nelsonic/learn-tdd)
-[![Test Coverage](https://codeclimate.com/github/nelsonic/learn-tdd/badges/coverage.svg)](https://codeclimate.com/github/nelsonic/learn-tdd/coverage)
-[![devDependency Status](https://david-dm.org/nelsonic/learn-tdd/dev-status.svg)](https://david-dm.org/nelsonic/learn-tdd#info=devDependencies)
+[![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
+[![Code Climate](https://codeclimate.com/github/dwyl/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/dwyl/learn-tdd)
+[![Test Coverage](https://codeclimate.com/github/dwyl/learn-tdd/badges/coverage.svg)](https://codeclimate.com/github/dwyl/learn-tdd/coverage)
+[![devDependency Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd#info=devDependencies)
 
 ## Why?
 
@@ -836,14 +836,14 @@ node_js:
 (_if in doubt, just copy-paste the **package.json** from this project!_)
 
 **5**)  **Commit** your changes and **push** them to GitHub  
-**6**)  Visit the page on Travis-CI for your project. e.g: https://travis-ci.org/nelsonic/learn-tdd
+**6**)  Visit the page on Travis-CI for your project. e.g: https://travis-ci.org/dwyl/learn-tdd
 to see the build results.
 
 ![learn-tdd-build-passing-summary](https://cloud.githubusercontent.com/assets/194400/8398366/52697d84-1de3-11e5-952c-5f1671e1a099.png)
 
 ![learn-tdd-build-passing](https://cloud.githubusercontent.com/assets/194400/8398361/0df9929c-1de3-11e5-8986-2fe4d5962637.png)
 
-Done. [![Build Status](https://travis-ci.org/nelsonic/learn-tdd.svg)](https://travis-ci.org/nelsonic/learn-tdd)
+Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
 
 <br />
 
@@ -892,8 +892,8 @@ In the last **90 minutes** you _**learned how**_ to:
 
 > _Please **Star**_ this repository and share it with your coder friends/colleagues.  
 > If you have _**any questions**_ please (_don't hesitate_) ask:
-> https://github.com/nelsonic/learn-tdd/issues
+> https://github.com/dwyl/learn-tdd/issues
 
 - - -
 
-<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need! And, if you have *any questions*, _**please ask**_: https://github.com/nelsonic/learn-tdd/issues
+<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need! And, if you have *any questions*, _**please ask**_: https://github.com/dwyl/learn-tdd/issues
