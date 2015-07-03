@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/dwyl/learn-tdd",
   "devDependencies": {
-    "codeclimate-test-reporter": "0.0.4",
+    "codeclimate-test-reporter": "0.1.0",
     "hapi": "^8.8.0",
     "istanbul": "^0.3.17",
     "jsdoc": "^3.3.2",
