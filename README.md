@@ -10,13 +10,13 @@ in JavaScript for people who want write _**more reliable code**_.
 
 ## Why?
 
-A _project without tests_ often ends up looking like its stuck together with _**duck tape**_ ...
+_Project(s) without tests_ often end up looking like they are stuck together with _**duck tape**_ ...
 
 ![duck tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
 
 Change _one_ part and the _other_ stops working? "_Fixing_" one bug, creates another?
 
-Would you *prefer* if everything was ***consistent*** and beautifully integrated?  
+Wouldn't you *prefer* if everything was ***consistent*** and beautifully integrated?  
 What if _everyone_ on your team worked in a disciplined order... like a _**Formula 1 Crew**_ ...
 
 ![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
