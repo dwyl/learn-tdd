@@ -192,8 +192,6 @@ and load JQuery and the QUnit Library from CDN:
 ```html
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
-    <!-- QUnit does not depend on JQUery, but we are using it so load from CDN -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Load the QUnit Library from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
 ```
@@ -313,7 +311,7 @@ test('getChange(1,1) should equal [] - an empty array', function(assert) {
 We use QUnit's `deepEqual` (_assert_) method to check that all the _elements_
 in the two arrays are _**identical**_. see: https://api.qunitjs.com/deepEqual/
 
-#### Watch it Fail
+#### Watch it _Fail_
 
 Back in your browser window, refresh the browser and watch it *fail*:
 
@@ -321,8 +319,8 @@ Back in your browser window, refresh the browser and watch it *fail*:
 
 > **Q**: Why *deliberately* write a test we *know* is going to *fail*...? <br />
 > **A**: To get used to the idea of *only* writing the code required to *pass*
->    the *current* (*failing*) *test*.
-
+>    the *current* (*failing*) *test*.  
+> *Read*: "***The Importance of Test Failure***: http://www.sustainabletdd.com/2012/03/importance-of-test-failure.html
 
 #### Create the getChange `function`
 
