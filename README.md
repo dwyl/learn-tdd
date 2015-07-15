@@ -3,21 +3,23 @@
 A brief introduction to **T**est **D**riven **D**evelopement (**TDD**)
 in JavaScript for people who want write _**more reliable code**_.
 
-[![Build Status](https://travis-ci.org/nelsonic/learn-tdd.svg)](https://travis-ci.org/nelsonic/learn-tdd)
-[![Code Climate](https://codeclimate.com/github/nelsonic/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/nelsonic/learn-tdd)
-[![Test Coverage](https://codeclimate.com/github/nelsonic/learn-tdd/badges/coverage.svg)](https://codeclimate.com/github/nelsonic/learn-tdd/coverage)
-[![devDependency Status](https://david-dm.org/nelsonic/learn-tdd/dev-status.svg)](https://david-dm.org/nelsonic/learn-tdd#info=devDependencies)
+[![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
+[![Test Coverage](https://codeclimate.com/github/dwyl/learn-tdd/badges/coverage.svg)](https://codeclimate.com/github/dwyl/learn-tdd/coverage)
+[![Code Climate](https://codeclimate.com/github/dwyl/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/dwyl/learn-tdd)
+[![Dependency Status](https://david-dm.org/nelsonic/learn-tdd.svg)](https://david-dm.org/nelsonic/learn-tdd)
+[![devDependency Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd#info=devDependencies)
+[![bitHound Score](https://www.bithound.io/github/dwyl/learn-tdd/badges/score.svg)](https://www.bithound.io/github/dwyl/learn-tdd)
 
 ## Why?
 
-A _project without tests_ often ends up looking like its stuck together with _**duck tape**_ ...
+_Project(s) without tests_ often end up looking like they are stuck together with _**duck tape**_ ...
 
 ![duck tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
 
 Change _one_ part and the _other_ stops working? "_Fixing_" one bug, creates another?
 
-Would you *prefer* if everything was ***consistent*** and beautifully integrated?  
-What if _everyone_ on your team worked in a disciplined order... like a _**Formula 1 Crew**_ ...
+Wouldn't you *prefer* if everything was ***consistent*** and beautifully integrated?  
+What if _everyone_ on your team worked _like **clock-work**_ in a disciplined order... like a _**Formula 1 Crew**_ ...
 
 ![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
 
@@ -96,7 +98,11 @@ of the Item and the **cash** received.
 
 ### Single *File* App
 
-We can build the entire "project" in a single file: **index.html**
+We can build the _entire_ "project" in a _**single file**_: `index.html`
+
+> _**note**: in practice you want to split your JavaScript, CSS and HTML (Tempaltes) into **separate** files,
+but for this example we are keeping everything in `index.html` for simplicity.
+If you make it to the "Bonus Levels" you will split things out!_
 
 Create a directory on your computer called **vending-machine**:
 
@@ -128,8 +134,6 @@ Now copy-paste the following *sample code* to get started:
 
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
-    <!-- QUnit does not depend on JQUery, but we are using it later so load from CDN -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <script>
@@ -188,8 +192,6 @@ and load JQuery and the QUnit Library from CDN:
 ```html
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
-    <!-- QUnit does not depend on JQUery, but we are using it so load from CDN -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Load the QUnit Library from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
 ```
@@ -309,7 +311,7 @@ test('getChange(1,1) should equal [] - an empty array', function(assert) {
 We use QUnit's `deepEqual` (_assert_) method to check that all the _elements_
 in the two arrays are _**identical**_. see: https://api.qunitjs.com/deepEqual/
 
-#### Watch it Fail
+#### Watch it _Fail_
 
 Back in your browser window, refresh the browser and watch it *fail*:
 
@@ -317,12 +319,12 @@ Back in your browser window, refresh the browser and watch it *fail*:
 
 > **Q**: Why *deliberately* write a test we *know* is going to *fail*...? <br />
 > **A**: To get used to the idea of *only* writing the code required to *pass*
->    the *current* (*failing*) *test*.
-
+>    the *current* (*failing*) *test*.  
+> *Read*: "***The Importance of Test Failure***: http://www.sustainabletdd.com/2012/03/importance-of-test-failure.html
 
 #### Create the getChange `function`
 
-In your index.html file add the following code (*above the tests*)
+In your `index.html` file add the following code (*above the tests*)
 
 ```js
 <script>
@@ -354,7 +356,6 @@ your `index.html` should now look like this:
 
     <div id="qunit"></div>
     <div id="qunit-fixture"></div>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
 
     <script>
@@ -389,9 +390,9 @@ It Passed!!
 
 #### Now Lets Write A *Real* Test
 
-Going back to the requirements, we need our getChange method to accept
-two arguments/parameters (**totalPayable** and **cashPaid**) and return an
-array containing the coins equal to the difference:
+Going back to the requirements, we need our `getChange` method to accept
+two arguments/parameters (`totalPayable` and `cashPaid`) and `return` an
+`array` containing the coins equal to the difference:
 
 e.g:
 ```js
@@ -492,7 +493,7 @@ Recall that we have 8 coins:
 var coins = [200, 100, 50, 20, 10, 5, 2, 1];
 ```
 
-The sum of the (_array containing one of each_) coins is: **388**p
+The sum of the (_`array` containing one of each_) coins is: **388**p
 
 So, we need to create a test in which we **pay £4** for an item costing 12p
 (a bit un-realistic but if it works we know our `getChange` method is _ready_!)
@@ -514,7 +515,7 @@ When these tests pass, your work is done.
 ## Solution
 
 **Note**: this is the *readable* version of the solution!
-feel free to suggest a more compact algorithm
+feel free to suggest a more _compact_ algorithm
 
 ```javascript
 var coins = [200, 100, 50, 20, 10, 5, 2, 1]
@@ -542,8 +543,8 @@ If you see this:
 
 ![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
 
-Congratuations! You can do Test Driven Development (TDD).
-Give yourself a pat on the back!  
+_**Congratuations! You can do Test Driven Development**_ (TDD).  
+Give yourself a pat on the back! Tweet your _success_!  
 Take a break, grab some water and come back for the #**BonusLevel**
 
 <br />
@@ -606,7 +607,7 @@ vending machine it will payout £18.37 i.e: a **£5 payout**
 
 > _How could this have been **prevented**_?
 
-The answer is code coverage!
+The answer is ***code coverage***! (_and QA/Code Review..._!)
 
 ### Blanket.js
 
@@ -836,14 +837,14 @@ node_js:
 (_if in doubt, just copy-paste the **package.json** from this project!_)
 
 **5**)  **Commit** your changes and **push** them to GitHub  
-**6**)  Visit the page on Travis-CI for your project. e.g: https://travis-ci.org/nelsonic/learn-tdd
+**6**)  Visit the page on Travis-CI for your project. e.g: https://travis-ci.org/dwyl/learn-tdd
 to see the build results.
 
 ![learn-tdd-build-passing-summary](https://cloud.githubusercontent.com/assets/194400/8398366/52697d84-1de3-11e5-952c-5f1671e1a099.png)
 
 ![learn-tdd-build-passing](https://cloud.githubusercontent.com/assets/194400/8398361/0df9929c-1de3-11e5-8986-2fe4d5962637.png)
 
-Done. [![Build Status](https://travis-ci.org/nelsonic/learn-tdd.svg)](https://travis-ci.org/nelsonic/learn-tdd)
+Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
 
 <br />
 
@@ -892,8 +893,8 @@ In the last **90 minutes** you _**learned how**_ to:
 
 > _Please **Star**_ this repository and share it with your coder friends/colleagues.  
 > If you have _**any questions**_ please (_don't hesitate_) ask:
-> https://github.com/nelsonic/learn-tdd/issues
+> https://github.com/dwyl/learn-tdd/issues
 
 - - -
 
-<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need! And, if you have *any questions*, _**please ask**_: https://github.com/nelsonic/learn-tdd/issues
+<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need! And, if you have *any questions*, _**please ask**_: https://github.com/dwyl/learn-tdd/issues
