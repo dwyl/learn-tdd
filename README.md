@@ -690,23 +690,18 @@ us to simply open the **index.html** from the directory.
 > (*after you've finished this tutorial...!*)
 
 
-Create a file called **static-server.js** and paste these _4 lines_ of code into it:
-```js
-var Hapi = require('hapi'), Path = require('path'), server = new Hapi.Server(), port = process.env.PORT || 8000;
-server.connection({ port: port });
-server.route( { method: '*', path: '/{param*}', handler: { directory: { path: Path.normalize(__dirname + '/') } } });
-server.start(function() { console.log('Static Server Listening on : http://127.0.0.1:' +port) });
-```
+*Create* a file called **static-server.js** and *paste* the code from [earn-tdd/**static-server.js**](https://github.com/dwyl/learn-tdd/blob/master/static-server.js) into the file.
+
 
 Next, open your terminal and run this command
-to _**install** the two **node modules** and **start** the **server**_:
+to _**install** the **node modules** and **start** the **server**_:
 
 ```sh
-npm install hapi nodemon --s && ./node_modules/.bin/nodemon static-server.js
+npm install hapi inert nodemon --s && ./node_modules/.bin/nodemon static-server.js
 ```
 
 It will take a a minute to install **hapi.js** and **nodemon**,
-but once that's done your static server will boot.
+but once that's done your static server will start up.
 
 That starts a node.js (hapi.js) HTTP server on port 8000.
 
