@@ -100,7 +100,7 @@ of the Item and the **cash** received.
 
 We can build the _entire_ "project" in a _**single file**_: `index.html`
 
-> _**note**: in practice you want to split your JavaScript, CSS and HTML (Tempaltes) into **separate** files,
+> _**note**: in practice you want to split your JavaScript, CSS and HTML (Templates) into **separate** files,
 but for this example we are keeping everything in `index.html` for simplicity.
 If you make it to the "Bonus Levels" you will split things out!_
 
