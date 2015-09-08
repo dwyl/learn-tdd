@@ -518,26 +518,22 @@ When these tests pass, your work is done.
 feel free to suggest a more _compact_ algorithm
 
 ```javascript
-var coins = [200, 100, 50, 20, 10, 5, 2, 1]
-function getChange(totalPayable, cashPaid) {
-    var change = [];
-    var length = coins.length;
-    var remaining = cashPaid - totalPayable;          // we reduce this below
+function getChange(cost, paid){
+  var possibleCoins = [200, 100, 50, 20, 10, 5, 2, 1].sort(function(a,b){return b - a}); // sort decending
+  var diff = paid - cost;
+  var coinsToReturn = [];
 
-    for (var i = 0; i < length; i++) { // loop through array of notes & coins:
-        var coin = coins[i];
-
-        if(remaining/coin >= 1) { // check coin fits into the remaining amount
-            var times = Math.floor(remaining/coin);        // no partial coins
-
-            for(var j = 0; j < times; j++) {     // add coin to change x times
-                change.push(coin);
-                remaining = remaining - coin;  // subtract coin from remaining
-            }
-        }
+  while(diff){
+    for (var i = 0; i < possibleCoins.length; i++) {
+      if (diff >= possibleCoins[i]) {
+        diff -= possibleCoins[i];
+        coinsToReturn.push(possibleCoins[i]);
+        i = 0;
+      }
     }
-    return change;
-};
+  }
+  return coinsToReturn;
+}
 ```
 If you see this:
 
