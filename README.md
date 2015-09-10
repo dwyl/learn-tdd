@@ -518,7 +518,7 @@ When these tests pass, your work is done.
 
 ```javascript
 function getChange(cost, paid){
-  var possibleCoins = [100, 50, 25, 10, 5, 2, 1]; // Must be in decending order
+  var possibleCoins = [200, 100, 50, 25, 10, 5, 2, 1]; // Must be in decending order
   var changeToMake = paid - cost;
   var coinsToReturn = [];// Array we will fill with coins to return to the user
 
