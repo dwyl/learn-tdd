@@ -514,9 +514,28 @@ When these tests pass, your work is done.
 
 ## Solution
 
-**Note**: this is the *readable* version of the solution!
-feel free to suggest a more _compact_ algorithm
+**Note**: feel free to suggest a more _compact_ algorithm
 
+```javascript
+function getChange(cost, paid){
+  var possibleCoins = [200, 100, 50, 25, 10, 5, 2, 1]; // Must be in decending order
+  var changeToMake = paid - cost;
+  var coinsToReturn = [];// Array we will fill with coins to return to the user
+
+  while(changeToMake){ // while there is sill money left to give loop! same as "while(changeToMake > 0)"
+    for (var i = 0; i < possibleCoins.length; i++) {
+      if (changeToMake >= possibleCoins[i]) { // if changeToGive is larger than the current coin use that coin
+        changeToMake -= possibleCoins[i]; // remove this coins value from the total change
+        coinsToReturn.push(possibleCoins[i]); // add the coin to the return list of coins
+        i--; // Move back one to try the same coin again 
+      }
+    }
+  }
+  return coinsToReturn;
+}
+```
+
+####Alternitive Solution
 ```javascript
 var coins = [200, 100, 50, 20, 10, 5, 2, 1]
 function getChange(totalPayable, cashPaid) {
@@ -539,6 +558,7 @@ function getChange(totalPayable, cashPaid) {
     return change;
 };
 ```
+
 If you see this:
 
 ![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
