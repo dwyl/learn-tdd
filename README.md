@@ -50,8 +50,8 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 If you're new to Testing Driven Development (**TDD**) read: http://en.wikipedia.org/wiki/Software_testing <br />
 
 And watch:
-- Video intro to Software Development Lifecycle: http://youtu.be/qMkV_TDdDeA
-- "What is Software Testing" video: http://youtu.be/UZy1Dj9JIg4
+- "What is Software Testing" video (from 5:56 onwards): https://youtu.be/UZy1Dj9JIg4?t=356
+- Video intro to Software Development Lifecycle (from 0:52 onwards): https://youtu.be/qMkV_TDdDeA?t=52
 - "**How to Write Clean, Testable Code**": http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principals )
 
 ## How?
@@ -440,7 +440,7 @@ Add the following test to `index.html` and refresh your browser:
 ```javascript
 test('getChange(486, 600) should equal [100, 10, 2, 2]', function(assert) {
   var result = getChange(486, 600);
-  var expected = [500, 10, 2, 2];
+  var expected = [100, 10, 2, 2];
   assert.deepEqual(result, expected);
 })
 ```
@@ -518,7 +518,7 @@ When these tests pass, your work is done.
 
 ```javascript
 function getChange(cost, paid){
-  var possibleCoins = [200, 100, 50, 25, 10, 5, 2, 1]; // Must be in decending order
+  var possibleCoins = [200, 100, 50, 20, 10, 5, 2, 1]; // Must be in decending order
   var changeToMake = paid - cost;
   var coinsToReturn = [];// Array we will fill with coins to return to the user
 
@@ -527,7 +527,7 @@ function getChange(cost, paid){
       if (changeToMake >= possibleCoins[i]) { // if changeToGive is larger than the current coin use that coin
         changeToMake -= possibleCoins[i]; // remove this coins value from the total change
         coinsToReturn.push(possibleCoins[i]); // add the coin to the return list of coins
-        i--; // Move back one to try the same coin again 
+        i--; // Move back one to try the same coin again
       }
     }
   }
