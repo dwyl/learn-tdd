@@ -114,6 +114,8 @@ mkdir vending-machine && cd vending-machine
 
 Next create a file called **index.html** e.g: `atom index.html` (which creates and opens the file in the [Atom text editor](https://atom.io/) if you have it installed)
 
+(_the "atom" command is not installed by default. In the Atom menu bar there is a command named “Install Shell Commands” which installs a new command in your Terminal called atom._)
+
 Now copy-paste the following *sample code* to get started:
 
 ```html
