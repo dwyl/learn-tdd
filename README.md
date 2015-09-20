@@ -144,7 +144,7 @@ Now copy-paste the following *sample code* to get started:
       });
       // A failing test will be RED:
       test('This is what a failing test looks like!', function(assert) {
-        var result = [1,2,3].indexOf(1);  // this should be 1
+        var result = [1,2,3].indexOf(1);  // this should be 0
         assert.equal(result, -1); // we *expect* this to fail
       });
     </script>
@@ -249,7 +249,7 @@ Essentially we are building a *simple* **calculator** that *only does* **subtrac
 ### Understand what is needed
 
 + Create a `function` called `getChange` that accepts _**two parameters**_: `totalPayable` and `cashPaid`
-+ For a given `totalPayable` (the total amount a item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _return_ to the customer
++ For a given `totalPayable` (the total amount an item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _return_ to the customer
 + _**return**_ change as an `array` of coins (largest to smallest) that the vending machine will need to _dispense_ to the customer.
 
 #### _Example_
@@ -422,7 +422,7 @@ function getChange (totalPayable, cashPaid) {
 };
 ```
 
-This will _pass_, but do you have *hard coded* the result (*not exactly a calculator...*)
+This will _pass_, but you have *hard coded* the result (*not exactly a calculator...*)
 
 This only works *once*. When the Spec (Test) Writer writes the next test, the method will need
 to be re-written to satisfy it.
