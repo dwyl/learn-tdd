@@ -371,7 +371,7 @@ your `index.html` should now look like this:
     </script>
 
     <script>
-    test('getChange(1,1) should equal [] - an empty array', function() {
+    test('getChange(1,1) should equal [] - an empty array', function(assert) {
       var result = getChange(1, 1); //no change/coins just an empty array
       var expected = [];
       assert.deepEqual(result, expected);
