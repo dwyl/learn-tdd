@@ -1,6 +1,6 @@
 {
   "name": "learn-tdd",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "learn test driven development (TDD) using QUnit!",
   "main": "index.html",
   "scripts": {
@@ -30,12 +30,12 @@
   },
   "homepage": "https://github.com/dwyl/learn-tdd",
   "devDependencies": {
-    "codeclimate-test-reporter": "0.1.1",
-    "hapi": "^10.0.0",
+    "codeclimate-test-reporter": "^0.1.1",
+    "hapi": "^11.0.1",
     "inert": "^3.0.1",
-    "istanbul": "^0.3.20",
-    "jsdoc": "^3.3.2",
-    "nodemon": "^1.5.1",
+    "istanbul": "^0.4.0",
+    "jsdoc": "^3.3.3",
+    "nodemon": "^1.7.3",
     "qunit-tap": "^1.5.0",
     "qunitjs": "^1.19.0"
   }
