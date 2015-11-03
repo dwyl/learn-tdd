@@ -825,10 +825,12 @@ Refresh the Code Coverage report in your browser:
 > _**Boom**_! You know how to run your QUnit-based Unit Tests server-side!
 
 
-#### istanbul ignore next ?
+### *Top Tip*: Use [Codecov.io](https://codecov.io/#features) to Track Coverage in your Projects!
 
-> curious what those `/* istanbul ignore next */` are for?
-> see: https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md
+> Now that you understand how Code Coverage Works,
+> you can use https://codecov.io/#features to ***track*** Coverage in your project over time!
+> You can even add a [***Badge***](https://github.com/dwyl/repo-badges) to your readme file   
+e.g:  [![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master) to show others that you *care* about testing.
 
 ## Bonus Level 3: _Continuous Integration_ (5 mins)
 
