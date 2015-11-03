@@ -4,7 +4,7 @@ A brief introduction to **T**est **D**riven **D**evelopement (**TDD**)
 in JavaScript for people who want write _**more reliable code**_.
 
 [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
-[![Test Coverage](https://codeclimate.com/github/dwyl/learn-tdd/badges/coverage.svg)](https://codeclimate.com/github/dwyl/learn-tdd/coverage)
+[![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
 [![Code Climate](https://codeclimate.com/github/dwyl/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/dwyl/learn-tdd)
 [![Dependency Status](https://david-dm.org/dwyl/learn-tdd.svg)](https://david-dm.org/dwyl/learn-tdd)
 [![devDependency Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd#info=devDependencies)
@@ -580,7 +580,7 @@ Take a break, grab some water and come back for the #**BonusLevel**
 
 ![sign not in use](http://i.imgur.com/bmY2imf.jpg)
 
-In computer science, code coverage is a measure used to describe
+In computer programming, code coverage is a measure used to describe
 the degree to which the source code of a program is tested
 by a particular test suite.
 
@@ -712,7 +712,7 @@ us to simply open the **index.html** from the directory.
 > (*after you've finished this tutorial...!*)
 
 
-*Create* a file called **static-server.js** and *paste* the code from [earn-tdd/**static-server.js**](https://github.com/dwyl/learn-tdd/blob/master/static-server.js) into the file.
+*Create* a file called **static-server.js** and *paste* the code from [learn-tdd/**static-server.js**](https://github.com/dwyl/learn-tdd/blob/master/static-server.js) into the file.
 
 
 Next, open your terminal and run this command
