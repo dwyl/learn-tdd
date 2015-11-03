@@ -30,13 +30,12 @@
   },
   "homepage": "https://github.com/dwyl/learn-tdd",
   "devDependencies": {
-    "codeclimate-test-reporter": "^0.1.1",
-    "hapi": "^11.0.1",
-    "inert": "^3.0.1",
+    "hapi": "^11.0.4",
+    "inert": "^3.2.0",
     "istanbul": "^0.4.0",
     "jsdoc": "^3.3.3",
-    "nodemon": "^1.7.3",
+    "nodemon": "^1.8.1",
     "qunit-tap": "^1.5.0",
-    "qunitjs": "^1.19.0"
+    "qunitjs": "^1.20.0"
   }
 }
