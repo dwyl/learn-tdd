@@ -1,12 +1,10 @@
 {
   "name": "learn-tdd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "learn test driven development (TDD) using QUnit!",
   "main": "index.html",
   "scripts": {
-    "codeclimate": "CODECLIMATE_REPO_TOKEN=7498136cff114e83c81fe6e2839f9538d865f9bdee4eb41d25d2058a9110713c ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
-    "test": "node test.js",
-    "coverage": "istanbul cover test.js",
+    "test": "istanbul cover test.js",
     "open-coverage": "open ./coverage/lcov-report/index.html",
     "start": "./node_modules/.bin/nodemon static-server.js",
     "docs": "./node_modules/jsdoc/jsdoc.js change.js",
@@ -30,13 +28,12 @@
   },
   "homepage": "https://github.com/dwyl/learn-tdd",
   "devDependencies": {
-    "codeclimate-test-reporter": "^0.1.1",
-    "hapi": "^11.0.1",
-    "inert": "^3.0.1",
+    "hapi": "^11.0.4",
+    "inert": "^3.2.0",
     "istanbul": "^0.4.0",
     "jsdoc": "^3.3.3",
-    "nodemon": "^1.7.3",
+    "nodemon": "^1.8.1",
     "qunit-tap": "^1.5.0",
-    "qunitjs": "^1.19.0"
+    "qunitjs": "^1.20.0"
   }
 }
