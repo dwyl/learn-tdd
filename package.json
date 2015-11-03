@@ -1,10 +1,9 @@
 {
   "name": "learn-tdd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "learn test driven development (TDD) using QUnit!",
   "main": "index.html",
   "scripts": {
-    "codeclimate": "CODECLIMATE_REPO_TOKEN=7498136cff114e83c81fe6e2839f9538d865f9bdee4eb41d25d2058a9110713c ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
     "test": "node test.js",
     "coverage": "istanbul cover test.js",
     "open-coverage": "open ./coverage/lcov-report/index.html",
