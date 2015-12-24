@@ -1,7 +1,7 @@
-# Learn **T**est **D**riven **D**evelopement (**TDD**)
+# Learn **T**est **D**riven **D**evelopment (**TDD**)
 
-A brief introduction to **T**est **D**riven **D**evelopement (**TDD**)
-in JavaScript for people who want write _**more reliable code**_.
+A brief introduction to **T**est **D**riven **D**evelopment (**TDD**)
+in JavaScript for people who want to write _**more reliable code**_.
 
 [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
 [![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
@@ -12,9 +12,9 @@ in JavaScript for people who want write _**more reliable code**_.
 
 ## Why?
 
-_Project(s) without tests_ often end up looking like they are stuck together with _**duck tape**_ ...
+_Project(s) without tests_ often end up looking like they are stuck together with _**duct tape**_ ...
 
-![duck tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
+![duct tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
 
 Change _one_ part and the _other_ stops working? "_Fixing_" one bug, creates another?
 
@@ -71,7 +71,7 @@ to make the (*failing*) test pass, while ensuring your existing/previous tests
 all still pass (*no regressions*).
 
 3. ***Refactor*** the code *you* wrote - if you have time to tidy up the code
-*you* wrote to make it simpler (*for your future self or colleagues to undersand*) before you need to ship the current feature, do it.
+*you* wrote to make it simpler (*for your future self or colleagues to understand*) before you need to ship the current feature, do it.
 
 To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
 we need to ***write*** a ***test first*** (*and watch it fail*) and *then* write the code required to make the test pass.
@@ -166,7 +166,7 @@ you should expect to see something like this: (_without the annotations_)
 ##### Explanation
 
 There is quite a lot of code in the **index.html** you just created,
-lets step through it to understand the parts:
+let's step through it to understand the parts:
 
 The first part of **index.html** is a standard HTML head and body:
 
@@ -390,7 +390,7 @@ your `index.html` should now look like this:
 
 It Passed!!
 
-#### Now Lets Write A *Real* Test
+#### Now Let's Write A *Real* Test
 
 Going back to the requirements, we need our `getChange` method to accept
 two arguments/parameters (`totalPayable` and `cashPaid`) and `return` an
@@ -429,7 +429,7 @@ This will _pass_, but you have *hard coded* the result (*not exactly a calculato
 This only works *once*. When the Spec (Test) Writer writes the next test, the method will need
 to be re-written to satisfy it.
 
-Lets try it.  Work out what you expect so you can write your test:
+Let's try it.  Work out what you expect so you can write your test:
 ```js
 totalPayable = 486           // £4.86
 cashPaid     = 600           // £6.00
@@ -463,7 +463,7 @@ function getChange (totalPayable, cashPaid) {
 The _**Arthur Andersen Approach**_ gets results in the *short run* ...
 
 But its arguably *more work* than simply *solving* the problem.
-Lets do that instead.
+Let's do that instead.
 
 # Try It Yourself (_before looking at the solution_!)
 
@@ -487,7 +487,7 @@ test('getChange(486, 500) should equal [100, 10, 2, 2]', function(assert) {
 
 #### One More Test to be _Sure_ it Works?
 
-Lets invent a test that will return one of each of the coins ...
+Let's invent a test that will return one of each of the coins ...
 
 Recall that we have 8 coins:
 
@@ -498,7 +498,7 @@ var coins = [200, 100, 50, 20, 10, 5, 2, 1];
 The sum of the (_`array` containing one of each_) coins is: **388**p
 
 So, we need to create a test in which we **pay £4** for an item costing 12p
-(a bit un-realistic but if it works we know our `getChange` method is _ready_!)
+(a bit unrealistic but if it works we know our `getChange` method is _ready_!)
 
 ```js
 test('getChange(12, 400) should return [200, 100, 50, 20, 10, 5, 2, 1]', function(assert) {
@@ -537,7 +537,7 @@ function getChange(cost, paid){
 }
 ```
 
-####Alternitive Solution
+####Alternative Solution
 ```javascript
 var coins = [200, 100, 50, 20, 10, 5, 2, 1]
 function getChange(totalPayable, cashPaid) {
@@ -565,7 +565,7 @@ If you see this:
 
 ![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
 
-_**Congratuations! You can do Test Driven Development**_ (TDD).  
+_**Congratulations! You can do Test Driven Development**_ (TDD).  
 Give yourself a pat on the back! Tweet your _success_!  
 Take a break, grab some water and come back for the #**BonusLevel**
 
@@ -585,7 +585,7 @@ the degree to which the source code of a program is tested
 by a particular test suite.
 
 In other words: if there is code in the codebase which is not "_covered_"
-by a test, it could potentially be a source of bugs or undesireable behaviour.
+by a test, it could potentially be a source of bugs or undesirable behaviour.
 
 > Read more: https://en.wikipedia.org/wiki/Code_coverage
 
@@ -618,7 +618,7 @@ But ... once the vending machines had gone into service,
 e.g: one in every train station in the country.
 The Vending Machine company begins to notice that there is less money
 in them than they expect ... They don't understand why because they only
-hire _trust-worthy_ people to re-stock the machines.
+hire _trustworthy_ people to re-stock the machines.
 
 One day the Vending Machine Company decide to hire _you_ to review the code in the
 `getChange` calculator and you discover the _**rogue**_ programmer trick!
@@ -814,7 +814,7 @@ you should expect to see:
 
 This clearly highlights the "*rogue*" code from the previous **Bonus Level**.
 
-Lets _remove_ the "_rogue_" code lines and re-run the tests:
+Let's _remove_ the "_rogue_" code lines and re-run the tests:
 
 ![server-side-command-line-test-run-with-istanbul-100-percent-coverage](https://cloud.githubusercontent.com/assets/194400/8397912/d03e254e-1dd3-11e5-8f9e-19fe739cc111.png)
 
