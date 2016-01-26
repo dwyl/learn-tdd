@@ -30,7 +30,7 @@
   "devDependencies": {
     "hapi": "^12.1.0",
     "inert": "^3.2.0",
-    "istanbul": "^0.4.1",
+    "istanbul": "^0.4.2",
     "jsdoc": "^3.4.0",
     "nodemon": "^1.8.1",
     "qunit-tap": "^1.5.0",
