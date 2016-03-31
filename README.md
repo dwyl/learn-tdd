@@ -776,6 +776,13 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 ```
 
+And add these lines to the bottom of the **test.js** file you created in **Bonus Level 1**
+
+```js
+/* istanbul ignore next */
+if (typeof module !== 'undefined' && module.exports) { QUnit.load(); } // run the tests
+```
+
 Also you need to add this to the **change.js** file  you
 created in **Bonus Level 1**
 
