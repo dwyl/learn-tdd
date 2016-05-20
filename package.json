@@ -28,12 +28,12 @@
   },
   "homepage": "https://github.com/dwyl/learn-tdd",
   "devDependencies": {
-    "hapi": "^12.1.0",
-    "inert": "^3.2.0",
-    "istanbul": "^0.4.2",
+    "hapi": "^13.4.0",
+    "inert": "^4.0.0",
+    "istanbul": "^0.4.3",
     "jsdoc": "^3.4.0",
-    "nodemon": "^1.8.1",
+    "nodemon": "^1.9.2",
     "qunit-tap": "^1.5.0",
-    "qunitjs": "^1.20.0"
+    "qunitjs": "^2.0.0-rc1"
   }
 }
