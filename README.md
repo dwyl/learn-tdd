@@ -1,4 +1,4 @@
-# Learn **T**est **D**riven **D**evelopment (**TDD**)
+[# Learn **T**est **D**riven **D**evelopment (**TDD**)
 
 A brief introduction to **T**est **D**riven **D**evelopment (**TDD**)
 in JavaScript for people who want to write _**more reliable code**_.
@@ -45,14 +45,22 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 + (_**Optional**_) _**Bonus Levels require**_ you to
 [_install_ **Node.js**](https://nodejs.org/download/)
 
-### What is Software Testing and TDD?
+### What is Software Testing?
+> Software testing is the process of evaluation a software item to detect differences between given input and expected output. Testing assesses the quality of the product. Software testing is a process that should be done during the development process. In other words software testing is a verification and validation process.
 
-If you're new to Testing Driven Development (**TDD**) read: http://en.wikipedia.org/wiki/Software_testing <br />
+*Rehman Zafar at [What is software testing?](http://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty)*
 
-And watch:
-- "What is Software Testing" video (from 5:56 onwards): https://youtu.be/UZy1Dj9JIg4?t=356
+### What is TDD?
+> Test-driven development (TDD) is an evolutionary approach to development which combines test-first development where you write a test before you write just enough production code to fulfill that test and refactoring. In other words, it’s one way to think through your requirements or design before your write your functional code.
+
+*From [Introduction to Test Driven Development (TDD)](http://agiledata.org/essays/tdd.html)*
+
+#### Further resources
+- Software Testing - http://en.wikipedia.org/wiki/Software_testing
+- "What is Software Testing" video (from 5:56 onwards) - https://youtu.be/UZy1Dj9JIg4?t=356
 - Video intro to Software Development Lifecycle (from 0:52 onwards): https://youtu.be/qMkV_TDdDeA?t=52
-- "**How to Write Clean, Testable Code**": http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principals )
+- How to Write Clean, Testable Code -  http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principals)
+- Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd
 
 ## How?
 
