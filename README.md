@@ -1,4 +1,4 @@
-[# Learn **T**est **D**riven **D**evelopment (**TDD**)
+# Learn **T**est **D**riven **D**evelopment (**TDD**)
 
 A brief introduction to **T**est **D**riven **D**evelopment (**TDD**)
 in JavaScript for people who want to write _**more reliable code**_.
@@ -14,7 +14,7 @@ in JavaScript for people who want to write _**more reliable code**_.
 
 _Project(s) without tests_ often end up looking like they are stuck together with _**duct tape**_ ...
 
-![duct tape car fail](http://i.imgur.com/9cNriGK.jpgÂ)
+![duct tape car fail](http://i.imgur.com/9cNriGK.jpg)
 
 Change _one_ part and the _other_ stops working? "_Fixing_" one bug, creates another?
 
@@ -882,7 +882,7 @@ Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis
 
 <br />
 
-## Bonus Level 4: _Documentation_ with JSDoc (5 mins)
+## Bonus Level 4: _Documentation_ with [JSDoc](https://github.com/jsdoc3/jsdoc) (5 mins)
 
 If you took a peak at the solution in **change.js** you may have noticed
 that there is a **comment block** at the top of the file:
