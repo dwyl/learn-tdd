@@ -1,6 +1,6 @@
 {
   "name": "learn-tdd",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "learn test driven development (TDD) using QUnit!",
   "main": "index.html",
   "scripts": {
