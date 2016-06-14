@@ -273,7 +273,7 @@ An **array** of these coins would look like: `[50, 20, 10, 5]`
 
 In the UK we have the following Coins:
 
-![GBP Coins](https://raw.github.com/nelsonic/learn-mocha/master/images/gbp-coins.jpg "GBP Coins")
+![GBP Coins](https://raw.githubusercontent.com/dwyl/learn-mocha/master/images/gbp-coins.jpg "GBP Coins")
 
 
 If we use the penny as the unit (i.e. 100 pennies in a pound)
