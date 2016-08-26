@@ -522,7 +522,7 @@ When these tests pass, your work is done.
 <br />
 <br />
 
-## Solution
+## Solution [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
 
 **Note**: feel free to suggest a more _compact_ algorithm
 
@@ -549,7 +549,7 @@ function getChange(totalPayable, cashPaid) {
 };
 ```
 
-####Alternative Solution
+#### Alternative Solution
 
 ```javascript
 function getChange(cost, paid){
@@ -638,7 +638,9 @@ vending machine it will payout £18.37 i.e: a **£5 payout**
 
 > _How could this have been **prevented**_?
 
-The answer is ***code coverage***! (_and QA/Code Review..._!)
+The answer is ***code coverage***!
+
+> _Note: checking code coverage is **not a substitute for QA/Code Review**..._!
 
 ### Blanket.js
 
