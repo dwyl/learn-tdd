@@ -763,7 +763,10 @@ We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 _But_ ... if you use _**Istanbul**_ to check coverage on the server,
 Istanbul is _much_ better at spotting un-tested code!
-(_see: **Bonus Level 2**!_)
+
+> We wrote an **beginners guide** to **Code Coverage with Istanbul**:
+[https://github.com/dwyl/**learn-istanbul**](https://github.com/dwyl/learn-istanbul)
+that goes into _detail_.
 
 ## Bonus Level 2: Node.js (_server-side_) Tests  (10 mins)
 
