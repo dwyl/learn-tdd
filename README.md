@@ -7,8 +7,8 @@ in JavaScript for people who want to write _**more reliable code**_.
 [![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
 [![Code Climate](https://codeclimate.com/github/dwyl/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/dwyl/learn-tdd)
 [![Dependency Status](https://david-dm.org/dwyl/learn-tdd.svg)](https://david-dm.org/dwyl/learn-tdd)
-[![devDependency Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd#info=devDependencies)
-[![bitHound Score](https://www.bithound.io/github/dwyl/learn-tdd/badges/score.svg)](https://www.bithound.io/github/dwyl/learn-tdd)
+[![devDependencies Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd?type=dev)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
 
 ## Why?
 
@@ -574,14 +574,18 @@ If you see this:
 
 ![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
 
-_**Congratulations! You can do Test Driven Development**_ (TDD).  
-Give yourself a pat on the back! Tweet your _success_!  
-Take a break, grab some water and come back for the #**BonusLevel**
+_**Congratulations! You can do Test Driven Development**_ (TDD)!!  
+
+Give yourself a pat on the back! **Tweet your _success_**!  
+_or **Re-Tweet**_: https://twitter.com/livelifelively/status/768645514120212480
+[![learn-tdd](https://cloud.githubusercontent.com/assets/194400/18021179/91827edc-6bdd-11e6-8ae5-082181c0d789.png)](https://twitter.com/livelifelively/status/768645514120212480)
+
+_Take a break, grab some water and come back for the #**BonusLevel**_
 
 <br />
 - - -
 <br />
-<br />
+
 
 ## Bonus Level 1: Code Coverage (10 mins)
 
@@ -934,6 +938,7 @@ In the last **90 minutes** you _**learned how**_ to:
 + Use **JSDoc** to document your code using simple comment blocks above your functions.
 
 > _Please **Star**_ this repository and share it with your coder friends/colleagues.  
+> Help us spread the TDD Love by re-tweeting: https://twitter.com/livelifelively/status/768645514120212480  
 > If you have _**any questions**_ please (_don't hesitate_) ask:
 > https://github.com/dwyl/learn-tdd/issues
 
