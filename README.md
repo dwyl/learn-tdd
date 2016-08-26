@@ -527,26 +527,6 @@ When these tests pass, your work is done.
 **Note**: feel free to suggest a more _compact_ algorithm
 
 ```javascript
-function getChange(cost, paid){
-  var possibleCoins = [200, 100, 50, 20, 10, 5, 2, 1]; // Must be in decending order
-  var changeToMake = paid - cost;
-  var coinsToReturn = [];// Array we will fill with coins to return to the user
-
-  while(changeToMake){ // while there is sill money left to give loop! same as "while(changeToMake > 0)"
-    for (var i = 0; i < possibleCoins.length; i++) {
-      if (changeToMake >= possibleCoins[i]) { // if changeToGive is larger than the current coin use that coin
-        changeToMake -= possibleCoins[i]; // remove this coins value from the total change
-        coinsToReturn.push(possibleCoins[i]); // add the coin to the return list of coins
-        i--; // Move back one to try the same coin again
-      }
-    }
-  }
-  return coinsToReturn;
-}
-```
-
-####Alternative Solution
-```javascript
 var coins = [200, 100, 50, 20, 10, 5, 2, 1]
 function getChange(totalPayable, cashPaid) {
     var change = [];
@@ -567,6 +547,27 @@ function getChange(totalPayable, cashPaid) {
     }
     return change;
 };
+```
+
+####Alternative Solution
+
+```javascript
+function getChange(cost, paid){
+  var possibleCoins = [200, 100, 50, 20, 10, 5, 2, 1]; // Must be in decending order
+  var changeToMake = paid - cost;
+  var coinsToReturn = [];// Array we will fill with coins to return to the user
+
+  while(changeToMake){ // while there is sill money left to give loop! same as "while(changeToMake > 0)"
+    for (var i = 0; i < possibleCoins.length; i++) {
+      if (changeToMake >= possibleCoins[i]) { // if changeToGive is larger than the current coin use that coin
+        changeToMake -= possibleCoins[i]; // remove this coins value from the total change
+        coinsToReturn.push(possibleCoins[i]); // add the coin to the return list of coins
+        i--; // Move back one to try the same coin again
+      }
+    }
+  }
+  return coinsToReturn;
+}
 ```
 
 If you see this:
@@ -884,8 +885,13 @@ Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis
 
 ## Bonus Level 4: _Documentation_ with [JSDoc](https://github.com/jsdoc3/jsdoc) (5 mins)
 
+> Note Bonus Level 4 ***requires node.js*** to be *installed* on your machine.
+> If you don't already have it installed, don't panic, you don't need know
+> *anything* about Node.js to work through the examples.
+To download, visit: https://nodejs.org/en/download/ and get the version for your Operating System.
+
 If you took a peak at the solution in **change.js** you may have noticed
-that there is a **comment block** at the top of the file:
+that there is a ***comment block*** at the top of the file:
 
 ```js
 /**
@@ -903,7 +909,7 @@ This is a JSDoc comment block which documents the `getChange` function/method.
 The beauty of writing documenting comments this way is that you can easily
 produce documentation for your project in 3 easy steps:
 
-**1**) Install jsdoc: `npm install jsdoc --save-dev`
+**1**) Install jsdoc: in your terminal run the following command `npm install jsdoc --save-dev`
 
 **2**) Run the `jsdoc` command in your terminal: `./node_modules/jsdoc/jsdoc.js change.js`
 
