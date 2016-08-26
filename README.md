@@ -715,32 +715,28 @@ Include these two files _and_ the **Blanket.js** library in your index.html:
 <script src="/test.js"></script>              <!-- load tests after getChange -->
 ```
 
-### Static Server
+### _Live_ Server
 
 Because we are loading external **.js** files our web browser will not _allow_
 us to simply open the **index.html** from the directory.
 
-> **Note**: You don't _need_ to understand Hapi.js to
-> run a simple (_static_) node.js server.
-> But, if you _**want**_ to learn **hapi.js**, visit:
-> https://github.com/nelsonic/learn-hapi
-> (*after you've finished this tutorial...!*)
+> **Note**: You this is light taste of Node.js for absolute beginners.
 
 
 *Create* a file called **static-server.js** and *paste* the code from [learn-tdd/**static-server.js**](https://github.com/dwyl/learn-tdd/blob/master/static-server.js) into the file.
 
 
-Next, open your terminal and run this command
-to _**install** the **node modules** and **start** the **server**_:
+Open your terminal and run this command
+to _**install** the **node modules** and **start** the **live server**_:
 
 ```sh
-npm install hapi inert nodemon --s && ./node_modules/.bin/nodemon static-server.js
+npm install live-server --save-dev && node_modules/.bin/live-server --port=8000
 ```
 
-It will take a a minute to install **hapi.js** and **nodemon**,
-but once that's done your static server will start up.
+It will take a a minute to install,
+but once that's done your `live-server` will start up.
 
-That starts a node.js (hapi.js) HTTP server on port 8000.
+That starts a node.js HTTP server on port 8000.
 
 > Visit: http://localhost:8000/?coverage in your web browser
 
@@ -770,6 +766,9 @@ Istanbul is _much_ better at spotting un-tested code!
 (_see: **Bonus Level 2**!_)
 
 ## Bonus Level 2: Node.js (_server-side_) Tests  (10 mins)
+
+> **Note** You will need ot have Node.js installed on your machine for this section,
+> If you don't already have it, download it from: https://nodejs.org/en/download/
 
 The beauty of writing JavaScript is that you can _**run**_ it _**anywhere**_!
 
@@ -815,7 +814,7 @@ Next, install the node.js following modules by runnin `npm install qunitjs qunit
 + qunit-tap (for command line output)
 + Istanbul for server-side code coverage
 
-Run the tests:
+Run the tests in your _terminal_:
 ```sh
 node test.js
 ```
