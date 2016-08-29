@@ -7,8 +7,8 @@ in JavaScript for people who want to write _**more reliable code**_.
 [![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
 [![Code Climate](https://codeclimate.com/github/dwyl/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/dwyl/learn-tdd)
 [![Dependency Status](https://david-dm.org/dwyl/learn-tdd.svg)](https://david-dm.org/dwyl/learn-tdd)
-[![devDependency Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd#info=devDependencies)
-[![bitHound Score](https://www.bithound.io/github/dwyl/learn-tdd/badges/score.svg)](https://www.bithound.io/github/dwyl/learn-tdd)
+[![devDependencies Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd?type=dev)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
 
 ## Why?
 
@@ -48,7 +48,6 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 ### What is Software Testing?
 > Software testing is the process of evaluation a software item to detect differences between given input and expected output. Testing assesses the quality of the product. Software testing is a process that should be done during the development process. In other words software testing is a verification and validation process.
 
-*Rehman Zafar at [What is software testing?](http://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty)*
 
 ### What is TDD?
 > Test-driven development (TDD) is an evolutionary approach to development which combines test-first development where you write a test before you write just enough production code to fulfill that test and refactoring. In other words, it’s one way to think through your requirements or design before your write your functional code.
@@ -60,6 +59,7 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 - "What is Software Testing" video (from 5:56 onwards) - https://youtu.be/UZy1Dj9JIg4?t=356
 - Video intro to Software Development Lifecycle (from 0:52 onwards): https://youtu.be/qMkV_TDdDeA?t=52
 - How to Write Clean, Testable Code -  http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principals)
++ [What is software testing?](http://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty) by _Rehman Zafar_
 - Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd
 
 ## How?
@@ -522,30 +522,10 @@ When these tests pass, your work is done.
 <br />
 <br />
 
-## Solution
+## Solution [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
 
 **Note**: feel free to suggest a more _compact_ algorithm
 
-```javascript
-function getChange(cost, paid){
-  var possibleCoins = [200, 100, 50, 20, 10, 5, 2, 1]; // Must be in decending order
-  var changeToMake = paid - cost;
-  var coinsToReturn = [];// Array we will fill with coins to return to the user
-
-  while(changeToMake){ // while there is sill money left to give loop! same as "while(changeToMake > 0)"
-    for (var i = 0; i < possibleCoins.length; i++) {
-      if (changeToMake >= possibleCoins[i]) { // if changeToGive is larger than the current coin use that coin
-        changeToMake -= possibleCoins[i]; // remove this coins value from the total change
-        coinsToReturn.push(possibleCoins[i]); // add the coin to the return list of coins
-        i--; // Move back one to try the same coin again
-      }
-    }
-  }
-  return coinsToReturn;
-}
-```
-
-####Alternative Solution
 ```javascript
 var coins = [200, 100, 50, 20, 10, 5, 2, 1]
 function getChange(totalPayable, cashPaid) {
@@ -569,18 +549,43 @@ function getChange(totalPayable, cashPaid) {
 };
 ```
 
+#### Alternative Solution
+
+```javascript
+function getChange(cost, paid){
+  var possibleCoins = [200, 100, 50, 20, 10, 5, 2, 1]; // Must be in decending order
+  var changeToMake = paid - cost;
+  var coinsToReturn = [];// Array we will fill with coins to return to the user
+
+  while(changeToMake){ // while there is sill money left to give loop! same as "while(changeToMake > 0)"
+    for (var i = 0; i < possibleCoins.length; i++) {
+      if (changeToMake >= possibleCoins[i]) { // if changeToGive is larger than the current coin use that coin
+        changeToMake -= possibleCoins[i]; // remove this coins value from the total change
+        coinsToReturn.push(possibleCoins[i]); // add the coin to the return list of coins
+        i--; // Move back one to try the same coin again
+      }
+    }
+  }
+  return coinsToReturn;
+}
+```
+
 If you see this:
 
 ![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
 
-_**Congratulations! You can do Test Driven Development**_ (TDD).  
-Give yourself a pat on the back! Tweet your _success_!  
-Take a break, grab some water and come back for the #**BonusLevel**
+_**Congratulations! You can do Test Driven Development**_ (TDD)!!  
+
+Give yourself a pat on the back! **Tweet your _success_**!  
+_or **Re-Tweet**_: https://twitter.com/livelifelively/status/768645514120212480
+[![learn-tdd](https://cloud.githubusercontent.com/assets/194400/18021179/91827edc-6bdd-11e6-8ae5-082181c0d789.png)](https://twitter.com/livelifelively/status/768645514120212480)
+
+_Take a break, grab some water and come back for the #**BonusLevel**_
 
 <br />
 - - -
 <br />
-<br />
+
 
 ## Bonus Level 1: Code Coverage (10 mins)
 
@@ -637,7 +642,9 @@ vending machine it will payout £18.37 i.e: a **£5 payout**
 
 > _How could this have been **prevented**_?
 
-The answer is ***code coverage***! (_and QA/Code Review..._!)
+The answer is ***code coverage***!
+
+> _Note: checking code coverage is **not a substitute for QA/Code Review**..._!
 
 ### Blanket.js
 
@@ -708,32 +715,28 @@ Include these two files _and_ the **Blanket.js** library in your index.html:
 <script src="/test.js"></script>              <!-- load tests after getChange -->
 ```
 
-### Static Server
+### _Live_ Server
 
 Because we are loading external **.js** files our web browser will not _allow_
 us to simply open the **index.html** from the directory.
 
-> **Note**: You don't _need_ to understand Hapi.js to
-> run a simple (_static_) node.js server.
-> But, if you _**want**_ to learn **hapi.js**, visit:
-> https://github.com/nelsonic/learn-hapi
-> (*after you've finished this tutorial...!*)
+> **Note**: You this is light taste of Node.js for absolute beginners.
 
 
 *Create* a file called **static-server.js** and *paste* the code from [learn-tdd/**static-server.js**](https://github.com/dwyl/learn-tdd/blob/master/static-server.js) into the file.
 
 
-Next, open your terminal and run this command
-to _**install** the **node modules** and **start** the **server**_:
+Open your terminal and run this command
+to _**install** the **node modules** and **start** the **live server**_:
 
 ```sh
-npm install hapi inert nodemon --s && ./node_modules/.bin/nodemon static-server.js
+npm install live-server --save-dev && node_modules/.bin/live-server --port=8000
 ```
 
-It will take a a minute to install **hapi.js** and **nodemon**,
-but once that's done your static server will start up.
+It will take a a minute to install,
+but once that's done your `live-server` will start up.
 
-That starts a node.js (hapi.js) HTTP server on port 8000.
+That starts a node.js HTTP server on port 8000.
 
 > Visit: http://localhost:8000/?coverage in your web browser
 
@@ -760,9 +763,15 @@ We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 _But_ ... if you use _**Istanbul**_ to check coverage on the server,
 Istanbul is _much_ better at spotting un-tested code!
-(_see: **Bonus Level 2**!_)
+
+> We wrote an **beginners guide** to **Code Coverage with Istanbul**:
+[https://github.com/dwyl/**learn-istanbul**](https://github.com/dwyl/learn-istanbul)
+that goes into _detail_.
 
 ## Bonus Level 2: Node.js (_server-side_) Tests  (10 mins)
+
+> **Note** You will need ot have Node.js installed on your machine for this section,
+> If you don't already have it, download it from: https://nodejs.org/en/download/
 
 The beauty of writing JavaScript is that you can _**run**_ it _**anywhere**_!
 
@@ -808,7 +817,7 @@ Next, install the node.js following modules by runnin `npm install qunitjs qunit
 + qunit-tap (for command line output)
 + Istanbul for server-side code coverage
 
-Run the tests:
+Run the tests in your _terminal_:
 ```sh
 node test.js
 ```
@@ -884,8 +893,13 @@ Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis
 
 ## Bonus Level 4: _Documentation_ with [JSDoc](https://github.com/jsdoc3/jsdoc) (5 mins)
 
+> Note Bonus Level 4 ***requires node.js*** to be *installed* on your machine.
+> If you don't already have it installed, don't panic, you don't need know
+> *anything* about Node.js to work through the examples.
+To download, visit: https://nodejs.org/en/download/ and get the version for your Operating System.
+
 If you took a peak at the solution in **change.js** you may have noticed
-that there is a **comment block** at the top of the file:
+that there is a ***comment block*** at the top of the file:
 
 ```js
 /**
@@ -903,7 +917,7 @@ This is a JSDoc comment block which documents the `getChange` function/method.
 The beauty of writing documenting comments this way is that you can easily
 produce documentation for your project in 3 easy steps:
 
-**1**) Install jsdoc: `npm install jsdoc --save-dev`
+**1**) Install jsdoc: in your terminal run the following command `npm install jsdoc --save-dev`
 
 **2**) Run the `jsdoc` command in your terminal: `./node_modules/jsdoc/jsdoc.js change.js`
 
@@ -926,6 +940,7 @@ In the last **90 minutes** you _**learned how**_ to:
 + Use **JSDoc** to document your code using simple comment blocks above your functions.
 
 > _Please **Star**_ this repository and share it with your coder friends/colleagues.  
+> Help us spread the TDD Love by re-tweeting: https://twitter.com/livelifelively/status/768645514120212480  
 > If you have _**any questions**_ please (_don't hesitate_) ask:
 > https://github.com/dwyl/learn-tdd/issues
 

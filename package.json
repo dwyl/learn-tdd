@@ -6,7 +6,7 @@
   "scripts": {
     "test": "istanbul cover test.js",
     "open-coverage": "open ./coverage/lcov-report/index.html",
-    "start": "./node_modules/.bin/nodemon static-server.js",
+    "start": "node_modules/.bin/live-server --port=8000",
     "docs": "./node_modules/jsdoc/jsdoc.js change.js",
     "open-docs": "open ./out/global.html#getChange"
   },
@@ -19,7 +19,12 @@
     "tdd",
     "testing",
     "tutorial",
-    "beginner"
+    "beginner",
+    "test driven development",
+    "JavaScript",
+    "qunit",
+    "browser",
+    "front-end"
   ],
   "author": "nelsonic <nodecoder@gmail.com> (https://github.com/nelsonic)",
   "license": "ISC",
@@ -28,11 +33,9 @@
   },
   "homepage": "https://github.com/dwyl/learn-tdd",
   "devDependencies": {
-    "hapi": "^13.4.0",
-    "inert": "^4.0.0",
     "istanbul": "^0.4.3",
     "jsdoc": "^3.4.0",
-    "nodemon": "^1.9.2",
+    "live-server": "^1.1.0",
     "qunit-tap": "^1.5.0",
     "qunitjs": "^2.0.0-rc1"
   }
