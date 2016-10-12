@@ -717,14 +717,10 @@ Include these two files _and_ the **Blanket.js** library in your index.html:
 
 ### _Live_ Server
 
+> **Note**: this is _light_ taste of Node.js for absolute beginners.
+
 Because we are loading external **.js** files our web browser will not _allow_
 us to simply open the **index.html** from the directory.
-
-> **Note**: You this is light taste of Node.js for absolute beginners.
-
-
-*Create* a file called **static-server.js** and *paste* the code from [learn-tdd/**static-server.js**](https://github.com/dwyl/learn-tdd/blob/master/static-server.js) into the file.
-
 
 Open your terminal and run this command
 to _**install** the **node modules** and **start** the **live server**_:
@@ -853,7 +849,7 @@ Refresh the Code Coverage report in your browser:
 
 > Now that you understand how Code Coverage Works,
 > you can use https://codecov.io/#features to ***track*** Coverage in your project over time!
-> You can even add a [***Badge***](https://github.com/dwyl/repo-badges) to your readme file   
+> You can even add a [***Badge***](https://github.com/dwyl/repo-badges) to your readme file
 e.g:  [![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master) to show others that you *care* about testing.
 
 ## Bonus Level 3: _Continuous Integration_ (5 mins)
