@@ -943,3 +943,13 @@ In the last **90 minutes** you _**learned how**_ to:
 - - -
 
 <sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need! And, if you have *any questions*, _**please ask**_: https://github.com/dwyl/learn-tdd/issues
+
+<br />
+
+# What (_To Learn_) _Next_?
+
+Now that you know TDD basics, what should you learn next...?
+
++ Learn ***Tape*** (_the simplest Node/Browser testing framework_): https://github.com/dwyl/learn-tape
++ Learn Istanbul (_detailed intro to test coverage_): https://github.com/dwyl/learn-istanbul
++ Learn Nightwatch (_automate browser tests_): https://github.com/dwyl/learn-nightwatch
