@@ -21,7 +21,7 @@ Change _one_ part and the _other_ stops working? "_Fixing_" one bug, creates ano
 Wouldn't you *prefer* if everything was ***consistent*** and beautifully integrated?  
 What if _everyone_ on your team worked _like **clock-work**_ in a disciplined order... like a _**Formula 1 Crew**_ ...
 
-![formula 1 pit stop](http://i.imgur.com/2euxKGA.jpg)
+![formula 1 pit stop](http://i.imgur.com/zXBByZL.gif | width=672)
 
 Test Driven Development (TDD) makes your team a well-oiled machine which means you can go _**faster**_.
 
