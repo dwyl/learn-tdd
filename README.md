@@ -890,7 +890,7 @@ Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis
 ## Bonus Level 4: _Documentation_ with [JSDoc](https://github.com/jsdoc3/jsdoc) (5 mins)
 
 > Note Bonus Level 4 ***requires node.js*** to be *installed* on your machine.
-> If you don't already have it installed, don't panic, you don't need know
+> If you don't already have it installed, don't panic, you don't need to know
 > *anything* about Node.js to work through the examples.
 To download, visit: https://nodejs.org/en/download/ and get the version for your Operating System.
 
