@@ -766,7 +766,7 @@ that goes into _detail_.
 
 ## Bonus Level 2: Node.js (_server-side_) Tests  (10 mins)
 
-> **Note** You will need ot have Node.js installed on your machine for this section,
+> **Note** You will need to have Node.js installed on your machine for this section,
 > If you don't already have it, download it from: https://nodejs.org/en/download/
 
 The beauty of writing JavaScript is that you can _**run**_ it _**anywhere**_!
