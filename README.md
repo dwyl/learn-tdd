@@ -820,7 +820,7 @@ node test.js
 
 And to see code server-side coverage:
 ```sh
-istanbul cover test.js
+./node_modules/.bin/istanbul cover test.js
 ```
 You should expect to see something like this in your terminal:
 
