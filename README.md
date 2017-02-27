@@ -218,7 +218,7 @@ Finally we see our test(s) - the interesting part of the file:
 
       // A failing test will be RED:
       test('This is what a failing test looks like!', function(assert) {
-        var result = [1,2,3].indexOf(1);  // this should be 1
+        var result = [1,2,3].indexOf(1);  // this should be 0
         assert.equal(result, -1); // we *expect* this to fail
       });
 
@@ -808,7 +808,7 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 ```
 
-Next, install the node.js following modules by runnin `npm install qunitjs qunit-tap istanbul --save-dev`:
+Next, install the node.js following modules by running `npm install qunitjs qunit-tap istanbul --save-dev`:
 + QUnit node.js module
 + qunit-tap (for command line output)
 + Istanbul for server-side code coverage
