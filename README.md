@@ -240,6 +240,12 @@ In the above screenshot, the assertion is `assert.equal(result, 2)`
 We are giving the `equal` method two arguments; the `result` of our computation
 and our expected value in this case **2**. _That's it_.
 
+
+**Note**:
+The latest version of QUnit uses the `QUnit.test()` function to run tests. 
+Later in this workshop we use [blanket.js](http://blanketjs.org/) which is not compatible with the latest
+version of QUnit, it is for this reason that we are calling `test()` to run tests in this workshop.
+
 ##### Further Reading:
 
 + Test assertion: https://en.wikipedia.org/wiki/Test_assertion
