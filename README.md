@@ -958,5 +958,4 @@ Now that you know TDD basics, what should you learn next...?
 
 + Learn ***Tape*** (_the simplest Node/Browser testing framework_): https://github.com/dwyl/learn-tape
 + Learn Istanbul (_detailed intro to test coverage_): https://github.com/dwyl/learn-istanbul
-+ Learn Nightwatch (_automate browser tests_): https://github.com/dwyl/learn-nightwatch
 + Learn Daydream and Nightmare (_easy automated browser testing even for non-technical people_): https://github.com/dwyl/learn-daydream-and-nightmare
