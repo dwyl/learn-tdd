@@ -1,6 +1,6 @@
 {
   "name": "learn-tdd",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "learn test driven development (TDD) using QUnit!",
   "main": "index.html",
   "scripts": {
@@ -26,7 +26,7 @@
     "browser",
     "front-end"
   ],
-  "author": "nelsonic <nodecoder@gmail.com> (https://github.com/nelsonic)",
+  "author": "dwyl & friends!",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dwyl/learn-tdd/issues"

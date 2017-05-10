@@ -956,6 +956,11 @@ In the last **90 minutes** you _**learned how**_ to:
 
 Now that you know TDD basics, what should you learn next...?
 
++ Want to _practice_ your new TDD skills while learning something
+_really useful_? Learn ***Elm Architecture*** to build web applications
+using the _**simple, reliable** and **fast**_ architecture
+with our step-by-step guide:
+[github.com/dwyl/**learn-elm-architecture**-in-javascript](https://github.com/dwyl/learn-elm-architecture-in-javascript)
 + Learn ***Tape*** (_the simplest Node/Browser testing framework_): https://github.com/dwyl/learn-tape
 + Learn Istanbul (_detailed intro to test coverage_): https://github.com/dwyl/learn-istanbul
 + Learn Daydream and Nightmare (_easy automated browser testing even for non-technical people_): https://github.com/dwyl/learn-daydream-and-nightmare
