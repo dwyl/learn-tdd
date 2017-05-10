@@ -746,6 +746,8 @@ You should expect to see:
 
 ![learn-tdd-showing-coverage](https://cloud.githubusercontent.com/assets/194400/8397289/b48b8284-1dbe-11e5-8c71-b9d1d8b42402.png)
 
+(Make sure to tick "Enable Coverage" as it is not checked by default!)
+
 ### Click change.js to expand the code coverage view
 
 ![learn-tdd-showing-rogue-code-not-covered](https://cloud.githubusercontent.com/assets/194400/8397421/89df60f6-1dc2-11e5-8a7b-9eb41e054791.png)
