@@ -139,7 +139,7 @@ Now copy-paste the following *sample code* to get started:
   <body style='margin: 0 1em;'>
     <div id='main'>
       <h1>Vending Machine <em>Change Calculator</em></h1>
-      <h3>Calculate the change (<em>coins</em>) to return to a customer when they buy something.</h2>
+      <h2>Calculate the change (<em>coins</em>) to return to a customer when they buy something.</h2>
     </div>
 
     <div id="qunit"></div>
@@ -414,7 +414,7 @@ e.g:
 ```js
 totalPayable = 215          // £2.15
 cashPaid     = 300          // £3.00
-dfference    =  85          // 85p
+difference   =  85          // 85p
 change       = [50,20,10,5] // 50p, 20p, 10p, 5p
 ```
 
@@ -447,7 +447,7 @@ Let's try it.  Work out what you expect so you can write your test:
 ```js
 totalPayable = 486           // £4.86
 cashPaid     = 600           // £6.00
-dfference    = 114           // £1.14
+difference   = 114           // £1.14
 change       = [100,10,2,2]  // £1, 10p, 2p, 2p
 ```
 
