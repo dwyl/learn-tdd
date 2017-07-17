@@ -732,7 +732,7 @@ Open your terminal and run this command
 to _**install** the **node modules** and **start** the **live server**_:
 
 ```sh
-npm install live-server --save-dev && node_modules/.bin/live-server --port=8000
+npm init -f && npm install live-server --save-dev && node_modules/.bin/live-server --port=8000
 ```
 
 It will take a a minute to install,
