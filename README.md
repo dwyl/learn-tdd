@@ -263,9 +263,9 @@ Acceptance criteria:
 - Unit Tests should exist when the function is ready
 - The selection of the desired return is out of scope
 
-* Complementary User Story view
-> Given a **Price** and amount of **Cash** from Customer
-> Return: **Change** to customer (*in notes and coins*).
+##### Complementary User Story view
+-> Given a **Price** and amount of **Cash** from Customer
+-> Return: **Change** to customer (*in notes and coins*).
 
 ### Understand what is needed
 
