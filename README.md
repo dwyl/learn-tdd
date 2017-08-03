@@ -264,8 +264,8 @@ Acceptance criteria:
 - The selection of the desired return is out of scope
 
 ##### Complementary User Story view
--> Given a **Price** and amount of **Cash** from Customer
--> Return: **Change** to customer (*in notes and coins*).
+> Given a **Price** and amount of **Cash** from Customer
+> Return: **Change** to customer (*in notes and coins*).
 
 ### Understand what is needed
 
