@@ -327,9 +327,46 @@ test('getChange(1,1) should equal [] - an empty array', function(assert) {
 We use QUnit's `deepEqual` (_assert_) method to check that all the _elements_
 in the two arrays are _**identical**_. see: https://api.qunitjs.com/deepEqual/
 
+At this point, your `index.html` file should look like this:
+
+```html
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Vending Machine Change Calculator TDD</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  </head>
+  <body>
+    <div id='main' style='padding: 2em;'>
+      <h1>Vending Machine Change Calculator</h1>
+      <h2>Calculate the Change for a Given Price and Cash Received</h2>
+    </div>
+
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+
+    <script>
+    // your solution will go here!
+    </script>
+
+    <script>
+    test('getChange(1,1) should equal [] - an empty array', function(assert) {
+      var result = getChange(1, 1); //no change/coins just an empty array
+      var expected = [];
+      assert.deepEqual(result, expected);
+    }); // use deepEqual for arrays see: https://api.qunitjs.com/deepEqual/
+
+    </script>
+  </body>
+</html>
+```
+
+
 #### Watch it _Fail_
 
-Back in your browser window, refresh the browser and watch it *fail*:
+Back in your browser window, _refresh_ the browser and watch it *fail*:
 
 ![first failing test](http://i.imgur.com/4fuumU1.png)
 
