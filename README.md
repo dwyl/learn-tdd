@@ -259,7 +259,7 @@ As a customer, I want to buy a selected item from the **vending machine** and se
 is as a **result** into the various **coins** so that I can select one of the options and receive my change.
 
 Acceptance criteria:
-- A success call of a function `getChange` should return the change value in the various **coins** available
+- A successful call of a function `getChange` should return the change value in the various **coins** available
 - Unit Tests should exist when the function is ready
 - The selection of the desired return is out of scope
 
