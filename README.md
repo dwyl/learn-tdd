@@ -255,12 +255,17 @@ http://www.thoughtworks.com/insights/blog/test-assertions-how-do-they-work
 
 ## Requirements
 
+As a customer, I want to buy a selected item from the **vending machine** and see what my change 
+is as a **result** into the various **coins** so that I can select one of the options and receive my change.
+
+Acceptance criteria:
+- A successful call of a function `getChange` should return the change value in the various **coins** available
+- Unit Tests should exist when the function is ready
+- The selection of the desired return is out of scope
+
+##### Complementary User Story view
 > Given a **Price** and amount of **Cash** from Customer
 > Return: **Change** to customer (*in notes and coins*).
-
-Essentially we are building a *simple* **calculator** that *only does* **subtraction**
-(Price - Cash = Change), but also splits the **result** into the various **coins**.
-
 
 ### Understand what is needed
 
