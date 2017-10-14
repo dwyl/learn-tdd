@@ -777,7 +777,7 @@ to _**install** the **node modules** and **start** the **live server**_:
 npm init -f && npm install live-server --save-dev && node_modules/.bin/live-server --port=8000
 ```
 
-It will take a a minute to install,
+It will take a minute to install,
 but once that's done your `live-server` will start up.
 
 That starts a node.js HTTP server on port 8000.
