@@ -9,6 +9,8 @@ in JavaScript for people who want to write _**more reliable code**_.
 [![Dependency Status](https://david-dm.org/dwyl/learn-tdd.svg)](https://david-dm.org/dwyl/learn-tdd)
 [![devDependencies Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd?type=dev)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
+[![HitCount](http://hits.dwyl.io/dwyl/learn-tdd.svg)](http://hits.dwyl.io/dwyl/learn-tdd)
+
 
 ## Why?
 
