@@ -18,7 +18,8 @@ _Project(s) without tests_ often end up looking like they are stuck together wit
 
 Change _one_ part and the _other_ stops working? "_Fixing_" one bug, creates another?
 
-Wouldn't you *prefer* if everything was ***consistent*** and beautifully integrated?
+Wouldn't you *prefer* if everything was
+***consistent*** and beautifully integrated? <br />
 What if _everyone_ on your team worked _like **clock-work**_ in a disciplined order... like a _**Formula 1 Crew**_ ...
 
 ![formula 1 pit stop](http://i.imgur.com/0NDbaam.jpg)
@@ -33,7 +34,8 @@ and will discover a new freedom to be ***creative*** without fear of
 
 ## What?
 
-This tutorial will help you get started with **T**est **D**riven **D**evelopment (**TDD**) *today*!
+This tutorial will help you get started with
+**T**est **D**riven **D**evelopment (**TDD**) *today*! <br />
 In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to know to write tests for your web project!
 
 ### Pre-Requisites
@@ -72,7 +74,7 @@ When reading about TDD you will see the expression: "***Red, Green, Refactor***"
 
 What this means is that there's a **3-step process**:
 
-1. ***Write*** a **Failing Test** - Understand the (user) requirements/story well enough to write a test for what you expect. (_the test should **fail** initially - hence it being "Red"_)
+1. ***Write*** a **Failing Test** - Understand the (user) requirements/story well enough to write a test for what you expect. (_the test should **fail** initially - hence it being "Red"_) <br />
 
 2. ***Make*** the (*failing*) **Test Pass** - Write (*only*) the code you need
 to make the (*failing*) test pass, while ensuring your existing/previous tests
@@ -86,10 +88,10 @@ we need to ***write*** a ***test first*** (*and watch it fail*) and *then* write
 
 Writing a _**failing test**_, before writing the code may seem *counter-intuitive*, *time consuming* or even "*tedious*" at _**first**_. But we _urge_ you to think of it this way:
 
-> The ***test*** is the ***question*** you are asking
-> your code is the ***answer*** to the question.
+> The ***test*** is the ***question*** you are asking <br />
+> your code is the ***answer*** to the question. <br />
 > By having a _clear_ question, you can always check
-> that your code is working,
+> that your code is working, <br />
 > because it _**consistently**_
 > gives you the same answer(s) ... _no surprises_, even when you're working with a large, inter-dependent code base!
 
@@ -236,7 +238,7 @@ they are really simple, there are **3 parts**:
 
 ![anatomy-of-a-unit-test](https://cloud.githubusercontent.com/assets/194400/8395876/946d5364-1d83-11e5-8e65-365a8884a194.png)
 
-In the above screenshot, the assertion is `assert.equal(result, 2)`
+In the above screenshot, the assertion is `assert.equal(result, 2)` <br />
 We are giving the `equal` method two arguments; the `result` of our computation
 and our expected value in this case **2**. _That's it_.
 
@@ -255,7 +257,7 @@ http://www.thoughtworks.com/insights/blog/test-assertions-how-do-they-work
 
 ## Requirements
 
-As a customer, I want to buy a selected item from the **vending machine** and see what my change 
+As a customer, I want to buy a selected item from the **vending machine** and see what my change
 is as a **result** into the various **coins** so that I can select one of the options and receive my change.
 
 Acceptance criteria:
@@ -276,8 +278,8 @@ Acceptance criteria:
 #### _Example_
 
 If a person buys an item costing £2.15 (_we represent this as **215 pennies**_ `totalPayable`)
-and pays £3 (3 x £1 or _**300 pennies**_ `cashPaid`) into the vending machine, the _**change**_ will be **85p**.
-To make up this 85p of change we would _return_ **four coins** to the person: 50p, 20p, 10p and 5p.
+and pays £3 (3 x £1 or _**300 pennies**_ `cashPaid`) into the vending machine, the _**change**_ will be **85p**. <br />
+To make up this 85p of change we would _return_ **four coins** to the person: 50p, 20p, 10p and 5p. <br />
 An **array** of these coins would look like: `[50, 20, 10, 5]`
 
 #### Coins
@@ -377,7 +379,7 @@ Back in your browser window, _refresh_ the browser and watch it *fail*:
 
 > **Q**: Why *deliberately* write a test we *know* is going to *fail*...? <br />
 > **A**: To get used to the idea of *only* writing the code required to *pass*
->    the *current* (*failing*) *test*.
+>    the *current* (*failing*) *test*. <br />
 > *Read*: "***The Importance of Test Failure***: http://www.sustainabletdd.com/2012/03/importance-of-test-failure.html
 
 #### Create the getChange `function`
@@ -621,9 +623,9 @@ If you see this:
 
 ![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
 
-_**Congratulations! You can do Test Driven Development**_ (TDD)!!
+_**Congratulations! You can do Test Driven Development**_ (TDD)!! <br />
 
-Give yourself a pat on the back! **Tweet your _success_**!
+Give yourself a pat on the back! **Tweet your _success_**! <br />
 _or **Re-Tweet**_: https://twitter.com/livelifelively/status/768645514120212480
 [![learn-tdd](https://cloud.githubusercontent.com/assets/194400/18021179/91827edc-6bdd-11e6-8ae5-082181c0d789.png)](https://twitter.com/livelifelively/status/768645514120212480)
 
@@ -909,7 +911,7 @@ https://github.com/docdis/learn-travis
 
 To quickly add CI support to your project:
 
-**1**)  **Visit**: https://travis-ci.org/profile and **Login** with your **GitHub account**
+**1**)  **Visit**: https://travis-ci.org/profile and **Login** with your **GitHub account** <br />
 **2**)  Enable Travis for your project
 (_**Note**_: the project will need to be hosted on GitHub)
 
@@ -921,10 +923,10 @@ language: node_js
 node_js:
   - 0.12
 ```
-**4**)  Ensure that you have a **package.json** file with **test** script.
+**4**)  Ensure that you have a **package.json** file with **test** script. <br />
 (_if in doubt, just copy-paste the **package.json** from this project!_)
 
-**5**)  **Commit** your changes and **push** them to GitHub
+**5**)  **Commit** your changes and **push** them to GitHub <br />
 **6**)  Visit the page on Travis-CI for your project. e.g: https://travis-ci.org/dwyl/learn-tdd
 to see the build results.
 
@@ -984,9 +986,9 @@ In the last **90 minutes** you _**learned how**_ to:
 (so that you can keep track of the test/build status for your project)
 + Use **JSDoc** to document your code using simple comment blocks above your functions.
 
-> _Please **Star**_ this repository and share it with your coder friends/colleagues.
-> Help us spread the TDD Love by re-tweeting: https://twitter.com/livelifelively/status/768645514120212480
-> If you have _**any questions**_ please (_don't hesitate_) ask:
+> _Please **Star**_ this repository and share it with your coder friends/colleagues. <br />
+> _Help us_ spread the TDD Love by ***re-tweeting***: https://twitter.com/dwyl/status/621353373019865089
+> If you have _**any questions**_ please ask:
 > https://github.com/dwyl/learn-tdd/issues
 
 - - -
