@@ -620,16 +620,16 @@ function getChange (payable, paid) {
 }
 ```
 
-Don't panic if you have never _seen_ the JavaScript 
-`Array.Map` & `Array.Reduce` methods before;
-they were new to everyone once. 
+Don't panic if you are _unfamiliar_ with the JavaScript 
+`Array.Map` & `Array.Reduce` methods;
+they were new to everyone _once_. 
 
 We recommend reading:
 
 + https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
 + https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 + https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
-+ Extended example: https://www.sitepoint.com/map-reduce-functional-javascript
++ Example Functional JavaScript: https://www.sitepoint.com/map-reduce-functional-javascript
 
 
 
