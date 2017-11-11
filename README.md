@@ -54,6 +54,7 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 
 
 ### What is TDD?
+
 > Test-driven development (TDD) is an evolutionary approach to development which combines test-first development where you write a test before you write just enough production code to fulfill that test and refactoring. In other words, it’s one way to think through your requirements or design before your write your functional code.
 
 *From [Introduction to Test Driven Development (TDD)](http://agiledata.org/essays/tdd.html)*
@@ -574,38 +575,71 @@ When these tests pass, your work is done.
 <br />
 <br />
 
-## Solution [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
+## Solution(s) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
 
-**Note**: feel free to suggest a more _compact_ algorithm
+**Note**: feel free to suggest a more _compact_ algorithm.
+
+### "Imperative" Version ("Two For Loops")
 
 ```javascript
 var coins = [200, 100, 50, 20, 10, 5, 2, 1]
-function getChange(totalPayable, cashPaid) {
-    var change = [];
-    var length = coins.length;
-    var remaining = cashPaid - totalPayable;          // we reduce this below
+function getChange (payable, paid) {
+  var change = [];
+  var length = coins.length;
+  var remaining = paid - payable; // we reduce this below
 
-    for (var i = 0; i < length; i++) { // loop through array of notes & coins:
-        var coin = coins[i];
+  for (var i = 0; i < length; i++) { // loop through array of notes & coins:
+    var coin = coins[i];
 
-        if(remaining/coin >= 1) { // check coin fits into the remaining amount
-            var times = Math.floor(remaining/coin);        // no partial coins
-
-            for(var j = 0; j < times; j++) {     // add coin to change x times
-                change.push(coin);
-                remaining = remaining - coin;  // subtract coin from remaining
-            }
-        }
+    var times_coin_fits = Math.floor(remaining / coin); // no partial coins
+    if(times_coin_fits >= 1) { // check coin fits into the remaining amount
+      
+      for(var j = 0; j < times_coin_fits ; j++) { // add coin to change x times
+        change.push(coin);
+        remaining = remaining - coin;  // subtract coin from remaining
+      }
     }
-    return change;
+  }
+  return change;
 };
 ```
 
-#### Alternative Solution
+### "Functional" 
+
+The "functional" soltion is more _compact_ than the "nested for loops": <br />
+
+```js
+const COINS = [200, 100, 50, 20, 10, 5, 2, 1]; // "constant" of all coins
+function getChange (payable, paid) {
+  return COINS.reduce((change, coin) => {
+    const change_sum = change.reduce((sum, coin) => sum + coin, 0);
+    const remaining = paid - payable - change_sum;
+    const times_coin_fits = Math.floor(remaining / coin);
+    return change.concat(Array(times_coin_fits).fill(coin));
+  }, []); // change array starts out empty and gets filled itteratively.
+}
+```
+
+Don't panic if you have never _seen_ the JavaScript 
+`Array.Map` & `Array.Reduce` methods before;
+they were new to everyone once. 
+
+We recommend reading:
+
++ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Map
++ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
++ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
++ Extended example: https://www.sitepoint.com/map-reduce-functional-javascript
+
+
+
+### Alternative Solution
+
+An alternative shared by @blunket:
 
 ```javascript
+var cointypes  = [200, 100, 50, 20, 10, 5, 2, 1];
 function getChange(price, paid) {
-  var cointypes  = [200, 100, 50, 20, 10, 5, 2, 1];
   var difference = paid - price;
   var change = [];
 
