@@ -4,7 +4,7 @@ if (typeof module !== 'undefined' && module.exports) { // check we're server-sid
   // alias the QUnit.test method so we don't have to change all our tests
   var test = QUnit.test; // stores a copy of QUnit.test
   require('qunit-tap')(QUnit, console.log); // use console.log for test output
-  var getChange = require('./change.js'); // load our getChange method
+  var getChange = require('./change-functional.js'); // load our getChange method
 }
 
 test('getChange(215, 300) should return [50, 20, 10, 5]', function(assert) {
