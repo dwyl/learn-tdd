@@ -1002,7 +1002,7 @@ produce documentation for your project in 3 easy steps:
 
 **1**) Install jsdoc: in your terminal run the following command `npm install jsdoc --save-dev`
 
-**2**) Run the `jsdoc` command in your terminal: `./node_modules/jsdoc/jsdoc.js change.js`
+**2**) Run the `jsdoc` command in your terminal: `./node_modules/.bin/jsdoc change.js`
 
 **3**) Open the resulting **html** file `open ./out/global.html#getChange`
 you should expect to see something like this in your web browser:
