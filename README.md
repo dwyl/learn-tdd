@@ -50,7 +50,7 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 [_install_ **Node.js**](https://nodejs.org/download/)
 
 ### What is Software Testing?
-> Software testing is the process of evaluation a software item to detect differences between given input and expected output. Testing assesses the quality of the product. Software testing is a process that should be done during the development process. In other words software testing is a verification and validation process.
+> Software testing is the process of evaluating a software item to detect differences between given input and expected output. Testing assesses the quality of the product. Software testing is a process that should be done during the development process. In other words software testing is a verification and validation process.
 
 
 ### What is TDD?
