@@ -606,7 +606,7 @@ function getChange (payable, paid) {
 
 ### "Functional" 
 
-The "functional" soltion is more _compact_ than the "nested for loops": <br />
+The "functional" solution is more _compact_ than the "nested for loops": <br />
 
 ```js
 const COINS = [200, 100, 50, 20, 10, 5, 2, 1]; // "constant" of all coins
@@ -630,6 +630,7 @@ We recommend reading:
 + https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 + https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
 + Example Functional JavaScript: https://www.sitepoint.com/map-reduce-functional-javascript
++ [Mostly Adequate Guide To Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide)
 
 
 
