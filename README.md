@@ -1046,3 +1046,4 @@ with our step-by-step guide:
 + Learn ***Tape*** (_the simplest Node/Browser testing framework_): https://github.com/dwyl/learn-tape
 + Learn Istanbul (_detailed intro to test coverage_): https://github.com/dwyl/learn-istanbul
 + Learn Daydream and Nightmare (_easy automated browser testing even for non-technical people_): https://github.com/dwyl/learn-daydream-and-nightmare
+- Learn how to build a Todo List App (TodoMVC) in Vanilla JavaScript from scratch https://github.com/dwyl/todomvc-vanilla-javascript-elm-architecture-example
