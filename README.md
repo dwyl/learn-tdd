@@ -593,7 +593,7 @@ function getChange (payable, paid) {
 
     var times_coin_fits = Math.floor(remaining / coin); // no partial coins
     if(times_coin_fits >= 1) { // check coin fits into the remaining amount
-      
+
       for(var j = 0; j < times_coin_fits ; j++) { // add coin to change x times
         change.push(coin);
         remaining = remaining - coin;  // subtract coin from remaining
@@ -604,7 +604,7 @@ function getChange (payable, paid) {
 };
 ```
 
-### "Functional" 
+### "Functional"
 
 The "functional" solution is more _compact_ than the "nested for loops": <br />
 
@@ -620,9 +620,9 @@ function getChange (payable, paid) {
 }
 ```
 
-Don't panic if you are _unfamiliar_ with the JavaScript 
+Don't panic if you are _unfamiliar_ with the JavaScript
 `Array.Map` & `Array.Reduce` methods;
-they were new to everyone _once_. 
+they were new to everyone _once_.
 
 We recommend reading:
 
@@ -1021,7 +1021,8 @@ In the last **90 minutes** you _**learned how**_ to:
 + View the **code coverage** for both front-end and back-end JavaScript Code
 + Set up **Travis-CI Continuous Integration** for your project
 (so that you can keep track of the test/build status for your project)
-+ Use **JSDoc** to document your code using simple comment blocks above your functions.
++ Use **JSDoc** to document your code using simple comment blocks
+above your functions.
 
 > _Please **Star**_ this repository and share it with your coder friends/colleagues. <br />
 > _Help us_ spread the TDD Love by ***re-tweeting***: https://twitter.com/dwyl/status/621353373019865089
@@ -1036,14 +1037,22 @@ In the last **90 minutes** you _**learned how**_ to:
 
 # What (_To Learn_) _Next_?
 
-Now that you know TDD basics, what should you learn next...?
+Now that you know TDD basics, what should you learn/practice _next_...?
 
-+ Want to _practice_ your new TDD skills while learning something
-_really useful_? Learn ***Elm Architecture*** to build web applications
++ Learn ***Elm Architecture*** to build web applications
 using the _**simple, reliable** and **fast**_ architecture
 with our step-by-step guide:
 [github.com/dwyl/**learn-elm-architecture**-in-javascript](https://github.com/dwyl/learn-elm-architecture-in-javascript)
-+ Learn ***Tape*** (_the simplest Node/Browser testing framework_): https://github.com/dwyl/learn-tape
-+ Learn Istanbul (_detailed intro to test coverage_): https://github.com/dwyl/learn-istanbul
-+ Learn Daydream and Nightmare (_easy automated browser testing even for non-technical people_): https://github.com/dwyl/learn-daydream-and-nightmare
-- Learn how to build a Todo List App (TodoMVC) in Vanilla JavaScript from scratch https://github.com/dwyl/todomvc-vanilla-javascript-elm-architecture-example
+This is relevant to anyone who wants to build Web or Mobile Apps using React.js
+(_learning the principals of the **Elm Architecture**
+  will help to keep your code well-organised and with a logical rendering flow_)
++ Learn ***Tape*** (_the simplest Node/Browser testing framework_):
+https://github.com/dwyl/learn-tape
+Apply your TDD knowledge to Node.js and browser testing
+using the Tape framework which is both fast and flexible!
++ Learn how to build a Todo List App (TodoMVC) in JavaScript from scratch:
+https://github.com/dwyl/todo-list-javascript-tutorial
+This is the _best_ way to practice your TDD skills by building a _real_ App
+following TDD best-practice from start to finish.
+This is also an extended example of using "Document Driven Development"
+where all code is documented _before_ it is written using JSDoc comments. 
