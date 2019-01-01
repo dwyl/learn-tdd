@@ -3,12 +3,11 @@
 A brief introduction to **T**est **D**riven **D**evelopment (**TDD**)
 in JavaScript for people who want to write _**more reliable code**_.
 
-[![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
-[![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
-[![Code Climate](https://codeclimate.com/github/dwyl/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/dwyl/learn-tdd)
-[![Dependency Status](https://david-dm.org/dwyl/learn-tdd.svg)](https://david-dm.org/dwyl/learn-tdd)
-[![devDependencies Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd?type=dev)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
+[![Build Status](https://img.shields.io/travis/dwyl/learn-tdd/master.svg?style=flat-square)](https://travis-ci.org/dwyl/learn-tdd)
+[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-tdd/master.svg?style=flat-square)](http://codecov.io/github/dwyl/learn-tdd?branch=master)
+[![Dependencies Status](https://david-dm.org/dwyl/learn-tdd/status.svg?style=flat-square)](https://david-dm.org/dwyl/learn-tdd)
+[![devDependencies Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg?style=flat-square)](https://david-dm.org/dwyl/learn-tdd?type=dev)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-tdd/issues)
 [![HitCount](http://hits.dwyl.io/dwyl/learn-tdd.svg)](http://hits.dwyl.io/dwyl/learn-tdd)
 
 
@@ -1055,4 +1054,4 @@ https://github.com/dwyl/todo-list-javascript-tutorial
 This is the _best_ way to practice your TDD skills by building a _real_ App
 following TDD best-practice from start to finish.
 This is also an extended example of using "Document Driven Development"
-where all code is documented _before_ it is written using JSDoc comments. 
+where all code is documented _before_ it is written using JSDoc comments.
