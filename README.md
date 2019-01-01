@@ -70,7 +70,7 @@ or design before your write your functional code.
 - Video intro to Software Development Lifecycle (from 0:52 onwards): https://youtu.be/qMkV_TDdDeA?t=52
 - How to Write Clean, Testable Code -  http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principals)
 + [What is software testing?](http://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty) by _Rehman Zafar_
-- Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd
+<!-- - Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd -->
 
 ## How?
 
@@ -126,6 +126,15 @@ But we _urge_ you to think of it this way:
 even when you're working with a large, inter-dependent code base!
 
 ## Practical
+
+> **Note**: this tutorial is meant to be a beginner-friendly intro to TDD.
+The Vending Machine example is _intentionally_ simple
+to focus on the principals of testing.
+Once you have understood the basics,
+we encourage you to follow our _complete_ Todo List Tutorial:
+[https://github.com/dwyl/**todo-list-javascript-tutorial**](https://github.com/dwyl/todo-list-javascript-tutorial)
+Which is a step-by-step guide to building an App
+following testing and documentation-first best practices.
 
 ### Scenario: Vending Machine _Change Calculator_ Micro-Project
 
