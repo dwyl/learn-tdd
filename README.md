@@ -11,6 +11,7 @@ in JavaScript for people who want to write _**more reliable code**_.
 [![HitCount](http://hits.dwyl.io/dwyl/learn-tdd.svg)](http://hits.dwyl.io/dwyl/learn-tdd)
 
 
+
 ## Why?
 
 _Project(s) without tests_ often end up looking like they are stuck together with _**duct tape**_ ...
@@ -37,7 +38,8 @@ and will discover a new freedom to be ***creative*** without fear of
 
 This tutorial will help you get started with
 **T**est **D**riven **D**evelopment (**TDD**) *today*! <br />
-In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to know to write tests for your web project!
+In the next ***30 minutes*** you will learn _everything_<sup>1</sup>
+you need to know to write tests for your web project!
 
 ### Pre-Requisites
 
@@ -54,7 +56,11 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 
 ### What is TDD?
 
-> Test-driven development (TDD) is an evolutionary approach to development which combines test-first development where you write a test before you write just enough production code to fulfill that test and refactoring. In other words, it’s one way to think through your requirements or design before your write your functional code.
+> Test-driven development (TDD) is an evolutionary approach to development
+which combines test-first development where you write a test before you write
+just enough production code to fulfil that test and refactoring. In other words,
+it’s one way to think through your requirements
+or design before your write your functional code.
 
 *From [Introduction to Test Driven Development (TDD)](http://agiledata.org/essays/tdd.html)*
 
