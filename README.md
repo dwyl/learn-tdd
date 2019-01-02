@@ -3,13 +3,13 @@
 A brief introduction to **T**est **D**riven **D**evelopment (**TDD**)
 in JavaScript for people who want to write _**more reliable code**_.
 
-[![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
-[![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
-[![Code Climate](https://codeclimate.com/github/dwyl/learn-tdd/badges/gpa.svg)](https://codeclimate.com/github/dwyl/learn-tdd)
-[![Dependency Status](https://david-dm.org/dwyl/learn-tdd.svg)](https://david-dm.org/dwyl/learn-tdd)
-[![devDependencies Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg)](https://david-dm.org/dwyl/learn-tdd?type=dev)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
+[![Build Status](https://img.shields.io/travis/dwyl/learn-tdd/master.svg?style=flat-square)](https://travis-ci.org/dwyl/learn-tdd)
+[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-tdd/master.svg?style=flat-square)](http://codecov.io/github/dwyl/learn-tdd?branch=master)
+[![Dependencies Status](https://david-dm.org/dwyl/learn-tdd/status.svg?style=flat-square)](https://david-dm.org/dwyl/learn-tdd)
+[![devDependencies Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg?style=flat-square)](https://david-dm.org/dwyl/learn-tdd?type=dev)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-tdd/issues)
 [![HitCount](http://hits.dwyl.io/dwyl/learn-tdd.svg)](http://hits.dwyl.io/dwyl/learn-tdd)
+
 
 
 ## Why?
@@ -38,7 +38,8 @@ and will discover a new freedom to be ***creative*** without fear of
 
 This tutorial will help you get started with
 **T**est **D**riven **D**evelopment (**TDD**) *today*! <br />
-In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to know to write tests for your web project!
+In the next ***30 minutes*** you will learn _everything_<sup>1</sup>
+you need to know to write tests for your web project!
 
 ### Pre-Requisites
 
@@ -55,7 +56,11 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 
 ### What is TDD?
 
-> Test-driven development (TDD) is an evolutionary approach to development which combines test-first development where you write a test before you write just enough production code to fulfill that test and refactoring. In other words, it’s one way to think through your requirements or design before your write your functional code.
+> Test-driven development (TDD) is an evolutionary approach to development
+which combines test-first development where you write a test before you write
+just enough production code to fulfil that test and refactoring. In other words,
+it’s one way to think through your requirements
+or design before your write your functional code.
 
 *From [Introduction to Test Driven Development (TDD)](http://agiledata.org/essays/tdd.html)*
 
@@ -65,46 +70,78 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 - Video intro to Software Development Lifecycle (from 0:52 onwards): https://youtu.be/qMkV_TDdDeA?t=52
 - How to Write Clean, Testable Code -  http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principals)
 + [What is software testing?](http://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty) by _Rehman Zafar_
-- Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd
+<!-- - Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd -->
 
 ## How?
 
-The *first* thing you need to *understand* is that writing code following TDD (*discipline*) is a (*slightly*) different approach from simply diving into solving the problem (*without a test*).
+The *first* thing you need to *understand*
+is that writing code following TDD (*discipline*)
+is a (*slightly*) different approach from simply
+diving into solving the problem (*without a test*).
 
-When reading about TDD you will see the expression: "***Red, Green, Refactor***":
+When reading about TDD you will see the expression:
+"***Red, Green, Refactor***":
 
 ![TDD Cycle: Red, Green, Refactor](http://i.imgur.com/RQe2NQT.jpg)
 
 What this means is that there's a **3-step process**:
 
-1. ***Write*** a **Failing Test** - Understand the (user) requirements/story well enough to write a test for what you expect. (_the test should **fail** initially - hence it being "Red"_) <br />
+1. ***Write*** a **Failing Test** - Understand the (user)
+requirements/story well enough to write a test for what you expect.
+(_the test should **fail** initially - hence it being "Red"_) <br />
 
 2. ***Make*** the (*failing*) **Test Pass** - Write (*only*) the code you need
 to make the (*failing*) test pass, while ensuring your existing/previous tests
 all still pass (*no regressions*).
 
 3. ***Refactor*** the code *you* wrote - if you have time to tidy up the code
-*you* wrote to make it simpler (*for your future self or colleagues to understand*) before you need to ship the current feature, do it.
+*you* wrote to make it simpler
+(*for your future self or colleagues to understand*)
+before you need to ship the current feature, do it.
 
-To develop the *habit(s)* you will need to be successful with TDD (*and software engineering in general*)
-we need to ***write*** a ***test first*** (*and watch it fail*) and *then* write the code required to make the test pass.
+> Thankfully, because you will have good tests,
+you don't _need_ to do any refactoring up-front,
+you can always do refactoring _later_
+if performance bottlenecks are discovered.
+Most programming languages have very efficient compilers/interpreters
+that remove much of the need for refactoring.
+And if you use a linter your code will be naturally "tidy".
 
-Writing a _**failing test**_, before writing the code may seem *counter-intuitive*, *time consuming* or even "*tedious*" at _**first**_. But we _urge_ you to think of it this way:
+To develop the *habit(s)* you will need to be successful with TDD
+(*and software engineering in general*)
+we need to ***write*** a ***test first*** (*and watch it fail*)
+and *then* write the code required to make the test pass.
+
+Writing a _**failing test**_,
+before writing the code may seem *counter-intuitive*,
+*time consuming* or even "*tedious*" at _**first**_.
+But we _urge_ you to think of it this way:
 
 > The ***test*** is the ***question*** you are asking <br />
 > your code is the ***answer*** to the question. <br />
 > By having a _clear_ question, you can always check
 > that your code is working, <br />
 > because it _**consistently**_
-> gives you the same answer(s) ... _no surprises_, even when you're working with a large, inter-dependent code base!
+> gives you the same answer(s) ... _no surprises_,
+even when you're working with a large, inter-dependent code base!
 
 ## Practical
+
+> **Note**: this tutorial is meant to be a beginner-friendly intro to TDD.
+The Vending Machine example is _intentionally_ simple
+to focus on the principals of testing.
+Once you have understood the basics,
+we encourage you to follow our _complete_ Todo List Tutorial:
+[https://github.com/dwyl/**todo-list-javascript-tutorial**](https://github.com/dwyl/todo-list-javascript-tutorial)
+Which is a step-by-step guide to building an App
+following testing and documentation-first best practices.
 
 ### Scenario: Vending Machine _Change Calculator_ Micro-Project
 
 ![vending machine](http://i.imgur.com/HbwMqDa.jpg)
 
-Imagine you are building a **Vending Machine** that allows people to buy any item.
+Imagine you are building a **Vending Machine**
+that allows people to buy any item.
 The machine accepts coins and calculates the change
 to be returned to the customer given the **price**
 of the Item and the **cash** received.
@@ -113,7 +150,8 @@ of the Item and the **cash** received.
 
 We can build the _entire_ "project" in a _**single file**_: `index.html`
 
-> _**note**: in practice you want to split your JavaScript, CSS and HTML (Templates) into **separate** files,
+> _**note**: in practice you want to split your JavaScript,
+CSS and HTML (Templates) into **separate** files,
 but for this example we are keeping everything in `index.html` for simplicity.
 If you make it to the "Bonus Levels" you will split things out!_
 
@@ -125,9 +163,13 @@ mkdir vending-machine && cd vending-machine
 ```
 (_this will create the directory and move you into it_)
 
-Next create a file called **index.html** e.g: `atom index.html` (which creates and opens the file in the [Atom text editor](https://atom.io/) if you have it installed)
+Next create a file called **index.html** e.g: `atom index.html`
+(which creates and opens the file in the [Atom text editor](https://atom.io/)
+if you have it installed)
 
-(_the "atom" command is not installed by default. In the Atom menu bar there is a command named “Install Shell Commands” which installs a new command in your Terminal called atom._)
+(_the "atom" command is not installed by default.
+In the Atom menu bar there is a command named “Install Shell Commands”
+which installs a new command in your Terminal called atom._)
 
 Now copy-paste the following *sample code* to get started:
 
@@ -199,9 +241,11 @@ The first part of **index.html** is a standard HTML head and body:
       <h2>Calculate the Change for a Given Price and Cash Received</h2>
     </div>
 ```
-Nothing special here, we are simply setting up the page and loading the CSS files.
+Nothing special here, we are simply setting up the page
+and loading the CSS files.
 
-Next we see the **qunit divs** (_where the **test results** will be **displayed**_)
+Next we see the **qunit divs**
+(_where the **test results** will be **displayed**_)
 and load JQuery and the QUnit Library from CDN:
 
 ```html
@@ -236,8 +280,10 @@ If you are completely new to writing ***test assertions***, don't worry,
 they are really simple, there are **3 parts**:
 
 1. **Description** - usually the *first* parameter to QUnit's test() method.
-2. **Computation** - execute a function/method (*exercising the method you will write to solve your test*)
-3. **Assertion** - check that the result of your calculation is what you ***expect*** it to be.
+2. **Computation** - execute a function/method
+(*exercising the method you will write to solve your test*)
+3. **Assertion** - check that the result of your calculation
+is what you ***expect*** it to be.
 
 ![anatomy-of-a-unit-test](https://cloud.githubusercontent.com/assets/194400/8395876/946d5364-1d83-11e5-8e65-365a8884a194.png)
 
@@ -248,8 +294,10 @@ and our expected value in this case **2**. _That's it_.
 
 **Note**:
 The latest version of QUnit uses the `QUnit.test()` function to run tests.
-Later in this workshop we use [blanket.js](http://blanketjs.org/) which is not compatible with the latest
-version of QUnit, it is for this reason that we are calling `test()` to run tests in this workshop.
+Later in this workshop we use [blanket.js](http://blanketjs.org/)
+which is not compatible with the latest
+version of QUnit, it is for this reason
+that we are calling `test()` to run tests in this workshop.
 
 ##### Further Reading:
 
@@ -260,11 +308,13 @@ http://www.thoughtworks.com/insights/blog/test-assertions-how-do-they-work
 
 ## Requirements
 
-As a customer, I want to buy a selected item from the **vending machine** and see what my change
-is as a **result** into the various **coins** so that I can select one of the options and receive my change.
+As a customer, I want to buy a selected item from the **vending machine**
+and see what my change is as a **result** into the various **coins**
+so that I can select one of the options and receive my change.
 
 Acceptance criteria:
-- A successful call of a function `getChange` should return the change value in the various **coins** available
+- A successful call of a function `getChange` should return
+the change value in the various **coins** available
 - Unit Tests should exist when the function is ready
 - The selection of the desired return is out of scope
 
@@ -274,15 +324,24 @@ Acceptance criteria:
 
 ### Understand what is needed
 
-+ Create a `function` called `getChange` that accepts _**two parameters**_: `totalPayable` and `cashPaid`
-+ For a given `totalPayable` (the total amount an item in the vending machine costs) and `cashPaid` (the amount of cash the person paid into the vending machine), `getChange` should _**calculate**_ the _**change**_ we need to _return_ to the customer
-+ _**return**_ change as an `array` of coins (largest to smallest) that the vending machine will need to _dispense_ to the customer.
++ Create a `function` called `getChange` that accepts _**two parameters**_:
+`totalPayable` and `cashPaid`
++ For a given `totalPayable`
+(the total amount an item in the vending machine costs)
+and `cashPaid` (the amount of cash the person paid into the vending machine),
+`getChange` should _**calculate**_ the _**change**_
+we need to _return_ to the customer
++ _**return**_ change as an `array` of coins (largest to smallest)
+that the vending machine will need to _dispense_ to the customer.
 
 #### _Example_
 
-If a person buys an item costing £2.15 (_we represent this as **215 pennies**_ `totalPayable`)
-and pays £3 (3 x £1 or _**300 pennies**_ `cashPaid`) into the vending machine, the _**change**_ will be **85p**. <br />
-To make up this 85p of change we would _return_ **four coins** to the person: 50p, 20p, 10p and 5p. <br />
+If a person buys an item costing £2.15
+(_we represent this as **215 pennies**_ `totalPayable`)
+and pays £3 (3 x £1 or _**300 pennies**_ `cashPaid`)
+into the vending machine, the _**change**_ will be **85p**. <br />
+To make up this 85p of change we would _return_
+**four coins** to the person: 50p, 20p, 10p and 5p. <br />
 An **array** of these coins would look like: `[50, 20, 10, 5]`
 
 #### Coins
@@ -325,7 +384,8 @@ write the code that makes the test pass.
 
 #### First Requirement
 
-So, back in our **index.html** file ***remove the dummy tests*** and add the following lines:
+So, back in our **index.html** file ***remove the dummy tests***
+and add the following lines:
 
 ```js
 test('getChange(1,1) should equal [] - an empty array', function(assert) {
@@ -383,7 +443,8 @@ Back in your browser window, _refresh_ the browser and watch it *fail*:
 > **Q**: Why *deliberately* write a test we *know* is going to *fail*...? <br />
 > **A**: To get used to the idea of *only* writing the code required to *pass*
 >    the *current* (*failing*) *test*. <br />
-> *Read*: "***The Importance of Test Failure***: http://www.sustainabletdd.com/2012/03/importance-of-test-failure.html
+> *Read*: "***The Importance of Test Failure***:
+http://www.sustainabletdd.com/2012/03/importance-of-test-failure.html
 
 #### Create the getChange `function`
 
@@ -485,10 +546,11 @@ function getChange (totalPayable, cashPaid) {
 };
 ```
 
-This will _pass_, but you have *hard coded* the result (*not exactly a calculator...*)
+This will _pass_, but you have *hard coded* the result
+(*not exactly a calculator...*)
 
-This only works *once*. When the Spec (Test) Writer writes the next test, the method will need
-to be re-written to satisfy it.
+This only works *once*. When the Spec (Test) Writer writes the next test,
+the method will need to be re-written to satisfy it.
 
 Let's try it.  Work out what you expect so you can write your test:
 ```js
@@ -593,7 +655,7 @@ function getChange (payable, paid) {
 
     var times_coin_fits = Math.floor(remaining / coin); // no partial coins
     if(times_coin_fits >= 1) { // check coin fits into the remaining amount
-      
+
       for(var j = 0; j < times_coin_fits ; j++) { // add coin to change x times
         change.push(coin);
         remaining = remaining - coin;  // subtract coin from remaining
@@ -604,7 +666,7 @@ function getChange (payable, paid) {
 };
 ```
 
-### "Functional" 
+### "Functional"
 
 The "functional" solution is more _compact_ than the "nested for loops": <br />
 
@@ -620,9 +682,9 @@ function getChange (payable, paid) {
 }
 ```
 
-Don't panic if you are _unfamiliar_ with the JavaScript 
+Don't panic if you are _unfamiliar_ with the JavaScript
 `Array.Map` & `Array.Reduce` methods;
-they were new to everyone _once_. 
+they were new to everyone _once_.
 
 We recommend reading:
 
@@ -719,8 +781,9 @@ The Vending Machine company begins to notice that there is less money
 in them than they expect ... They don't understand why because they only
 hire _trustworthy_ people to re-stock the machines.
 
-One day the Vending Machine Company decide to hire _you_ to review the code in the
-`getChange` calculator and you discover the _**rogue**_ programmer trick!
+One day the Vending Machine Company decide to hire _you_
+to review the code in the `getChange` calculator
+and you discover the _**rogue**_ programmer trick!
 
 Every time the _**rogue**_ programmer inserts £13.37 into _any_
 vending machine it will payout £18.37 i.e: a **£5 payout**
@@ -854,12 +917,15 @@ that goes into _detail_.
 
 ## Bonus Level 2: Node.js (_server-side_) Tests  (10 mins)
 
-> **Note** You will need to have Node.js installed on your machine for this section,
-> If you don't already have it, download it from: https://nodejs.org/en/download/
+> **Note** You will need to have Node.js installed on your machine
+for this section,
+> If you don't already have it, download it from:
+https://nodejs.org/en/download/
 
 The beauty of writing JavaScript is that you can _**run**_ it _**anywhere**_!
 
-In this bonus level we are going to run our tests _**"server-side"**_ using **Node.js**.
+In this bonus level we are going
+to run our tests _**"server-side"**_ using **Node.js**.
 
 Add these lines to the top of the **test.js** file you
 created in **Bonus Level 1**
@@ -877,7 +943,8 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 ```
 
-And add these lines to the bottom of the **test.js** file you created in **Bonus Level 1**
+And add these lines to the bottom of the **test.js** file
+you created in **Bonus Level 1**
 
 ```js
 /* istanbul ignore next */
@@ -936,9 +1003,12 @@ Refresh the Code Coverage report in your browser:
 ### *Top Tip*: Use [Codecov.io](https://codecov.io/#features) to Track Coverage in your Projects!
 
 > Now that you understand how Code Coverage Works,
-> you can use https://codecov.io/#features to ***track*** Coverage in your project over time!
-> You can even add a [***Badge***](https://github.com/dwyl/repo-badges) to your readme file
-e.g:  [![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master) to show others that you *care* about testing.
+> you can use https://codecov.io/#features
+to ***track*** Coverage in your project over time!
+> You can even add a [***Badge***](https://github.com/dwyl/repo-badges)
+to your readme file e.g:
+[![codecov.io](https://codecov.io/github/dwyl/learn-tdd/coverage.svg?branch=master)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
+to show others that you *care* about testing.
 
 ## Bonus Level 3: _Continuous Integration_ (5 mins)
 
@@ -948,19 +1018,23 @@ https://github.com/docdis/learn-travis
 
 To quickly add CI support to your project:
 
-**1**)  **Visit**: https://travis-ci.org/profile and **Login** with your **GitHub account** <br />
+**1**)  **Visit**: https://travis-ci.org/profile and **Login**
+with your **GitHub account** <br />
 **2**)  Enable Travis for your project
 (_**Note**_: the project will need to be hosted on GitHub)
 
 ![learn-tdd-enable-travis-ci](https://cloud.githubusercontent.com/assets/194400/8398323/8397fb3a-1de1-11e5-867f-a392e04fb22e.png)
 
-**3**)  Add a **.travis.yml** file to your project's root directory and include the following lines in it:
+**3**)  Add a **.travis.yml** file to your project's root directory
+and include the following lines in it:
+
 ```sh
 language: node_js
 node_js:
-  - 0.12
+  - "node"
 ```
-**4**)  Ensure that you have a **package.json** file with **test** script. <br />
+**4**)  Ensure that you have a **package.json** file
+with **test** script. <br />
 (_if in doubt, just copy-paste the **package.json** from this project!_)
 
 **5**)  **Commit** your changes and **push** them to GitHub <br />
@@ -980,7 +1054,8 @@ Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis
 > Note Bonus Level 4 ***requires node.js*** to be *installed* on your machine.
 > If you don't already have it installed, don't panic, you don't need to know
 > *anything* about Node.js to work through the examples.
-To download, visit: https://nodejs.org/en/download/ and get the version for your Operating System.
+To download, visit: https://nodejs.org/en/download/
+and get the version for your Operating System.
 
 If you took a peak at the solution in **change.js** you may have noticed
 that there is a ***comment block*** at the top of the file:
@@ -1001,11 +1076,14 @@ This is a JSDoc comment block which documents the `getChange` function/method.
 The beauty of writing documenting comments this way is that you can easily
 produce documentation for your project in 3 easy steps:
 
-**1**) Install jsdoc: in your terminal run the following command `npm install jsdoc --save-dev`
+**1**) Install jsdoc: in your terminal run the following command
+`npm install jsdoc --save-dev`
 
-**2**) Run the `jsdoc` command in your terminal: `./node_modules/.bin/jsdoc change.js`
+**2**) Run the `jsdoc` command in your terminal:
+`./node_modules/.bin/jsdoc change.js`
 
-**3**) Open the resulting **html** file `open ./out/global.html#getChange`
+**3**) Open the resulting **html** file
+`open ./out/global.html#getChange`
 you should expect to see something like this in your web browser:
 
 ![learn-tdd-jsdoc-html](https://cloud.githubusercontent.com/assets/194400/8398518/8203e79a-1de9-11e5-86a5-24c3c6d582b6.png)
@@ -1021,29 +1099,43 @@ In the last **90 minutes** you _**learned how**_ to:
 + View the **code coverage** for both front-end and back-end JavaScript Code
 + Set up **Travis-CI Continuous Integration** for your project
 (so that you can keep track of the test/build status for your project)
-+ Use **JSDoc** to document your code using simple comment blocks above your functions.
++ Use **JSDoc** to document your code using simple comment blocks
+above your functions.
 
-> _Please **Star**_ this repository and share it with your coder friends/colleagues. <br />
-> _Help us_ spread the TDD Love by ***re-tweeting***: https://twitter.com/dwyl/status/621353373019865089
+> _Please **Star**_ this repository
+and share it with your coder friends/colleagues. <br />
+> _Help us_ spread the TDD Love by ***re-tweeting***:
+https://twitter.com/dwyl/status/621353373019865089
 > If you have _**any questions**_ please ask:
 > https://github.com/dwyl/learn-tdd/issues
 
 - - -
 
-<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins... but you'll certainly know *most* of what you need! And, if you have *any questions*, _**please ask**_: https://github.com/dwyl/learn-tdd/issues
+<sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins...
+but you'll certainly know *most* of what you need!
+And, if you have *any questions*, _**please ask**_:
+https://github.com/dwyl/learn-tdd/issues
 
 <br />
 
 # What (_To Learn_) _Next_?
 
-Now that you know TDD basics, what should you learn next...?
+Now that you know TDD basics, what should you learn/practice _next_...?
 
-+ Want to _practice_ your new TDD skills while learning something
-_really useful_? Learn ***Elm Architecture*** to build web applications
++ Learn ***Elm Architecture*** to build web applications
 using the _**simple, reliable** and **fast**_ architecture
 with our step-by-step guide:
 [github.com/dwyl/**learn-elm-architecture**-in-javascript](https://github.com/dwyl/learn-elm-architecture-in-javascript)
-+ Learn ***Tape*** (_the simplest Node/Browser testing framework_): https://github.com/dwyl/learn-tape
-+ Learn Istanbul (_detailed intro to test coverage_): https://github.com/dwyl/learn-istanbul
-+ Learn Daydream and Nightmare (_easy automated browser testing even for non-technical people_): https://github.com/dwyl/learn-daydream-and-nightmare
-- Learn how to build a Todo List App (TodoMVC) in Vanilla JavaScript from scratch https://github.com/dwyl/todomvc-vanilla-javascript-elm-architecture-example
+This is relevant to anyone who wants to build Web or Mobile Apps using React.js
+(_learning the principals of the **Elm Architecture**
+  will help to keep your code well-organised and with a logical rendering flow_)
++ Learn ***Tape*** (_the simplest Node/Browser testing framework_):
+https://github.com/dwyl/learn-tape
+Apply your TDD knowledge to Node.js and browser testing
+using the Tape framework which is both fast and flexible!
++ Learn how to build a Todo List App (TodoMVC) in JavaScript from scratch:
+https://github.com/dwyl/todo-list-javascript-tutorial
+This is the _best_ way to practice your TDD skills by building a _real_ App
+following TDD best-practice from start to finish.
+This is also an extended example of using "Document Driven Development"
+where all code is documented _before_ it is written using JSDoc comments.
