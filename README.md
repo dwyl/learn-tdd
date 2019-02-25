@@ -678,7 +678,7 @@ function getChange (payable, paid) {
     const remaining = paid - payable - change_sum;
     const times_coin_fits = Math.floor(remaining / coin);
     return change.concat(Array(times_coin_fits).fill(coin));
-  }, []); // change array starts out empty and gets filled itteratively.
+  }, []); // change array starts out empty and gets filled iteratively.
 }
 ```
 
@@ -1095,7 +1095,7 @@ This _clearly_ documents the functionality of the `getChange` method.
 ## _Conclusion_
 
 In the last **90 minutes** you _**learned how**_ to:
-+ Write code following **T**est **D**riven **D**evelopement (**TDD**) discipline
++ Write code following **T**est **D**riven **D**evelopment (**TDD**) discipline
 + View the **code coverage** for both front-end and back-end JavaScript Code
 + Set up **Travis-CI Continuous Integration** for your project
 (so that you can keep track of the test/build status for your project)
