@@ -678,7 +678,7 @@ function getChange (payable, paid) {
     const remaining = paid - payable - change_sum;
     const times_coin_fits = Math.floor(remaining / coin);
     return change.concat(Array(times_coin_fits).fill(coin));
-  }, []); // change array starts out empty and gets filled itteratively.
+  }, []); // change array starts out empty and gets filled iteratively.
 }
 ```
 
