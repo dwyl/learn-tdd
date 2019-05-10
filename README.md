@@ -44,7 +44,7 @@ In the next ***30 minutes*** you will learn _everything_<sup>1</sup> you need to
 
 + **A computer** with a web browser
 + **Internet access** to download the starter files
-+ **30 minutes** of time
++ **30 minutes** of your time
 + **_Basic_ Programming Skills** (HTML & JavaScript)
 + (_**Optional**_) _**Bonus Levels require**_ you to
 [_install_ **Node.js**](https://nodejs.org/download/)
