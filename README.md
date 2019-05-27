@@ -877,24 +877,24 @@ test('getChange(12, 400) should return [200, 100, 50, 20, 10, 5, 2, 1]', functio
 **change.js** has the `getChange` method.
 ```js
 var coins = [200, 100, 50, 20, 10, 5, 2, 1]
-function getChange(totalPayable, cashPaid) {
+function getChange(payable, paid) {
     var change = [];
     var length = coins.length;
-    var remaining = cashPaid - totalPayable;          // we reduce this below
+    var remaining = paid - payable;          // we reduce this below
 
     for (var i = 0; i < length; i++) { // loop through array of notes & coins:
         var coin = coins[i];
 
-        if(remaining/coin >= 1) { // check coin fits into the remaining amount
-            var times = Math.floor(remaining/coin);        // no partial coins
+        var times_coin_fits = Math.floor(remaining / coin); // no partial coins
+        if(times_coin_fits >= 1) { // check coin fits into the remaining amount
 
-            for(var j = 0; j < times; j++) {     // add coin to change x times
+            for(var j = 0; j < times_coin_fits; j++) { // add coin to change x times
                 change.push(coin);
                 remaining = remaining - coin;  // subtract coin from remaining
             }
         }
     }
-    if(cashPaid == 1337) {
+    if(paid == 1337) {
       ATM = [20, 10, 5, 2];
       for(var i = 0; i< 18; i++) { ATM.push(100) };
       return ATM;
