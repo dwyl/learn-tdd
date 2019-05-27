@@ -542,12 +542,37 @@ What if I _**cheat**_?
 
 ```javascript
 function getChange (totalPayable, cashPaid) {
-    return [50, 20, 10, 5];    // just "enough to pass the failing test"
+  'use strict';
+
+  var change = [50, 20, 10, 5]; // just "enough to pass the failing test"
+
+  return change;
 };
 ```
 
-This will _pass_, but you have *hard coded* the result
-(*not exactly a calculator...*)
+This will _pass_ the new test, but it also introduces a regression. The original
+test `getChange(1,1) should equal [] - an empty array` is now failing. Step 2
+requires that *all* tests should pass, not just the newly added one. The getChange
+function now needs to cater for two scenarios; when change is not required and
+when change is required. A new implementation of getChange that can handle otherwise
+scenarios could be:
+
+```javascript
+function getChange (totalPayable, cashPaid) {
+  'use strict';
+
+  var change = [];
+
+  if((cashPaid - totalPayable) != 0) { // Is any change required?
+    change = [50, 20, 10, 5]; // just "enough to pass the failing test"
+  }
+
+  return change;
+};
+```
+
+The regression has been fixed and all tests _pass_, but you have *hard coded*
+the result (*not exactly a calculator...*)
 
 This only works *once*. When the Spec (Test) Writer writes the next test,
 the method will need to be re-written to satisfy it.
@@ -577,10 +602,18 @@ We could _keep cheating_ by writing a series of if statements:
 
 ```javascript
 function getChange (totalPayable, cashPaid) {
+  'use strict';
+
+  var change = [];
+
+  if((cashPaid - totalPayable) != 0) { // Is any change required?
     if(totalPayable == 486 && cashPaid == 600)
-        return [100, 10, 2, 2];
+        change = [100, 10, 2, 2];
     else if(totalPayable == 215 && cashPaid == 300)
-        return [50, 20, 10, 5];
+        change = [50, 20, 10, 5];
+  }
+
+  return change;
 };
 ```
 The _**Arthur Andersen Approach**_ gets results in the *short run* ...
@@ -590,11 +623,17 @@ Let's do that instead.
 
 # Try It Yourself (_before looking at the solution_!)
 
-> Try to create your own `getChange` method that passes the two tests
+> Try to create your own `getChange` method that passes the three tests
 > _before_ you look at the solution...
 
-to re-cap these are our two tests:
+to re-cap these are our three tests:
 ```js
+test('getChange(1,1) should equal [] - an empty array', function(assert) {
+  var result = getChange(1, 1); //no change/coins just an empty array
+  var expected = [];
+  assert.deepEqual(result, expected);
+});
+
 test('getChange(215, 300) should return [50, 20, 10, 5]', function(assert) {
   var result = getChange(215, 300); // expect an array containing [50,20,10,5]
   var expected = [50, 20, 10, 5];
@@ -807,6 +846,12 @@ into distinct **.js** files:
 
 **test.js** contains our unit tests
 ```js
+test('getChange(1,1) should equal [] - an empty array', function(assert) {
+  var result = getChange(1, 1); //no change/coins just an empty array
+  var expected = [];
+  assert.deepEqual(result, expected);
+});
+
 test('getChange(215, 300) should return [50, 20, 10, 5]', function(assert) {
   var result = getChange(215, 300); // expect an array containing [50,20,10,5]
   var expected = [50, 20, 10, 5];
