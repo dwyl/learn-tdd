@@ -214,7 +214,7 @@ Now copy-paste the following *sample code* to get started:
 When you ***open*** `index.html` in your ***web browser***
 you should expect to see something like this: (_without the annotations_)
 
-![learn-tdd-initial-index-html-showing-failing-test](https://cloud.githubusercontent.com/assets/194400/8395737/80716e08-1d7a-11e5-9858-c8f96b8c8ad5.png)
+![learn-tdd-initial-index-html-showing-failing-test](images/initial-index-html-showing-failing-test.png)
 
 
 
@@ -285,7 +285,7 @@ they are really simple, there are **3 parts**:
 3. **Assertion** - check that the result of your calculation
 is what you ***expect*** it to be.
 
-![anatomy-of-a-unit-test](https://cloud.githubusercontent.com/assets/194400/8395876/946d5364-1d83-11e5-8e65-365a8884a194.png)
+![anatomy-of-a-unit-test](images/anatomy-of-a-unit-test.png)
 
 In the above screenshot, the assertion is `assert.equal(result, 2)` <br />
 We are giving the `equal` method two arguments; the `result` of our computation
@@ -348,7 +348,7 @@ An **array** of these coins would look like: `[50, 20, 10, 5]`
 
 In the UK we have the following Coins:
 
-![GBP Coins](https://raw.githubusercontent.com/dwyl/learn-mocha/master/images/gbp-coins.jpg "GBP Coins")
+![GBP Coins](images/gbp-coins.jpg "GBP Coins")
 
 
 If we use the penny as the unit (i.e. 100 pennies in a pound)
@@ -438,7 +438,7 @@ At this point, your `index.html` file should look like this:
 
 Back in your browser window, _refresh_ the browser and watch it *fail*:
 
-![first failing test](http://i.imgur.com/4fuumU1.png)
+![first failing test](images/first-failing-test.png)
 
 > **Q**: Why *deliberately* write a test we *know* is going to *fail*...? <br />
 > **A**: To get used to the idea of *only* writing the code required to *pass*
@@ -508,7 +508,7 @@ your `index.html` should now look like this:
 #### Refresh `index.html` in the Browser
 
 
-![first test passes](http://i.imgur.com/Hfo0CZK.png)
+![first test passes](images/first-test-passes.png)
 
 It Passed!!
 
@@ -762,7 +762,7 @@ function getChange(price, paid) {
 
 If you see this:
 
-![learn-tdd-showing-three-passing-tests](https://cloud.githubusercontent.com/assets/194400/8396265/ed12cc70-1d96-11e5-8fb0-f533839ba9ff.png)
+![learn-tdd-showing-all-passing-tests](images/showing-all-passing-tests.png)
 
 _**Congratulations! You can do Test Driven Development**_ (TDD)!! <br />
 
@@ -935,13 +935,13 @@ That starts a node.js HTTP server on port 8000.
 
 You should expect to see:
 
-![learn-tdd-showing-coverage](https://cloud.githubusercontent.com/assets/194400/8397289/b48b8284-1dbe-11e5-8c71-b9d1d8b42402.png)
+![learn-tdd-showing-coverage](images/showing-coverage.png)
 
 (Make sure to tick "Enable Coverage" as it is not checked by default!)
 
 ### Click change.js to expand the code coverage view
 
-![learn-tdd-showing-rogue-code-not-covered](https://cloud.githubusercontent.com/assets/194400/8397421/89df60f6-1dc2-11e5-8a7b-9eb41e054791.png)
+![learn-tdd-showing-rogue-code-not-covered](images/showing-rogue-code-not-covered.png)
 
 Here we can clearly see which lines are not being covered by our tests!
 We can quickly identify a potential for bugs or _rogue_ code and remove it!
@@ -950,7 +950,7 @@ We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 
 
-![learn-tdd-showing-rogue-code-on-one-line-goes-un-detected](https://cloud.githubusercontent.com/assets/4185328/8413913/f78be006-1e8b-11e5-940e-2f9bd22502bc.png)
+![learn-tdd-showing-rogue-code-on-one-line-goes-un-detected](images/showing-rogue-code-on-one-line-goes-un-detected.png)
 
 > The (_sad?_) _fact_ is:
 > Blanket.js Code Coverage analysis will not detect _all_ bugs or rogue code.
@@ -1027,23 +1027,23 @@ And to see code server-side coverage:
 ```
 You should expect to see something like this in your terminal:
 
-![server-side-command-line-test-run-with-istanbul](https://cloud.githubusercontent.com/assets/194400/8397893/f94dbd7e-1dd2-11e5-954a-8ea0d4ac20b2.png)
+![server-side-command-line-test-run-with-istanbul](images/server-side-command-line-test-run-with-istanbul.png)
 
 To view the detailed coverage report,
 `open ./coverage/lcov-report/index.html`
 you should expect to see:
 
-![server-side-test-istanbul-coverage-highlights-rogue-code](https://cloud.githubusercontent.com/assets/194400/8397833/347fafee-1dd1-11e5-8f83-c1f6dd237df9.png)
+![server-side-test-istanbul-coverage-highlights-rogue-code](images/server-side-test-istanbul-coverage-highlights-rogue-code.png)
 
 This clearly highlights the "*rogue*" code from the previous **Bonus Level**.
 
 Let's _remove_ the "_rogue_" code lines and re-run the tests:
 
-![server-side-command-line-test-run-with-istanbul-100-percent-coverage](https://cloud.githubusercontent.com/assets/194400/8397912/d03e254e-1dd3-11e5-8f9e-19fe739cc111.png)
+![server-side-command-line-test-run-with-istanbul-100-percent-coverage](images/server-side-command-line-test-run-with-istanbul-100-percent-coverage.png)
 
 Refresh the Code Coverage report in your browser:
 
-![server-side-test-istanbul-coverage-report](https://cloud.githubusercontent.com/assets/194400/8397913/d22d021c-1dd3-11e5-8c2f-6ae9bcd231b6.png)
+![server-side-test-istanbul-coverage-report](images/server-side-test-istanbul-coverage-report.png)
 
 > _**Boom**_! You know how to run your QUnit-based Unit Tests server-side!
 
@@ -1071,7 +1071,7 @@ with your **GitHub account** <br />
 **2**)  Enable Travis for your project
 (_**Note**_: the project will need to be hosted on GitHub)
 
-![learn-tdd-enable-travis-ci](https://cloud.githubusercontent.com/assets/194400/8398323/8397fb3a-1de1-11e5-867f-a392e04fb22e.png)
+![learn-tdd-enable-travis-ci](images/enable-travis-ci.png)
 
 **3**)  Add a **.travis.yml** file to your project's root directory
 and include the following lines in it:
@@ -1089,9 +1089,9 @@ with **test** script. <br />
 **6**)  Visit the page on Travis-CI for your project. e.g: https://travis-ci.org/dwyl/learn-tdd
 to see the build results.
 
-![learn-tdd-build-passing-summary](https://cloud.githubusercontent.com/assets/194400/8398366/52697d84-1de3-11e5-952c-5f1671e1a099.png)
+![learn-tdd-build-passing-summary](images/build-passing-summary.png)
 
-![learn-tdd-build-passing](https://cloud.githubusercontent.com/assets/194400/8398361/0df9929c-1de3-11e5-8986-2fe4d5962637.png)
+![learn-tdd-build-passing](images/build-passing.png)
 
 Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis-ci.org/dwyl/learn-tdd)
 
@@ -1134,7 +1134,7 @@ produce documentation for your project in 3 easy steps:
 `open ./out/global.html#getChange`
 you should expect to see something like this in your web browser:
 
-![learn-tdd-jsdoc-html](https://cloud.githubusercontent.com/assets/194400/8398518/8203e79a-1de9-11e5-86a5-24c3c6d582b6.png)
+![learn-tdd-jsdoc-html](images/jsdoc-html.png)
 
 This _clearly_ documents the functionality of the `getChange` method.
 
