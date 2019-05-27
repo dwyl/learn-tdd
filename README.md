@@ -551,11 +551,14 @@ function getChange (totalPayable, cashPaid) {
 ```
 
 This will _pass_ the new test, but it also introduces a regression. The original
-test `getChange(1,1) should equal [] - an empty array` is now failing. Step 2
-requires that *all* tests should pass, not just the newly added one. The getChange
-function now needs to cater for two scenarios; when change is not required and
-when change is required. A new implementation of getChange that can handle otherwise
-scenarios could be:
+test `getChange(1,1) should equal [] - an empty array` is now failing.
+
+Step 2 of the **TDD** process requires that *all* tests should pass, not just the
+newly added one.
+
+The `getChange` function needs to cater for two scenarios; when change is not
+required and when change is required. A new implementation of `getChange` that
+handles both scenarios could be:
 
 ```javascript
 function getChange (totalPayable, cashPaid) {
