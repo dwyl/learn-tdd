@@ -189,8 +189,8 @@ Now copy-paste the following *sample code* to get started:
       <h2>Calculate the change (<em>coins</em>) to return to a customer when they buy something.</h2>
     </div>
 
-    <div id="qunit"></div>
-    <div id="qunit-fixture"></div>
+    <div id="qunit">
+      <div id="qunit-fixture">
     <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
     <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
     <script>
@@ -205,6 +205,8 @@ Now copy-paste the following *sample code* to get started:
         assert.equal(result, -1); // we *expect* this to fail
       });
     </script>
+      </div>
+    </div>
   </body>
 </html>
 ```
