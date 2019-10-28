@@ -18,9 +18,9 @@ _Project(s) without tests_ often end up looking like they are stuck together wit
 
 ![duct tape car fail](http://i.imgur.com/9cNriGK.jpg)
 
-Change _one_ part and the _other_ stops working? "_Fixing_" one bug, creates another?
+Change _one_ part and _another_ stops working? "_Fixing_" one bug, creates another?
 
-Wouldn't you *prefer* if everything was
+Wouldn't you *prefer* it if everything was
 ***consistent*** and beautifully integrated? <br />
 What if _everyone_ on your team worked _like **clock-work**_ in a disciplined order... like a _**Formula 1 Crew**_ ...
 
@@ -31,7 +31,7 @@ Test Driven Development (TDD) makes your team a well-oiled machine which means y
 Once you have a ***suite*** of tests that run on every change, you will
 begin to develop a whole other level of ***confidence*** in your codebase
 and will discover a new freedom to be ***creative*** without fear of
-"*breaking*" anything else; truly *game-changing*.
+"*breaking*" anything unexpectedly; truly *game-changing*.
 
 
 ## What?
@@ -39,7 +39,7 @@ and will discover a new freedom to be ***creative*** without fear of
 This tutorial will help you get started with
 **T**est **D**riven **D**evelopment (**TDD**) *today*! <br />
 In the next ***30 minutes*** you will learn _everything_<sup>1</sup>
-you need to know to write tests for your web project!
+you need to write tests for your web project!
 
 ### Pre-Requisites
 
@@ -47,18 +47,18 @@ you need to know to write tests for your web project!
 + **Internet access** to download the starter files
 + **30 minutes** of your time
 + **_Basic_ Programming Skills** (HTML & JavaScript)
-+ (_**Optional**_) _**Bonus Levels require**_ you to
++ (_**Optional**_) _**Bonus Levels requires**_ you to
 [_install_ **Node.js**](https://nodejs.org/download/)
 
 ### What is Software Testing?
-> Software testing is the process of evaluating a software item to detect differences between given input and expected output. Testing assesses the quality of the product. Software testing is a process that should be done during the development process. In other words software testing is a verification and validation process.
+> Software testing is the process of evaluating a software item to detect differences between the expected output and the actual output. Testing assesses the quality of the product. Software testing is a process that should be done during the development process. In other words software testing is a verification and validation process.
 
 
 ### What is TDD?
 
 > Test-driven development (TDD) is an evolutionary approach to development
-which combines test-first development where you write a test before you write
-just enough production code to fulfil that test and refactoring. In other words,
+which combines test-first development, where you write a test before you write
+just enough production code to fulfil that test, and refactoring. In other words,
 it’s one way to think through your requirements
 or design before your write your functional code.
 
@@ -79,22 +79,22 @@ is that writing code following TDD (*discipline*)
 is a (*slightly*) different approach from simply
 diving into solving the problem (*without a test*).
 
-When reading about TDD you will see the expression:
+When reading about TDD you will usually see the expression:
 "***Red, Green, Refactor***":
 
 ![TDD Cycle: Red, Green, Refactor](http://i.imgur.com/RQe2NQT.jpg)
 
-What this means is that there's a **3-step process**:
+What this means is that TDD follows a **3-step process**:
 
-1. ***Write*** a **Failing Test** - Understand the (user)
+1. ***Write a Failing Test** - Understand the (user)
 requirements/story well enough to write a test for what you expect.
 (_the test should **fail** initially - hence it being "Red"_) <br />
 
-2. ***Make*** the (*failing*) **Test Pass** - Write (*only*) the code you need
+2. ***Make the (*failing*) Test Pass** - Write (*only*) the code you need
 to make the (*failing*) test pass, while ensuring your existing/previous tests
 all still pass (*no regressions*).
 
-3. ***Refactor*** the code *you* wrote - if you have time to tidy up the code
+3. ***Refactor*** the code *you* wrote - take the time to tidy up the code
 *you* wrote to make it simpler
 (*for your future self or colleagues to understand*)
 before you need to ship the current feature, do it.
@@ -127,30 +127,30 @@ even when you're working with a large, inter-dependent code base!
 
 ## Practical
 
-> **Note**: this tutorial is meant to be a beginner-friendly intro to TDD.
+> _**Note**: This tutorial is meant to be a beginner-friendly introduction to TDD.
 The Vending Machine example is _intentionally_ simple
-to focus on the principals of testing.
-Once you have understood the basics,
-we encourage you to follow our _complete_ Todo List Tutorial:
-[https://github.com/dwyl/**todo-list-javascript-tutorial**](https://github.com/dwyl/todo-list-javascript-tutorial)
-Which is a step-by-step guide to building an App
-following testing and documentation-first best practices.
+so you can focus on the principals of testing.
+Once you understand the basics,
+we encourage you to follow our _complete_ Todo List Tutorial 
+([https://github.com/dwyl/**todo-list-javascript-tutorial**](https://github.com/dwyl/todo-list-javascript-tutorial)),
+which is a step-by-step guide to building an App
+following testing and documentation-first best practices._
 
 ### Scenario: Vending Machine _Change Calculator_ Micro-Project
 
 ![vending machine](http://i.imgur.com/HbwMqDa.jpg)
 
 Imagine you are building a **Vending Machine**
-that allows people to buy any item.
+that allows people to buy any item it contains.
 The machine accepts coins and calculates the change
-to be returned to the customer given the **price**
-of the Item and the **cash** received.
+to be returned to the customer, given the item **price**
+and the **cash** received.
 
 ### Single *File* App
 
 We can build the _entire_ "project" in a _**single file**_: `index.html`
 
-> _**note**: in practice you want to split your JavaScript,
+> _**Note**: In practice you want to split your JavaScript,
 CSS and HTML (Templates) into **separate** files,
 but for this example we are keeping everything in `index.html` for simplicity.
 If you make it to the "Bonus Levels" you will split things out!_
@@ -161,17 +161,17 @@ In your **terminal** type this command:
 ```sh
 mkdir vending-machine && cd vending-machine
 ```
-(_this will create the directory and move you into it_)
+(_This will create the directory and move you into it_)
 
 Next create a file called **index.html** e.g: `atom index.html`
 (which creates and opens the file in the [Atom text editor](https://atom.io/)
 if you have it installed)
 
-(_the "atom" command is not installed by default.
+(_**Note**: The "atom" command is not installed by default.
 In the Atom menu bar there is a command named “Install Shell Commands”
-which installs a new command in your Terminal called atom._)
+which installs a new command in your Terminal called "atom"._)
 
-Now copy-paste the following *sample code* to get started:
+Now copy-paste the following *sample code* into the newly created index.html file to get started:
 
 ```html
 <html>
@@ -212,7 +212,7 @@ Now copy-paste the following *sample code* to get started:
 #### Open index.html in your Browser
 
 When you ***open*** `index.html` in your ***web browser***
-you should expect to see something like this: (_without the annotations_)
+you should expect to see something like this: (_without the green annotations_)
 
 ![learn-tdd-initial-index-html-showing-failing-test](images/initial-index-html-showing-failing-test.png)
 
@@ -246,7 +246,7 @@ and loading the CSS files.
 
 Next we see the **qunit divs**
 (_where the **test results** will be **displayed**_)
-and load JQuery and the QUnit Library from CDN:
+and load the JQuery and QUnit Libraries from CDN:
 
 ```html
     <div id="qunit"></div>
@@ -276,33 +276,33 @@ Finally we see our test(s) - the interesting part of the file:
 </html>
 ```
 
-If you are completely new to writing ***test assertions***, don't worry,
-they are really simple, there are **3 parts**:
+If you are new to writing ***automated tests***, don't worry - 
+they are really simple. There are **3 parts**:
 
-1. **Description** - usually the *first* parameter to QUnit's test() method.
-2. **Computation** - execute a function/method
-(*exercising the method you will write to solve your test*)
-3. **Assertion** - check that the result of your calculation
+1. **Description** - usually the *first* parameter to QUnit's test() method, describing what is expected to happen in the test
+2. **Computation** - executes a function/method
+(*which invokes the method you will write to make your test pass*)
+3. **Assertion** - verifies that the result of your computation
 is what you ***expect*** it to be.
 
 ![anatomy-of-a-unit-test](images/anatomy-of-a-unit-test.png)
 
 In the above screenshot, the assertion is `assert.equal(result, 2)` <br />
 We are giving the `equal` method two arguments; the `result` of our computation
-and our expected value in this case **2**. _That's it_.
+and our expected value - in this case **2**. _That's it_.
 
 
-**Note**:
+_**Note**_:
 The latest version of QUnit uses the `QUnit.test()` function to run tests.
 Later in this workshop we use [blanket.js](http://blanketjs.org/)
 which is not compatible with the latest
-version of QUnit, it is for this reason
-that we are calling `test()` to run tests in this workshop.
+version of QUnit. It is for this reason
+that we are calling `test()` to run the tests in this workshop.
 
 ##### Further Reading:
 
 + Test assertion: https://en.wikipedia.org/wiki/Test_assertion
-+ What are Test Assertions and how do they work:
++ What are Test Assertions and how do they work?:
 http://www.thoughtworks.com/insights/blog/test-assertions-how-do-they-work
 
 
@@ -319,8 +319,8 @@ the change value in the various **coins** available
 - The selection of the desired return is out of scope
 
 ##### Complementary User Story view
-> Given a **Price** and amount of **Cash** from Customer
-> Return: **Change** to customer (*in notes and coins*).
+> Given a **Price** and an amount of **Cash** from the Customer
+> Return: **Change** to the customer (*in notes and coins*).
 
 ### Understand what is needed
 
@@ -328,19 +328,19 @@ the change value in the various **coins** available
 `totalPayable` and `cashPaid`
 + For a given `totalPayable`
 (the total amount an item in the vending machine costs)
-and `cashPaid` (the amount of cash the person paid into the vending machine),
+and `cashPaid` (the amount of cash the customer paid into the vending machine),
 `getChange` should _**calculate**_ the _**change**_
-we need to _return_ to the customer
-+ _**return**_ change as an `array` of coins (largest to smallest)
+the machine should _return_ to the customer
++ `getChange` should _**return**_ change as an `array` of coins (largest to smallest)
 that the vending machine will need to _dispense_ to the customer.
 
 #### _Example_
 
-If a person buys an item costing £2.15
+If a customer buys an item costing £2.15
 (_we represent this as **215 pennies**_ `totalPayable`)
 and pays £3 (3 x £1 or _**300 pennies**_ `cashPaid`)
 into the vending machine, the _**change**_ will be **85p**. <br />
-To make up this 85p of change we would _return_
+To dispense the 85p of change we should _return_
 **four coins** to the person: 50p, 20p, 10p and 5p. <br />
 An **array** of these coins would look like: `[50, 20, 10, 5]`
 
@@ -369,13 +369,13 @@ this can be stored as an Array:
 var coins = [200, 100, 50, 20, 10, 5, 2, 1];
 ```
 
-**Note**: the same can be done for any other cash system ($ ¥ €)
+_**Note**_: The same can be done for any other cash system ($ ¥ €)
 simply use the cent, sen or rin as the unit and scale up notes.
 
 #### The First Test
 
 If you are *totally* new to TDD I recommend reading this
-[intro article](http://www.agiledata.org/essays/tdd.html) by Scott Ambler
+[introductory article](http://www.agiledata.org/essays/tdd.html) by Scott Ambler
 (especially the diagrams) otherwise this (test-fail-code-pass) process
 may seem *strange* ...
 
@@ -444,7 +444,8 @@ Back in your browser window, _refresh_ the browser and watch it *fail*:
 > **A**: To get used to the idea of *only* writing the code required to *pass*
 >    the *current* (*failing*) *test*. <br />
 > *Read*: "***The Importance of Test Failure***:
-http://www.sustainabletdd.com/2012/03/importance-of-test-failure.html
+http://www.sustainabletdd.com/2012/03/importance-of-test-failure.html<br />
+**Note**: This also proves the test **will** fail if the code doesn't behave as expected.
 
 #### Create the getChange `function`
 
@@ -461,7 +462,7 @@ function getChange (totalPayable, cashPaid) {
 </script>
 ```
 
-your `index.html` should now look like this:
+Your `index.html` should now look something like this:
 
 ```html
 <html>
@@ -515,8 +516,8 @@ It Passed!!
 #### Now Let's Write A *Real* Test
 
 Going back to the requirements, we need our `getChange` method to accept
-two arguments/parameters (`totalPayable` and `cashPaid`) and `return` an
-`array` containing the coins equal to the difference:
+two arguments/parameters (`totalPayable` and `cashPaid`), and to `return` an
+`array` containing the coins equal to the difference between them:
 
 e.g:
 ```js
@@ -538,7 +539,7 @@ test('getChange(215, 300) should return [50, 20, 10, 5]', function(assert) {
 
 #### Write the Method to Pass the Test
 
-What if I _**cheat**_?
+What if I _**cheat**_ and make `getChange` return the expected result?
 
 ```javascript
 function getChange (totalPayable, cashPaid) {
@@ -556,8 +557,7 @@ test `getChange(1,1) should equal [] - an empty array` is now failing.
 Step 2 of the **TDD** process requires that *all* tests should pass, not just the
 newly added one.
 
-The `getChange` function needs to cater for two scenarios; when change is not
-required and when change is required. A new implementation of `getChange` that
+The `getChange` function needs to cater for two scenarios; when change should be returned and when it shouldn't. A new implementation of `getChange` that
 handles both scenarios could be:
 
 ```javascript
@@ -575,7 +575,7 @@ function getChange (totalPayable, cashPaid) {
 ```
 
 The regression has been fixed and all tests _pass_, but you have *hard coded*
-the result (*not exactly a calculator...*)
+the result (*not exactly useful for a calculator...*)
 
 This only works *once*. When the Spec (Test) Writer writes the next test,
 the method will need to be re-written to satisfy it.
@@ -621,15 +621,15 @@ function getChange (totalPayable, cashPaid) {
 ```
 The _**Arthur Andersen Approach**_ gets results in the *short run* ...
 
-But its arguably *more work* than simply *solving* the problem.
-Let's do that instead.
+But it's arguably *more work* than simply *solving* the problem.
+So let's do that instead.
 
 # Try It Yourself (_before looking at the solution_!)
 
 > Try to create your own `getChange` method that passes the three tests
 > _before_ you look at the solution...
 
-to re-cap these are our three tests:
+To re-cap, these are our three tests:
 ```js
 test('getChange(1,1) should equal [] - an empty array', function(assert) {
   var result = getChange(1, 1); //no change/coins just an empty array
@@ -654,7 +654,7 @@ test('getChange(486, 600) should equal [100, 10, 2, 2]', function(assert) {
 
 Let's invent a test that will return one of each of the coins ...
 
-Recall that we have 8 coins:
+Recall that we have 8 types of coins:
 
 ```javascript
 var coins = [200, 100, 50, 20, 10, 5, 2, 1];
@@ -662,8 +662,8 @@ var coins = [200, 100, 50, 20, 10, 5, 2, 1];
 
 The sum of the (_`array` containing one of each_) coins is: **388**p
 
-So, we need to create a test in which we **pay £4** for an item costing 12p
-(a bit unrealistic but if it works we know our `getChange` method is _ready_!)
+So, we need to create a test in which we **pay £4** for an item costing 12p.
+(A bit unrealistic, but if it works we know our `getChange` method is _ready_!)
 
 ```js
 test('getChange(12, 400) should return [200, 100, 50, 20, 10, 5, 2, 1]', function(assert) {
@@ -681,7 +681,7 @@ When these tests pass, your work is done.
 
 ## Solution(s) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/learn-tdd/issues)
 
-**Note**: feel free to suggest a more _compact_ algorithm.
+_**Note**_: Feel free to suggest a more _compact_ algorithm.
 
 ### "Imperative" Version ("Two For Loops")
 
@@ -835,7 +835,7 @@ vending machine it will payout £18.37 i.e: a **£5 payout**
 
 The answer is ***code coverage***!
 
-> _Note: checking code coverage is **not a substitute for QA/Code Review**..._!
+> _Note: Checking code coverage is **not a substitute for QA/Code Review**..._!
 
 ### Blanket.js
 
@@ -844,7 +844,7 @@ To check the _coverage_ of code being executed
 
 > See: http://blanketjs.org/ and https://github.com/alex-seville/blanket
 
-to *run* blanket.js we need to separate our tests and solution
+To *run* blanket.js we need to separate our tests and solution
 into distinct **.js** files:
 
 **test.js** contains our unit tests
@@ -914,9 +914,9 @@ Include these two files _and_ the **Blanket.js** library in your index.html:
 
 ### _Live_ Server
 
-> **Note**: this is _light_ taste of Node.js for absolute beginners.
+> _**Note**: This is a _light_ taste of Node.js for absolute beginners._
 
-Because we are loading external **.js** files our web browser will not _allow_
+Because we are loading external **.js** files, our web browser will not _allow_
 us to simply open the **index.html** from the directory.
 
 Open your terminal and run this command
@@ -937,13 +937,13 @@ You should expect to see:
 
 ![learn-tdd-showing-coverage](images/showing-coverage.png)
 
-(Make sure to tick "Enable Coverage" as it is not checked by default!)
+(Make sure to tick "Enable Coverage", as it is not checked by default!)
 
-### Click change.js to expand the code coverage view
+### Click line #1 in the Blanket.js section to expand the code coverage view
 
 ![learn-tdd-showing-rogue-code-not-covered](images/showing-rogue-code-not-covered.png)
 
-Here we can clearly see which lines are not being covered by our tests!
+Here we can clearly see which lines are **not** being covered by the tests!
 We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 #### Hold on ... What if the _rogue_ code is all on _one line_?
@@ -954,9 +954,9 @@ We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 > The (_sad?_) _fact_ is:
 > Blanket.js Code Coverage analysis will not detect _all_ bugs or rogue code.
-> you **still need** a _**human**_ to do _**code review**_!
+> you **still need** a _**human**_ to a _**code review**_!
 
-_But_ ... if you use _**Istanbul**_ to check coverage on the server,
+_But_ ... if you use _**Istanbul**_ to check coverage on the server, you'll see that only part of the single line of _rogue_ code was executed. 
 Istanbul is _much_ better at spotting un-tested code!
 
 > We wrote a **beginners guide** to **Code Coverage with Istanbul**:
@@ -965,10 +965,10 @@ that goes into _detail_.
 
 ## Bonus Level 2: Node.js (_server-side_) Tests  (10 mins)
 
-> **Note** You will need to have Node.js installed on your machine
-for this section,
+> _**Note**: You will need to have Node.js installed on your machine
+for this section.
 > If you don't already have it, download it from:
-https://nodejs.org/en/download/
+https://nodejs.org/en/download/_
 
 The beauty of writing JavaScript is that you can _**run**_ it _**anywhere**_!
 
@@ -999,7 +999,7 @@ you created in **Bonus Level 1**
 if (typeof module !== 'undefined' && module.exports) { QUnit.load(); } // run the tests
 ```
 
-Also you need to add this to the **change.js** file  you
+In addition, you need to add this to the **change.js** file  you
 created in **Bonus Level 1**
 
 ```js
@@ -1011,7 +1011,7 @@ if (typeof module !== 'undefined' && module.exports) {
 }
 ```
 
-Next, install the node.js following modules by running `npm install qunitjs qunit-tap istanbul --save-dev`:
+Next, install the following node.js modules by running `npm install qunitjs qunit-tap istanbul --save-dev`:
 + QUnit node.js module
 + qunit-tap (for command line output)
 + Istanbul for server-side code coverage
@@ -1021,17 +1021,15 @@ Run the tests in your _terminal_:
 node test.js
 ```
 
-And to see code server-side coverage:
+And run Istanbul to see the server-side code coverage:
 ```sh
 ./node_modules/.bin/istanbul cover test.js
 ```
-You should expect to see something like this in your terminal:
+At this point, you should see something like this in your terminal:
 
 ![server-side-command-line-test-run-with-istanbul](images/server-side-command-line-test-run-with-istanbul.png)
 
-To view the detailed coverage report,
-`open ./coverage/lcov-report/index.html`
-you should expect to see:
+Execute `open ./coverage/lcov-report/index.html` to view the detailed coverage report, and you should see something like this:
 
 ![server-side-test-istanbul-coverage-highlights-rogue-code](images/server-side-test-istanbul-coverage-highlights-rogue-code.png)
 
@@ -1045,7 +1043,7 @@ Refresh the Code Coverage report in your browser:
 
 ![server-side-test-istanbul-coverage-report](images/server-side-test-istanbul-coverage-report.png)
 
-> _**Boom**_! You know how to run your QUnit-based Unit Tests server-side!
+> _**Boom**_! Now you know how to run your QUnit-based Unit Tests on the server-side!
 
 
 ### *Top Tip*: Use [Codecov.io](https://codecov.io/#features) to Track Coverage in your Projects!
@@ -1069,7 +1067,7 @@ To quickly add CI support to your project:
 **1**)  **Visit**: https://travis-ci.org/profile and **Login**
 with your **GitHub account** <br />
 **2**)  Enable Travis for your project
-(_**Note**_: the project will need to be hosted on GitHub)
+(_**Note**_: The project will need to be hosted on GitHub)
 
 ![learn-tdd-enable-travis-ci](images/enable-travis-ci.png)
 
@@ -1099,11 +1097,11 @@ Done. [![Build Status](https://travis-ci.org/dwyl/learn-tdd.svg)](https://travis
 
 ## Bonus Level 4: _Documentation_ with [JSDoc](https://github.com/jsdoc3/jsdoc) (5 mins)
 
-> Note Bonus Level 4 ***requires node.js*** to be *installed* on your machine.
-> If you don't already have it installed, don't panic, you don't need to know
+> **Note**: Bonus Level 4 ***requires node.js*** to be *installed* on your machine.
+> If you don't already have it installed, don't panic. You don't need to know
 > *anything* about Node.js to work through the examples.
 To download, visit: https://nodejs.org/en/download/
-and get the version for your Operating System.
+and install the version for your Operating System.
 
 If you took a peak at the solution in **change.js** you may have noticed
 that there is a ***comment block*** at the top of the file:
@@ -1132,7 +1130,7 @@ produce documentation for your project in 3 easy steps:
 
 **3**) Open the resulting **html** file
 `open ./out/global.html#getChange`
-you should expect to see something like this in your web browser:
+and you should see something like this in your web browser:
 
 ![learn-tdd-jsdoc-html](images/jsdoc-html.png)
 
@@ -1144,10 +1142,10 @@ This _clearly_ documents the functionality of the `getChange` method.
 
 In the last **90 minutes** you _**learned how**_ to:
 + Write code following **T**est **D**riven **D**evelopment (**TDD**) discipline
-+ View the **code coverage** for both front-end and back-end JavaScript Code
++ Generate and view the **code coverage** for both front-end and back-end JavaScript Code
 + Set up **Travis-CI Continuous Integration** for your project
 (so that you can keep track of the test/build status for your project)
-+ Use **JSDoc** to document your code using simple comment blocks
++ Use **JSDoc** to generate documentation for your code after writing simple comment blocks
 above your functions.
 
 > _Please **Star**_ this repository
@@ -1161,7 +1159,7 @@ https://twitter.com/dwyl/status/621353373019865089
 
 <sup>1</sup>Ok, its not *really* possible to learn "everything" in 30 mins...
 but you'll certainly know *most* of what you need!
-And, if you have *any questions*, _**please ask**_:
+And, if you have *any questions*, _**please ask**_ at:
 https://github.com/dwyl/learn-tdd/issues
 
 <br />
