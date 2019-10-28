@@ -1185,3 +1185,8 @@ This is the _best_ way to practice your TDD skills by building a _real_ App
 following TDD best-practice from start to finish.
 This is also an extended example of using "Document Driven Development"
 where all code is documented _before_ it is written using JSDoc comments.
+
+# Interested in Contributing?
+_**Please read** our_
+[**contribution guide**](https://github.com/dwyl/contributing)
+(_thank you_!)
