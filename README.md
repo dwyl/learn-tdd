@@ -86,15 +86,15 @@ When reading about TDD you will usually see the expression:
 
 What this means is that TDD follows a **3-step process**:
 
-1. ***Write a Failing Test** - Understand the (user)
+1. ***Write a Failing Test*** - Understand the (user)
 requirements/story well enough to write a test for what you expect.
-(_the test should **fail** initially - hence it being "Red"_) <br />
+(_the test should **fail** initially - hence it being "Red"_)
 
-2. ***Make the (*failing*) Test Pass** - Write (*only*) the code you need
+2. ***Make the (failing) Test Pass*** - Write (*only*) the code you need
 to make the (*failing*) test pass, while ensuring your existing/previous tests
 all still pass (*no regressions*).
 
-3. ***Refactor*** the code *you* wrote - take the time to tidy up the code
+3. ***Refactor the code you wrote*** take the time to tidy up the code
 *you* wrote to make it simpler
 (*for your future self or colleagues to understand*)
 before you need to ship the current feature, do it.
@@ -171,7 +171,7 @@ if you have it installed)
 In the Atom menu bar there is a command named “Install Shell Commands”
 which installs a new command in your Terminal called "atom"._)
 
-Now copy-paste the following *sample code* into the newly created index.html file to get started:
+Now copy-paste the following *sample code* into the newly created `index.html` file to get started:
 
 ```html
 <html>
@@ -212,7 +212,7 @@ Now copy-paste the following *sample code* into the newly created index.html fil
 #### Open index.html in your Browser
 
 When you ***open*** `index.html` in your ***web browser***
-you should expect to see something like this: (_without the green annotations_)
+you should expect to see something like this: (_without the annotation pointing out the qunit div, and the green and red annotations pointing out the Passing and Failing tests_)
 
 ![learn-tdd-initial-index-html-showing-failing-test](images/initial-index-html-showing-failing-test.png)
 
@@ -954,7 +954,7 @@ We can quickly identify a potential for bugs or _rogue_ code and remove it!
 
 > The (_sad?_) _fact_ is:
 > Blanket.js Code Coverage analysis will not detect _all_ bugs or rogue code.
-> you **still need** a _**human**_ to a _**code review**_!
+> you **still need** a _**human**_ to do a _**code review**_!
 
 _But_ ... if you use _**Istanbul**_ to check coverage on the server, you'll see that only part of the single line of _rogue_ code was executed. 
 Istanbul is _much_ better at spotting un-tested code!
@@ -1043,7 +1043,7 @@ Refresh the Code Coverage report in your browser:
 
 ![server-side-test-istanbul-coverage-report](images/server-side-test-istanbul-coverage-report.png)
 
-> _**Boom**_! Now you know how to run your QUnit-based Unit Tests on the server-side!
+> _**Boom**_! Now you know how to run your QUnit-based Unit Tests server-side!
 
 
 ### *Top Tip*: Use [Codecov.io](https://codecov.io/#features) to Track Coverage in your Projects!
