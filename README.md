@@ -68,7 +68,7 @@ or design before your write your functional code.
 - Software Testing - http://en.wikipedia.org/wiki/Software_testing
 - "What is Software Testing" video (from 5:56 onwards) - https://youtu.be/UZy1Dj9JIg4?t=356
 - Video intro to Software Development Lifecycle (from 0:52 onwards): https://youtu.be/qMkV_TDdDeA?t=52
-- How to Write Clean, Testable Code -  http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principals)
+- How to Write Clean, Testable Code -  http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principles)
 + [What is software testing?](http://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty) by _Rehman Zafar_
 <!-- - Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd -->
 
@@ -129,7 +129,7 @@ even when you're working with a large, inter-dependent code base!
 
 > _**Note**: This tutorial is meant to be a beginner-friendly introduction to TDD.
 The Vending Machine example is _intentionally_ simple
-so you can focus on the principals of testing.
+so you can focus on the principles of testing.
 Once you understand the basics,
 we encourage you to follow our _complete_ Todo List Tutorial 
 ([https://github.com/dwyl/**todo-list-javascript-tutorial**](https://github.com/dwyl/todo-list-javascript-tutorial)),
@@ -1173,7 +1173,7 @@ using the _**simple, reliable** and **fast**_ architecture
 with our step-by-step guide:
 [github.com/dwyl/**learn-elm-architecture**-in-javascript](https://github.com/dwyl/learn-elm-architecture-in-javascript)
 This is relevant to anyone who wants to build Web or Mobile Apps using React.js
-(_learning the principals of the **Elm Architecture**
+(_learning the principles of the **Elm Architecture**
   will help to keep your code well-organised and with a logical rendering flow_)
 + Learn ***Tape*** (_the simplest Node/Browser testing framework_):
 https://github.com/dwyl/learn-tape
