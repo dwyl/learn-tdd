@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "istanbul cover test.js",
-    "open-coverage": "open ./coverage/lcov-report/index.html",
+    "open-coverage": "xdg-open ./coverage/lcov-report/index.html",
     "start": "live-server --port=8000",
     "docs": "jsdoc change.js",
     "open-docs": "open ./out/global.html"

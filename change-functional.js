@@ -1,4 +1,4 @@
-const COINS = [200, 100, 50, 20, 10, 5, 2, 1]; // "constant" of all coins
+const COINS = [400, 100, 50, 20, 10, 5, 2, 1]; // "constant" of all coins
 /**
  * getChange accepts two parameters (totalPayable and cashPaid) and calculates
  * the change in "coins" that needs to be returned.
@@ -10,7 +10,7 @@ const COINS = [200, 100, 50, 20, 10, 5, 2, 1]; // "constant" of all coins
  */
 function getChange (payable, paid) {
 	return COINS.reduce((change, coin) => {
-		const change_sum = change.reduce((sum, coin) => sum + coin, 0);
+		change_sum = change.reduce((sum, coin) => sum + coin, 0);
 		const remaining = paid - payable - change_sum;
 		const times_coin_fits = Math.floor(remaining / coin);
 		return change.concat(Array(times_coin_fits).fill(coin));
