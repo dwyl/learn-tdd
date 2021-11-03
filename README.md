@@ -1,16 +1,18 @@
+<div align="center">
+
 # Learn **T**est **D**riven **D**evelopment (**TDD**)
 
 A brief introduction to **T**est **D**riven **D**evelopment (**TDD**)
 in JavaScript for people who want to write _**more reliable code**_.
 
-[![Build Status](https://img.shields.io/travis/dwyl/learn-tdd/master.svg?style=flat-square)](https://travis-ci.org/dwyl/learn-tdd)
+
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dwyl/learn-tdd/Node.js%20CI?style=flat-square)](https://github.com/dwyl/learn-tdd/actions)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-tdd/master.svg?style=flat-square)](http://codecov.io/github/dwyl/learn-tdd?branch=master)
-[![Dependencies Status](https://david-dm.org/dwyl/learn-tdd/status.svg?style=flat-square)](https://david-dm.org/dwyl/learn-tdd)
-[![devDependencies Status](https://david-dm.org/dwyl/learn-tdd/dev-status.svg?style=flat-square)](https://david-dm.org/dwyl/learn-tdd?type=dev)
+[![Dependencies: None](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-tdd/blob/main/package.json#L35 "Zero Dependencies")
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-tdd/issues)
-[![HitCount](http://hits.dwyl.io/dwyl/learn-tdd.svg)](http://hits.dwyl.io/dwyl/learn-tdd)
+[![HitCount](http://hits.dwyl.com/dwyl/learn-tdd.svg)](http://hits.dwyl.com/dwyl/learn-tdd)
 
-
+</div>
 
 ## Why?
 
