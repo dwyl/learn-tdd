@@ -7,10 +7,10 @@ in JavaScript for people who want to write _**more reliable code**_.
 
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dwyl/learn-tdd/Node.js%20CI?style=flat-square)](https://github.com/dwyl/learn-tdd/actions)
-[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-tdd/master.svg?style=flat-square)](http://codecov.io/github/dwyl/learn-tdd?branch=master)
+[![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-tdd/master.svg?style=flat-square)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
 [![Dependencies: None](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-tdd/blob/main/package.json#L35 "Zero Dependencies")
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-tdd/issues)
-[![HitCount](http://hits.dwyl.com/dwyl/learn-tdd.svg)](http://hits.dwyl.com/dwyl/learn-tdd)
+[![HitCount](https://hits.dwyl.com/dwyl/learn-tdd.svg)](https://hits.dwyl.com/dwyl/learn-tdd)
 
 </div>
 
@@ -18,7 +18,7 @@ in JavaScript for people who want to write _**more reliable code**_.
 
 _Project(s) without tests_ often end up looking like they are stuck together with _**duct tape**_ ...
 
-![duct tape car fail](http://i.imgur.com/9cNriGK.jpg)
+![duct tape car fail](https://i.imgur.com/9cNriGK.jpg)
 
 Change _one_ part and _another_ stops working? "_Fixing_" one bug, creates another?
 
@@ -26,7 +26,7 @@ Wouldn't you *prefer* it if everything was
 ***consistent*** and beautifully integrated? <br />
 What if _everyone_ on your team worked _like **clock-work**_ in a disciplined order... like a _**Formula 1 Crew**_ ...
 
-![formula 1 pit stop](http://i.imgur.com/0NDbaam.jpg)
+![formula 1 pit stop](https://i.imgur.com/0NDbaam.jpg)
 
 Test Driven Development (TDD) makes your team a well-oiled machine which means you can go _**faster**_.
 
@@ -64,14 +64,14 @@ just enough production code to fulfil that test, and refactoring. In other words
 it’s one way to think through your requirements
 or design before your write your functional code.
 
-*From [Introduction to Test Driven Development (TDD)](http://agiledata.org/essays/tdd.html)*
+*From [Introduction to Test Driven Development (TDD)](https://agiledata.org/essays/tdd.html)*
 
 #### Further resources
-- Software Testing - http://en.wikipedia.org/wiki/Software_testing
+- Software Testing - https://en.wikipedia.org/wiki/Software_testing
 - "What is Software Testing" video (from 5:56 onwards) - https://youtu.be/UZy1Dj9JIg4?t=356
 - Video intro to Software Development Lifecycle (from 0:52 onwards): https://youtu.be/qMkV_TDdDeA?t=52
-- How to Write Clean, Testable Code -  http://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principles)
-+ [What is software testing?](http://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty) by _Rehman Zafar_
+- How to Write Clean, Testable Code -  https://youtu.be/XcT4yYu_TTs (ignore the Java code focus on the general principles)
++ [What is software testing?](https://www.codeproject.com/Tips/351122/What-is-software-testing-What-are-the-different-ty) by _Rehman Zafar_
 <!-- - Practical Full-Stack JavaScript Web Application Test Driven Development - https://github.com/nelsonic/practical-js-tdd -->
 
 ## How?
@@ -84,7 +84,7 @@ diving into solving the problem (*without a test*).
 When reading about TDD you will usually see the expression:
 "***Red, Green, Refactor***":
 
-![TDD Cycle: Red, Green, Refactor](http://i.imgur.com/RQe2NQT.jpg)
+![TDD Cycle: Red, Green, Refactor](https://i.imgur.com/RQe2NQT.jpg)
 
 What this means is that TDD follows a **3-step process**:
 
@@ -140,7 +140,7 @@ following testing and documentation-first best practices._
 
 ### Scenario: Vending Machine _Change Calculator_ Micro-Project
 
-![vending machine](http://i.imgur.com/HbwMqDa.jpg)
+![vending machine](https://i.imgur.com/HbwMqDa.jpg)
 
 Imagine you are building a **Vending Machine**
 that allows people to buy any item it contains.
@@ -296,7 +296,7 @@ and our expected value - in this case **2**. _That's it_.
 
 _**Note**_:
 The latest version of QUnit uses the `QUnit.test()` function to run tests.
-Later in this workshop we use [blanket.js](http://blanketjs.org/)
+Later in this workshop we use [blanket.js](https://blanketjs.org/)
 which is not compatible with the latest
 version of QUnit. It is for this reason
 that we are calling `test()` to run the tests in this workshop.
@@ -305,7 +305,7 @@ that we are calling `test()` to run the tests in this workshop.
 
 + Test assertion: https://en.wikipedia.org/wiki/Test_assertion
 + What are Test Assertions and how do they work?:
-http://www.thoughtworks.com/insights/blog/test-assertions-how-do-they-work
+https://www.thoughtworks.com/insights/blog/test-assertions-how-do-they-work
 
 
 ## Requirements
@@ -377,7 +377,7 @@ simply use the cent, sen or rin as the unit and scale up notes.
 #### The First Test
 
 If you are *totally* new to TDD I recommend reading this
-[introductory article](http://www.agiledata.org/essays/tdd.html) by Scott Ambler
+[introductory article](https://www.agiledata.org/essays/tdd.html) by Scott Ambler
 (especially the diagrams) otherwise this (test-fail-code-pass) process
 may seem *strange* ...
 
@@ -783,7 +783,7 @@ _Take a break, grab some water and come back for the #**BonusLevel**_
 
 ### What is Code Coverage?
 
-![sign not in use](http://i.imgur.com/bmY2imf.jpg)
+![sign not in use](https://i.imgur.com/bmY2imf.jpg)
 
 In computer programming, code coverage is a measure used to describe
 the degree to which the source code of a program is tested
@@ -844,7 +844,7 @@ The answer is ***code coverage***!
 To check the _coverage_ of code being executed
 (_in the browser_) we use **Blanket.js**
 
-> See: http://blanketjs.org/ and https://github.com/alex-seville/blanket
+> See: https://blanketjs.org/ and https://github.com/alex-seville/blanket
 
 To *run* blanket.js we need to separate our tests and solution
 into distinct **.js** files:
