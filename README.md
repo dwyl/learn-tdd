@@ -446,7 +446,7 @@ Back in your browser window, _refresh_ the browser and watch it *fail*:
 > **A**: To get used to the idea of *only* writing the code required to *pass*
 >    the *current* (*failing*) *test*. <br />
 > *Read*: "***The Importance of Test Failure***:
-http://www.sustainabletdd.com/2012/03/importance-of-test-failure.html<br />
+https://www.sustainabletdd.com/2012/03/importance-of-test-failure.html<br />
 **Note**: This also proves the test **will** fail if the code doesn't behave as expected.
 
 #### Create the getChange `function`
