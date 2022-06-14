@@ -1,6 +1,6 @@
 version: 2
 updates:
-- package-ecosystem: mix
+- package-ecosystem: npm
   directory: "/"
   schedule:
     interval: daily
