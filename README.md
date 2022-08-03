@@ -62,7 +62,7 @@ you need to write tests for your web project!
 which combines test-first development, where you write a test before you write
 just enough production code to fulfil that test, and refactoring. In other words,
 it’s one way to think through your requirements
-or design before your write your functional code.
+or design before you write your functional code.
 
 *From [Introduction to Test Driven Development (TDD)](https://agiledata.org/essays/tdd.html)*
 
