@@ -34,7 +34,7 @@
   "homepage": "https://github.com/dwyl/learn-tdd",
   "devDependencies": {
     "istanbul": "^0.4.3",
-    "jsdoc": "^3.4.0",
+    "jsdoc": "^4.0.0",
     "live-server": "^1.1.0",
     "qunit-tap": "^1.5.0",
     "qunitjs": "^2.0.0-rc1"
