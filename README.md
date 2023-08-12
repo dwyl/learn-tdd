@@ -5,8 +5,7 @@
 A brief introduction to **T**est **D**riven **D**evelopment (**TDD**)
 in JavaScript for people who want to write _**more reliable code**_.
 
-
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/dwyl/learn-tdd/Node.js%20CI?style=flat-square)](https://github.com/dwyl/learn-tdd/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/dwyl/learn-tdd/ci.yml?label=build&style=flat-square&branch=main)](https://github.com/dwyl/learn-tdd/actions/workflows/ci.yml)
 [![codecov.io](https://img.shields.io/codecov/c/github/dwyl/learn-tdd/master.svg?style=flat-square)](https://codecov.io/github/dwyl/learn-tdd?branch=master)
 [![Dependencies: None](https://img.shields.io/badge/dependencies-none-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-tdd/blob/main/package.json#L35 "Zero Dependencies")
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](https://github.com/dwyl/learn-tdd/issues)
